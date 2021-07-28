@@ -1,0 +1,21 @@
+.jingheqrcode {
+  text-align:center;
+  margin-top:10px;
+}
+.jingheqrcode img{
+	margin:0 auto;
+}
+.alipayLogo {
+  margin:0 auto;
+  height:20px;
+  background-image:url('../images/alipay.gif');
+  background-repeat:no-repeat;
+  //background-attachment:fixed;
+  background-position:center;
+}
+
+.checkout-help{
+  text-align:center;
+  vertical-align: middle;
+  margin-top:30px;
+}

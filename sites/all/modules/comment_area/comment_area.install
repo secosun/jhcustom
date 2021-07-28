@@ -1,0 +1,102 @@
+<?php
+
+/**
+ * @file
+ * Installation functions for Boss Manage.
+ */
+
+
+/**
+ * Implements hook_schema().
+ */
+ function comment_area_schema() {
+  $schema = array();
+
+   
+  $schema['comment_area_melike'] = array(
+    'description' => 'trace my like',
+    'fields' => array(
+      'comment_area_id' => array(
+        'description' => 'The primary identifier for a area manager.',
+        'type' => 'serial',
+        'unsigned' => TRUE,
+        'not null' => TRUE,
+      ),
+	  'userid' => array(
+        'description' => '',
+        'type' => 'int',
+        'unsigned' => TRUE,
+        'not null' => TRUE,
+        'default' => 0,
+      ),
+	  'areaid' => array(
+        'description' => '',
+        'type' => 'int',
+        'unsigned' => TRUE,
+        'not null' => TRUE,
+        'default' => 0,
+      ),
+	   'data' => array(
+        'type' => 'blob',
+        'not null' => FALSE,
+        'size' => 'big',
+        'serialize' => TRUE,
+        'description' => 'A serialized array of additional data.',
+      ),
+	),
+	'primary key' => array('comment_area_id'),
+    'indexes' => array(
+      'userid' => array('userid'),
+    ),
+  );
+  
+  $schema['comment_area_like'] = array(
+    'description' => 'User area responsible used with comment.',
+    'fields' => array(
+      'comment_area_id' => array(
+        'description' => 'The primary identifier for a area manager.',
+        'type' => 'serial',
+        'unsigned' => TRUE,
+        'not null' => TRUE,
+      ),
+      
+      'area_id' => array(
+        'description' => '',
+        'type' => 'int',
+        'unsigned' => TRUE,
+        'not null' => TRUE,
+        'default' => 0,
+      ),
+      
+	  
+	 
+	  
+      'node_id' => array(
+        'description' => '',
+        'type' => 'int',
+        'unsigned' => TRUE,
+        'not null' => TRUE,
+        'default' => 0,
+      ),
+      'like_number' => array(
+        'description' => '',
+        'type' => 'float',
+        'not null' => TRUE,
+        'default' => 0,
+      ),
+      'data' => array(
+        'type' => 'blob',
+        'not null' => FALSE,
+        'size' => 'big',
+        'serialize' => TRUE,
+        'description' => 'A serialized array of additional data.',
+      ),
+    ),
+    'primary key' => array('comment_area_id'),
+    'indexes' => array(
+      'area_id' => array('area_id'),
+	  'node_id' => array('node_id'),
+    ),
+  );
+    return $schema;
+}

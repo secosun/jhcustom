@@ -1,0 +1,12 @@
+name = Test
+description = Test
+package = Vegetable King Development
+core = 7.x
+
+files[] = test.module
+
+; Information added by Drupal.org packaging script on 2015-03-18
+version = "7.36"
+project = "drupal"
+datestamp = "1427943826"
+

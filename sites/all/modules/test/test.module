@@ -1,0 +1,79 @@
+<?php
+
+/**
+ * @file
+ * Enables users to comment on published content.
+ *
+ * When enabled, the Drupal comment module creates a discussion
+ * board for each Drupal node. Users can post comments to discuss
+ * a forum topic, weblog post, story, collaborative book page, etc.
+ */
+
+/**
+  * 实现钩子hook_menu().
+  */
+ function test_menu() {
+   $items['test'] = array(
+   'title' => 'abc',
+     'page callback' => 'test_page',
+     'access callback' => TRUE,
+     'type' => MENU_CALLBACK,
+   );
+   $items['utf8'] = array(
+   'title' => 'abc',
+     'page callback' => 'test_utf8',
+     'access callback' => TRUE,
+     'type' => MENU_CALLBACK,
+   );
+   return $items;
+  }
+
+function test_page(){
+   //$form_state['triggering_element']['#name']='Generic';
+   //$form = array();
+    //$request_options = array(
+    //  'method' => 'POST',
+    //  'data' => '',
+    //  'timeout' => 15000,
+    //  'headers' => array('Content-Type' => 'application/x-www-form-urlencoded'),
+    //);
+   // $response = drupal_http_request('http://192.168.1.200/utf8', $request_options);
+ 
+    //return $response->data;
+   
+
+    // $p3=json_last_error();
+    //$request_options = array(
+    //  'method' => 'POST',
+    //  'timeout' => 3600,
+    //  'headers' => array('Content-Type' => 'application/x-www-form-urlencoded'),
+    //);
+    //$resdata' => 'code=eb5b7e8368c11794c02d4033331ff6c95037c4f0&client_id=generic&client_secret=123456&redirect_uri=http%3A//192.168.1.200/openid-connect/generic&grant_type=authorization_code',
+    //  'ponse = drupal_http_request('http://192.168.1.200/oauth2/token', $request_options);
+   
+    module_load_include('inc', 'openid_connect', 'includes/openid_connect.forms');
+     
+	return drupal_get_form('openid_connect_login_form');
+
+    
+
+
+    //return array(
+    //  'subject' => t('Log in'),
+     // 'content' => drupal_get_form('openid_connect_login_form'),
+    //);
+    //openid_connect_login_form_submit($form, $form_state);
+
+  
+    //return 'HAHA';
+}
+
+
+function test_utf8(){
+  $result='{"a":"b"}';
+  echo $result;
+  drupal_exit();
+}
+
+ 
+

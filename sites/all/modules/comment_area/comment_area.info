@@ -1,0 +1,14 @@
+name = Comment Area
+description = Enhance Comment Moudle.  
+dependencies[] = comment
+package = Vegetable King Development
+core = 7.x
+
+files[] = comment_area.module
+
+; Information added by Drupal.org packaging script on 2015-03-18
+version = "7.x-3.1+7-dev"
+core = "7.x"
+project = "Comment Area"
+datestamp = "1426704489"
+

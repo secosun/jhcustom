@@ -1,0 +1,954 @@
+HTML {
+	FONT-SIZE: 12px
+}
+INPUT[type=radio] {
+	VERTICAL-ALIGN: middle
+}
+INPUT[type=checkbox] {
+	VERTICAL-ALIGN: middle
+}
+.form_input {
+	BORDER-BOTTOM: #a0a0a0 1px solid; BORDER-LEFT: #a0a0a0 1px solid; PADDING-BOTTOM: 4px; MARGIN: 0px; OUTLINE-STYLE: none; OUTLINE-COLOR: invert; PADDING-LEFT: 8px; OUTLINE-WIDTH: medium; PADDING-RIGHT: 8px; BACKGROUND: #fff; COLOR: #555; FONT-SIZE: 14px; VERTICAL-ALIGN: middle; BORDER-TOP: #a0a0a0 1px solid; BORDER-RIGHT: #a0a0a0 1px solid; PADDING-TOP: 4px; -webkit-box-shadow: inset 0 0 2px #e5e5e5; -moz-box-shadow: inset 0 0 2px #e5e5e5; box-shadow: inset 0 0 2px #e5e5e5
+}
+INPUT.form_input {
+	LINE-HEIGHT: 20px; WIDTH: 200px; 
+}
+TEXTAREA.form_input {
+	MIN-HEIGHT: 20px; WIDTH: 218px; HEIGHT: 60px
+}
+.form_input:focus {
+	BORDER-BOTTOM-COLOR: #3eabff; BORDER-TOP-COLOR: #3eabff; BORDER-RIGHT-COLOR: #3eabff; BORDER-LEFT-COLOR: #3eabff; -webkit-box-shadow: 0 0 1px #91bbd9, inset 0 0 2px #e5e5e5; -moz-box-shadow: 0 0 1px #91bbd9, inset 0 0 2px #e5e5e5; box-shadow: 0 0 1px #91bbd9, inset 0 0 2px #e5e5e5
+}
+.form_input_focus {
+	BORDER-BOTTOM-COLOR: #3eabff; BORDER-TOP-COLOR: #3eabff; BORDER-RIGHT-COLOR: #3eabff; BORDER-LEFT-COLOR: #3eabff; -webkit-box-shadow: 0 0 1px #91bbd9, inset 0 0 2px #e5e5e5; -moz-box-shadow: 0 0 1px #91bbd9, inset 0 0 2px #e5e5e5; box-shadow: 0 0 1px #91bbd9, inset 0 0 2px #e5e5e5
+}
+.form_input_error {
+	BORDER-BOTTOM-COLOR: #ff0000; BORDER-TOP-COLOR: #ff0000; BORDER-RIGHT-COLOR: #ff0000; BORDER-LEFT-COLOR: #ff0000; -webkit-box-shadow: 0 0 1px #d99191, inset 0 0 2px #e5e5e5; -moz-box-shadow: 0 0 1px #d99191, inset 0 0 2px #e5e5e5; box-shadow: 0 0 1px #d99191, inset 0 0 2px #e5e5e5
+}
+.form_input_l {
+	PADDING-BOTTOM: 9px; PADDING-LEFT: 8px; PADDING-RIGHT: 8px; FONT-SIZE: 14px; PADDING-TOP: 9px
+}
+.form_input_s {
+	PADDING-BOTTOM: 1px; PADDING-LEFT: 8px; PADDING-RIGHT: 8px; FONT-SIZE: 12px; PADDING-TOP: 1px
+}
+.form_input_defaultvalue {
+	COLOR: #bbb
+}
+.form_input_placeholder {
+	POSITION: relative; LINE-HEIGHT: 0; DISPLAY: block; COLOR: #bbb; FONT-SIZE: 0px; CURSOR: text
+}
+.form_input_placeholder SPAN {
+	POSITION: absolute; LINE-HEIGHT: 20px; WHITE-SPACE: nowrap; COLOR: #bbb; FONT-SIZE: 14px; TOP: 10px; LEFT: 10px
+}
+.btn {
+	BOX-SIZING: border-box; BORDER-BOTTOM: 1px solid; TEXT-ALIGN: center; BORDER-LEFT: 1px solid; PADDING-BOTTOM: 0px; MARGIN: 0px; OUTLINE-STYLE: none; OUTLINE-COLOR: invert; PADDING-LEFT: 0px; OUTLINE-WIDTH: 0px; PADDING-RIGHT: 0px; DISPLAY: inline-block; WHITE-SPACE: nowrap; VERTICAL-ALIGN: middle; BORDER-TOP: 1px solid; CURSOR: pointer; BORDER-RIGHT: 1px solid; TEXT-DECORATION: none; PADDING-TOP: 0px; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; -moz-appearance: none; -webkit-appearance: none; -moz-user-select: none; -webkit-user-select: none; -ms-box-sizing: border-box
+}
+.btn A {
+	DISPLAY: block; TEXT-DECORATION: none
+}
+.btn .btn-text {
+	LINE-HEIGHT: 20px; DISPLAY: block
+}
+.btn:hover {
+	OUTLINE-STYLE: none; OUTLINE-COLOR: invert; OUTLINE-WIDTH: medium
+}
+.btn:focus {
+	OUTLINE-STYLE: none; OUTLINE-COLOR: invert; OUTLINE-WIDTH: medium
+}
+.btn {
+	MIN-WIDTH: 80px; _width: 80px
+}
+.btn-medium {
+	MIN-WIDTH: 80px; _width: 80px
+}
+.btn .btn-text {
+	PADDING-BOTTOM: 4px; PADDING-LEFT: 9px; PADDING-RIGHT: 9px; FONT-SIZE: 12px; PADDING-TOP: 4px
+}
+.btn-medium .btn-text {
+	PADDING-BOTTOM: 4px; PADDING-LEFT: 9px; PADDING-RIGHT: 9px; FONT-SIZE: 12px; PADDING-TOP: 4px
+}
+.btn-small {
+	MIN-WIDTH: 56px; _width: 56px
+}
+.btn-small .btn-text {
+	PADDING-BOTTOM: 1px; PADDING-LEFT: 9px; PADDING-RIGHT: 9px; FONT-SIZE: 12px; PADDING-TOP: 1px
+}
+.btn-large {
+	MIN-WIDTH: 100px; _width: 100px
+}
+.btn-large .btn-text {
+	PADDING-BOTTOM: 9px; PADDING-LEFT: 14px; PADDING-RIGHT: 14px; FONT-FAMILY: "Microsoft YaHei", "微软雅黑", helvetica, arial, verdana, tahoma, sans-serif; FONT-SIZE: 14px; PADDING-TOP: 9px
+}
+.btn-huge {
+	MIN-WIDTH: 120px; _width: 120px
+}
+.btn-huge .btn-text {
+	PADDING-BOTTOM: 9px; LINE-HEIGHT: 25px; PADDING-LEFT: 14px; PADDING-RIGHT: 14px; FONT-FAMILY: "Microsoft YaHei", "微软雅黑", helvetica, arial, verdana, tahoma, sans-serif; FONT-SIZE: 20px; PADDING-TOP: 9px
+}
+.btn {
+	BORDER-BOTTOM-COLOR: #007dcc; BACKGROUND-COLOR: #1c98e7; BORDER-TOP-COLOR: #007dcc; BORDER-RIGHT-COLOR: #007dcc; BORDER-LEFT-COLOR: #007dcc
+}
+.btn-major,.form-submit {
+	BORDER-BOTTOM-COLOR: #007dcc; BACKGROUND-COLOR: #1c98e7; BORDER-TOP-COLOR: #007dcc; BORDER-RIGHT-COLOR: #007dcc; BORDER-LEFT-COLOR: #007dcc
+}
+.btn .btn-text {
+	COLOR: #ffffff
+}
+.btn-major .btn-text ,.form-submit{
+	COLOR: #ffffff
+}
+.btn:link .btn-text {
+	COLOR: #ffffff
+}
+.btn:visited .btn-text {
+	COLOR: #ffffff
+}
+.btn-major:link .btn-text {
+	COLOR: #ffffff
+}
+.btn-major:visited .btn-text {
+	COLOR: #ffffff
+}
+.btn:hover {
+	BORDER-BOTTOM-COLOR: #1092e5; BACKGROUND-COLOR: #25a3f3; BORDER-TOP-COLOR: #1092e5; BORDER-RIGHT-COLOR: #1092e5; BORDER-LEFT-COLOR: #1092e5
+}
+.btn:focus {
+	BORDER-BOTTOM-COLOR: #1092e5; BACKGROUND-COLOR: #25a3f3; BORDER-TOP-COLOR: #1092e5; BORDER-RIGHT-COLOR: #1092e5; BORDER-LEFT-COLOR: #1092e5
+}
+.btn-major:hover,.form-submit:hover {
+	BORDER-BOTTOM-COLOR: #1092e5; BACKGROUND-COLOR: #25a3f3; BORDER-TOP-COLOR: #1092e5; BORDER-RIGHT-COLOR: #1092e5; BORDER-LEFT-COLOR: #1092e5
+}
+.btn-major:focus,.form-submit:focus {
+	BORDER-BOTTOM-COLOR: #1092e5; BACKGROUND-COLOR: #25a3f3; BORDER-TOP-COLOR: #1092e5; BORDER-RIGHT-COLOR: #1092e5; BORDER-LEFT-COLOR: #1092e5
+}
+.btn:hover .btn-text {
+	COLOR: #ffffff
+}
+.btn:focus .btn-text {
+	COLOR: #ffffff
+}
+.btn-major:hover .btn-text {
+	COLOR: #ffffff
+}
+.btn-major:focus .btn-text {
+	COLOR: #ffffff
+}
+.btn:active {
+	BORDER-BOTTOM-COLOR: #007dcc; BACKGROUND-COLOR: #108bd9; BORDER-TOP-COLOR: #007dcc; BORDER-RIGHT-COLOR: #007dcc; BORDER-LEFT-COLOR: #007dcc
+}
+.btn-major:active ,.form-submit:active{
+	BORDER-BOTTOM-COLOR: #007dcc; BACKGROUND-COLOR: #108bd9; BORDER-TOP-COLOR: #007dcc; BORDER-RIGHT-COLOR: #007dcc; BORDER-LEFT-COLOR: #007dcc
+}
+.btn:active .btn-text {
+	COLOR: #ffffff
+}
+.btn-major:active .btn-text {
+	COLOR: #ffffff
+}
+.btn-minor {
+	BORDER-BOTTOM-COLOR: #d1d1d1; BACKGROUND-COLOR: #f4f7fa; BORDER-TOP-COLOR: #d1d1d1; BORDER-RIGHT-COLOR: #d1d1d1; BORDER-LEFT-COLOR: #d1d1d1
+}
+.btn-minor .btn-text {
+	COLOR: #3399e0
+}
+.btn-minor:link .btn-text {
+	COLOR: #3399e0
+}
+.btn-minor:visited .btn-text {
+	COLOR: #3399e0
+}
+.btn-minor:hover {
+	BORDER-BOTTOM-COLOR: #e2e2e2; BACKGROUND-COLOR: #ffffff; BORDER-TOP-COLOR: #e2e2e2; BORDER-RIGHT-COLOR: #e2e2e2; BORDER-LEFT-COLOR: #e2e2e2
+}
+.btn-minor:focus {
+	BORDER-BOTTOM-COLOR: #e2e2e2; BACKGROUND-COLOR: #ffffff; BORDER-TOP-COLOR: #e2e2e2; BORDER-RIGHT-COLOR: #e2e2e2; BORDER-LEFT-COLOR: #e2e2e2
+}
+.btn-minor:hover .btn-text {
+	COLOR: #3399e0
+}
+.btn-minor:focus .btn-text {
+	COLOR: #3399e0
+}
+.btn-minor:active {
+	BORDER-BOTTOM-COLOR: #d1d1d1; BACKGROUND-COLOR: #eff2f5; BORDER-TOP-COLOR: #d1d1d1; BORDER-RIGHT-COLOR: #d1d1d1; BORDER-LEFT-COLOR: #d1d1d1
+}
+.btn-minor:active .btn-text {
+	COLOR: #3399e0
+}
+.btn-pay {
+	BORDER-BOTTOM-COLOR: #e44b15; BACKGROUND-COLOR: #ff6600; BORDER-TOP-COLOR: #e44b15; BORDER-RIGHT-COLOR: #e44b15; BORDER-LEFT-COLOR: #e44b15
+}
+.btn-pay .btn-text {
+	COLOR: #ffffff
+}
+.btn-pay:link .btn-text {
+	COLOR: #ffffff
+}
+.btn-pay:visited .btn-text {
+	COLOR: #ffffff
+}
+.btn-pay:hover {
+	BORDER-BOTTOM-COLOR: #e86813; BACKGROUND-COLOR: #ff7f18; BORDER-TOP-COLOR: #e86813; BORDER-RIGHT-COLOR: #e86813; BORDER-LEFT-COLOR: #e86813
+}
+.btn-pay:focus {
+	BORDER-BOTTOM-COLOR: #e86813; BACKGROUND-COLOR: #ff7f18; BORDER-TOP-COLOR: #e86813; BORDER-RIGHT-COLOR: #e86813; BORDER-LEFT-COLOR: #e86813
+}
+.btn-pay:hover .btn-text {
+	COLOR: #ffffff
+}
+.btn-pay:focus .btn-text {
+	COLOR: #ffffff
+}
+.btn-pay:active {
+	BORDER-BOTTOM-COLOR: #c95c14; BACKGROUND-COLOR: #f06000; BORDER-TOP-COLOR: #c95c14; BORDER-RIGHT-COLOR: #c95c14; BORDER-LEFT-COLOR: #c95c14
+}
+.btn-pay:active .btn-text {
+	COLOR: #ffffff
+}
+[disabled].btn {
+	BORDER-BOTTOM-COLOR: #cad4e4; BORDER-TOP-COLOR: #cad4e4; BORDER-RIGHT-COLOR: #cad4e4; BORDER-LEFT-COLOR: #cad4e4; CURSOR: not-allowed; pointer-events: none
+}
+.btn-disabled {
+	BORDER-BOTTOM-COLOR: #cad4e4; BORDER-TOP-COLOR: #cad4e4; BORDER-RIGHT-COLOR: #cad4e4; BORDER-LEFT-COLOR: #cad4e4; CURSOR: not-allowed; pointer-events: none
+}
+[disabled].btn .btn-text {
+	COLOR: #bbbbbb
+}
+.btn-disabled .btn-text {
+	COLOR: #bbbbbb
+}
+.btn-disabled:link .btn-text {
+	COLOR: #bbbbbb
+}
+.btn-disabled:visited .btn-text {
+	COLOR: #bbbbbb
+}
+.btn-disabled {
+	BORDER-BOTTOM-COLOR: #dfe6f1; BACKGROUND-COLOR: #ecf0f5; BORDER-TOP-COLOR: #dfe6f1; BORDER-RIGHT-COLOR: #dfe6f1; BORDER-LEFT-COLOR: #dfe6f1
+}
+.btn-disabled:hover {
+	BORDER-BOTTOM-COLOR: #dfe6f1; BACKGROUND-COLOR: #ecf0f5; BORDER-TOP-COLOR: #dfe6f1; BORDER-RIGHT-COLOR: #dfe6f1; BORDER-LEFT-COLOR: #dfe6f1
+}
+.btn-disabled:focus {
+	BORDER-BOTTOM-COLOR: #dfe6f1; BACKGROUND-COLOR: #ecf0f5; BORDER-TOP-COLOR: #dfe6f1; BORDER-RIGHT-COLOR: #dfe6f1; BORDER-LEFT-COLOR: #dfe6f1
+}
+.btn-disabled:active {
+	BORDER-BOTTOM-COLOR: #dfe6f1; BACKGROUND-COLOR: #ecf0f5; BORDER-TOP-COLOR: #dfe6f1; BORDER-RIGHT-COLOR: #dfe6f1; BORDER-LEFT-COLOR: #dfe6f1
+}
+.btn-disabled .btn-text {
+	COLOR: #bbbbbb
+}
+.btn-disabled:hover .btn-text {
+	COLOR: #bbbbbb
+}
+.btn-disabled:focus .btn-text {
+	COLOR: #bbbbbb
+}
+.btn-disabled:active .btn-text {
+	COLOR: #bbbbbb
+}
+.btn {
+	MIN-WIDTH: 60px
+}
+.btn-medium {
+	MIN-WIDTH: 60px
+}
+.btn-small {
+	MIN-WIDTH: 36px
+}
+.btn-large {
+	MIN-WIDTH: 70px
+}
+.btn-huge {
+	MIN-WIDTH: 90px
+}
+BUTTON.btn .btn-text {
+	
+}
+INPUT.btn .btn-text {
+	
+}
+BUTTON.btn-medius .btn-text {
+	
+}
+INPUT.btn-medius .btn-text {
+	
+}
+BUTTON.btn-small .btn-text {
+	
+}
+INPUT.btn-small .btn-text {
+	
+}
+BUTTON.btn-large .btn-text {
+	
+}
+INPUT.btn-large .btn-text {
+	
+}
+BUTTON.btn-huge .btn-text {
+	
+}
+INPUT.btn-huge .btn-text {
+	
+}
+DIV.btn {
+	_width: 60px
+}
+A.btn {
+	_width: 60px
+}
+SPAN.btn {
+	_width: 60px
+}
+DIV.btn-medium {
+	_width: 60px
+}
+A.btn-medium {
+	_width: 60px
+}
+SPAN.btn-medium {
+	_width: 60px
+}
+DIV.btn-small {
+	_width: 36px
+}
+A.btn-small {
+	_width: 36px
+}
+SPAN.btn-small {
+	_width: 36px
+}
+DIV.btn-large {
+	_width: 70px
+}
+A.btn-large {
+	_width: 70px
+}
+SPAN.btn-large {
+	_width: 70px
+}
+DIV.btn-huge {
+	_width: 70px
+}
+A.btn-huge {
+	_width: 70px
+}
+SPAN.btn-huge {
+	_width: 70px
+}
+.ico__loading_16 {
+	WIDTH: 16px; DISPLAY: inline-block; BACKGROUND: url(/yk/lib/img/icon/ico_loading_16.76f1f49c23.gif) no-repeat 0px 0px; HEIGHT: 15px; VERTICAL-ALIGN: text-bottom
+}
+.ico__loading_24 {
+	WIDTH: 24px; DISPLAY: inline-block; BACKGROUND: url(/yk/lib/img/icon/ico_loading_24.0d286060ff.gif) no-repeat 0px 0px; HEIGHT: 23px; VERTICAL-ALIGN: text-bottom
+}
+.ico__loading_32 {
+	WIDTH: 32px; DISPLAY: inline-block; BACKGROUND: url(/yk/lib/img/icon/ico_loading_32.d1f3a40598.gif) no-repeat 0px 0px; HEIGHT: 31px; VERTICAL-ALIGN: text-bottom
+}
+.ico__loading_40 {
+	WIDTH: 40px; DISPLAY: inline-block; BACKGROUND: url(/yk/lib/img/icon/ico_loading_40.721d91d3a0.gif) no-repeat 0px 0px; HEIGHT: 38px; VERTICAL-ALIGN: text-bottom
+}
+.ico__loading_64 {
+	WIDTH: 64px; DISPLAY: inline-block; BACKGROUND: url(/yk/lib/img/icon/ico_loading_64.b95d48db52.gif) no-repeat 0px 0px; HEIGHT: 62px; VERTICAL-ALIGN: text-bottom
+}
+.link-minor {
+	COLOR: #06a7e1 !important
+}
+.link-minor:hover {
+	COLOR: #c31 !important
+}
+.ico__error {
+	BACKGROUND-IMAGE: url(/yk/passport/img/passport.75b4fcec9a.png); WIDTH: 16px; DISPLAY: inline-block; BACKGROUND-POSITION: 0px -5px; HEIGHT: 16px; VERTICAL-ALIGN: text-bottom; MARGIN-RIGHT: 3px
+}
+.ico__info {
+	BACKGROUND-IMAGE: url(/yk/passport/img/passport.75b4fcec9a.png); WIDTH: 16px; DISPLAY: inline-block; BACKGROUND-POSITION: -20px -5px; HEIGHT: 16px; VERTICAL-ALIGN: text-bottom; MARGIN-RIGHT: 3px
+}
+.ico-success {
+	MARGIN-TOP: -3px; WIDTH: 30px; DISPLAY: inline-block; BACKGROUND: url(/yk/passport/img/passport.75b4fcec9a.png) no-repeat -95px -30px; HEIGHT: 30px; VERTICAL-ALIGN: text-bottom; MARGIN-RIGHT: 10px
+}
+.ico-user {
+	LINE-HEIGHT: 0; MARGIN-TOP: -2px; DISPLAY: inline-block; BACKGROUND: url(/yk/passport/img/passport.75b4fcec9a.png) no-repeat; FONT-SIZE: 0px; VERTICAL-ALIGN: middle; MARGIN-RIGHT: 5px
+}
+.ico-phone {
+	LINE-HEIGHT: 0; MARGIN-TOP: -2px; DISPLAY: inline-block; BACKGROUND: url(/yk/passport/img/passport.75b4fcec9a.png) no-repeat; FONT-SIZE: 0px; VERTICAL-ALIGN: middle; MARGIN-RIGHT: 5px
+}
+.ico-warning {
+	LINE-HEIGHT: 0; MARGIN-TOP: -2px; DISPLAY: inline-block; BACKGROUND: url(/yk/passport/img/passport.75b4fcec9a.png) no-repeat; FONT-SIZE: 0px; VERTICAL-ALIGN: middle; MARGIN-RIGHT: 5px
+}
+.ico-prompt {
+	LINE-HEIGHT: 0; MARGIN-TOP: -2px; DISPLAY: inline-block; BACKGROUND: url(/yk/passport/img/passport.75b4fcec9a.png) no-repeat; FONT-SIZE: 0px; VERTICAL-ALIGN: middle; MARGIN-RIGHT: 5px
+}
+.ico-user {
+	WIDTH: 12px; BACKGROUND-POSITION: -65px -5px; HEIGHT: 12px
+}
+A:hover .ico-user {
+	BACKGROUND-POSITION: -80px -5px
+}
+.ico-phone {
+	WIDTH: 7px; BACKGROUND-POSITION: -95px -5px; HEIGHT: 12px
+}
+A:hover .ico-phone {
+	BACKGROUND-POSITION: -105px -5px
+}
+.ico-warning {
+	WIDTH: 14px; BACKGROUND-POSITION: -200px 0px; HEIGHT: 12px
+}
+.ico-prompt {
+	WIDTH: 12px; BACKGROUND-POSITION: -200px -20px; HEIGHT: 12px
+}
+[disabled].btn .ico__loading_16 {
+	VERTICAL-ALIGN: middle
+}
+.btn-disabled .ico__loading_16 {
+	VERTICAL-ALIGN: middle
+}
+.splitline-or {
+	POSITION: relative; LINE-HEIGHT: 0; MARGIN: 20px 0px; BACKGROUND: url(/sites/all/themes/cainiang01/images/passport.png) no-repeat 0px 0px; HEIGHT: 1px; FONT-SIZE: 0px
+}
+.splitline-or SPAN {
+	POSITION: absolute; TEXT-ALIGN: center; LINE-HEIGHT: 20px; WIDTH: 100%; COLOR: #909090; FONT-SIZE: 14px; TOP: -10px; LEFT: 0px
+}
+.formbox FIELDSET {
+	BORDER-BOTTOM: medium none; BORDER-LEFT: medium none; BORDER-TOP: medium none; BORDER-RIGHT: medium none; _position: relative
+}
+.formbox INPUT[type=radio] {
+	MARGIN-RIGHT: 4px
+}
+.formbox INPUT[type=checkbox] {
+	MARGIN-RIGHT: 4px
+}
+.formbox .entry {
+	POSITION: relative; MARGIN-BOTTOM: 10px
+}
+.formbox .entry:before {
+	LINE-HEIGHT: 0; DISPLAY: table; CONTENT: ""
+}
+.formbox .entry:after {
+	LINE-HEIGHT: 0; DISPLAY: table; CONTENT: ""
+}
+.formbox .entry:after {
+	CLEAR: both
+}
+.formbox .entry .error {
+	LINE-HEIGHT: 12px; COLOR: #ab0707; PADDING-TOP: 5px
+}
+.formbox .entry .error#submiterror {
+	PADDING-BOTTOM: 5px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; HEIGHT: 12px; OVERFLOW: hidden; PADDING-TOP: 5px
+}
+.formbox .action {
+	MARGIN-TOP: -2px
+}
+.formbox .action .btn-large .btn-text {
+	FONT-SIZE: 18px
+}
+.formbox .form_input_label {
+	TEXT-ALIGN: right; PADDING-BOTTOM: 0px; PADDING-LEFT: 5px; WIDTH: 40px; PADDING-RIGHT: 5px; DISPLAY: inline-block; COLOR: #565656; FONT-SIZE: 14px; VERTICAL-ALIGN: middle; PADDING-TOP: 0px
+}
+.formbox .form_input {
+	WIDTH: 222px; FONT-FAMILY: "microsoft yahei", "微软雅黑", "黑体"
+}
+.formbox .entry .placeholder {
+	POSITION: absolute; FONT-FAMILY: "microsoft yahei", "微软雅黑", "黑体"; COLOR: #bbb; FONT-SIZE: 14px; TOP: 10px; LEFT: 10px
+}
+.formbox .captcha-area IMG {
+	POSITION: absolute; WIDTH: 90px; HEIGHT: 40px; VERTICAL-ALIGN: middle; TOP: 0px; CURSOR: pointer; RIGHT: 45px
+}
+.formbox .captcha-area .btn {
+	POSITION: absolute; MIN-WIDTH: 0px; WIDTH: 40px; TOP: 0px; RIGHT: 0px
+}
+.formbox .captcha-area .btn .btn-text {
+	LINE-HEIGHT: 0; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; FONT-SIZE: 0px
+}
+.formbox .code .btn {
+	POSITION: absolute; TOP: 0px; RIGHT: 0px
+}
+.formbox .smscode-area .btn {
+	POSITION: absolute; TOP: 0px; RIGHT: 0px
+}
+.formbox .save {
+	MARGIN-TOP: -4px; MARGIN-BOTTOM: 20px; HEIGHT: 18px; COLOR: #909090
+}
+.formbox .save LABEL {
+	TEXT-ALIGN: left; PADDING-BOTTOM: 0px; PADDING-LEFT: 0px; WIDTH: 50px; PADDING-RIGHT: 0px; FONT-SIZE: 12px; VERTICAL-ALIGN: middle; PADDING-TOP: 0px
+}
+.formbox .save .find {
+	FLOAT: right; VERTICAL-ALIGN: middle
+}
+.formbox .dimension {
+	POSITION: absolute; TOP: 8px; RIGHT: 11px
+}
+.formbox .dimension .ico-code {
+	WIDTH: 24px; DISPLAY: block; BACKGROUND: url(/yk/passport/img/login/logreg.5cb3a4d2c6.png) #fff no-repeat 0px 0px; HEIGHT: 24px
+}
+.formbox .dimension .qtips {
+	PADDING-BOTTOM: 2px; PADDING-LEFT: 5px; WIDTH: 130px; BOTTOM: 32px; PADDING-RIGHT: 5px; COLOR: #909090; RIGHT: -11px; PADDING-TOP: 2px
+}
+.formbox .dimension .qtips .handler {
+	TOP: 4px
+}
+.formbox .dimension .qtips .content {
+	COLOR: #909090
+}
+.formbox .terms {
+	MARGIN-TOP: -4px; MARGIN-BOTTOM: 20px; HEIGHT: 18px
+}
+.formbox .getpwd {
+	TEXT-ALIGN: right; LINE-HEIGHT: 20px; MARGIN-TOP: -20px
+}
+.formbox .ico-repeat {
+	WIDTH: 20px; DISPLAY: inline-block; BACKGROUND: url(/yk/passport/img/passport.75b4fcec9a.png) no-repeat -40px -5px; HEIGHT: 20px
+}
+.form-error {
+	BORDER-BOTTOM: #fbcbc8 1px solid; BORDER-LEFT: #fbcbc8 1px solid; PADDING-BOTTOM: 0px; LINE-HEIGHT: 22px; BACKGROUND-COLOR: #fff5f5; PADDING-LEFT: 5px; PADDING-RIGHT: 5px; HEIGHT: 22px; COLOR: #cc6666; OVERFLOW: hidden; BORDER-TOP: #fbcbc8 1px solid; BORDER-RIGHT: #fbcbc8 1px solid; PADDING-TOP: 0px
+}
+.form-info {
+	BORDER-BOTTOM: #ecdda8 1px solid; BORDER-LEFT: #ecdda8 1px solid; PADDING-BOTTOM: 0px; LINE-HEIGHT: 22px; BACKGROUND-COLOR: #ffffe5; PADDING-LEFT: 5px; PADDING-RIGHT: 5px; HEIGHT: 22px; COLOR: #909090; OVERFLOW: hidden; BORDER-TOP: #ecdda8 1px solid; BORDER-RIGHT: #ecdda8 1px solid; PADDING-TOP: 0px
+}
+.thirdparties {
+	POSITION: relative; HEIGHT: 75px; _zoom: 1
+}
+.thirdparties .ico-QQ {
+	WIDTH: 20px; DISPLAY: inline-block; BACKGROUND: url(/sites/all/themes/cainiang01/images/ico_others.png) no-repeat 0px 0px; HEIGHT: 20px; VERTICAL-ALIGN: middle
+}
+.thirdparties .ico-weibo {
+	WIDTH: 20px; DISPLAY: inline-block; BACKGROUND: url(/sites/all/themes/cainiang01/images/ico_others.png) no-repeat 0px 0px; HEIGHT: 20px; VERTICAL-ALIGN: middle
+}
+.thirdparties .ico-zfb {
+	WIDTH: 20px; DISPLAY: inline-block; BACKGROUND: url(/sites/all/themes/cainiang01/images/ico_others.png) no-repeat 0px 0px; HEIGHT: 20px; VERTICAL-ALIGN: middle
+}
+.thirdparties .ico-freelogin {
+	WIDTH: 20px; DISPLAY: inline-block; BACKGROUND: url(/sites/all/themes/cainiang01/images/ico_others.png) no-repeat 0px 0px; HEIGHT: 20px; VERTICAL-ALIGN: middle
+}
+.thirdparties .ico-txweibo {
+	WIDTH: 20px; DISPLAY: inline-block; BACKGROUND: url(/sites/all/themes/cainiang01/images/ico_others.png) no-repeat 0px 0px; HEIGHT: 20px; VERTICAL-ALIGN: middle
+}
+.thirdparties .ico-wechat {
+	WIDTH: 20px; DISPLAY: inline-block; BACKGROUND: url(/sites/all/themes/cainiang01/images/ico_others.png) no-repeat 0px 0px; HEIGHT: 20px; VERTICAL-ALIGN: middle
+}
+.thirdparties .ico-renren {
+	WIDTH: 20px; DISPLAY: inline-block; BACKGROUND: url(/sites/all/themes/cainiang01/images/ico_others.png) no-repeat 0px 0px; HEIGHT: 20px; VERTICAL-ALIGN: middle
+}
+.thirdparties .ico-kaixin {
+	WIDTH: 20px; DISPLAY: inline-block; BACKGROUND: url(/sites/all/themes/cainiang01/images/ico_others.png) no-repeat 0px 0px; HEIGHT: 20px; VERTICAL-ALIGN: middle
+}
+.thirdparties .ico-toudu {
+	WIDTH: 20px; DISPLAY: inline-block; BACKGROUND: url(/sites/all/themes/cainiang01/images/ico_others.png) no-repeat 0px 0px; HEIGHT: 20px; VERTICAL-ALIGN: middle
+}
+.thirdparties .ico-taobao {
+	WIDTH: 20px; DISPLAY: inline-block; BACKGROUND: url(/sites/all/themes/cainiang01/images/ico_others.png) no-repeat 0px 0px; HEIGHT: 20px; VERTICAL-ALIGN: middle
+}
+.thirdparties .ico-QQ {
+	WIDTH: 40px; HEIGHT: 40px
+}
+.thirdparties .ico-zfb {
+	WIDTH: 40px; HEIGHT: 40px
+}
+.thirdparties .ico-wechat {
+	WIDTH: 40px; HEIGHT: 40px
+}
+.thirdparties .ico-taobao {
+	WIDTH: 40px; HEIGHT: 40px
+}
+.thirdparties .ico-QQ {
+	BACKGROUND-POSITION: 0px 0px
+}
+.thirdparties .ico-zfb {
+	BACKGROUND-POSITION: -90px 0px
+}
+.thirdparties .ico-wechat {
+	BACKGROUND-POSITION: -180px 0px
+}
+.thirdparties .ico-taobao {
+	BACKGROUND-POSITION: -135px 0px
+}
+.thirdparties .ico-weibo {
+	BACKGROUND-POSITION: -150px -90px
+}
+.thirdparties .ico-txweibo {
+	BACKGROUND-POSITION: 0px -90px
+}
+.thirdparties .ico-renren {
+	BACKGROUND-POSITION: -30px -90px
+}
+.thirdparties .ico-kaixin {
+	BACKGROUND-POSITION: -60px -90px
+}
+.thirdparties .ico-toudu {
+	BACKGROUND-POSITION: -90px -90px
+}
+.thirdparties .main-links {
+	WIDTH: 240px; OVERFLOW: hidden
+}
+.thirdparties .main-links UL {
+	WIDTH: 280px; MARGIN-BOTTOM: 15px
+}
+.thirdparties .main-links LI {
+	FLOAT: left; MARGIN-RIGHT: 26px
+}
+.thirdparties .main-links EM {
+	DISPLAY: none
+}
+.thirdparties .main-links A:hover .ico-QQ {
+	BACKGROUND-POSITION: 0px -45px
+}
+.thirdparties .main-links A:hover .ico-zfb {
+	BACKGROUND-POSITION: -90px -45px
+}
+.thirdparties .main-links A:hover .ico-taobao {
+	BACKGROUND-POSITION: -135px -45px
+}
+.thirdparties .main-links A:hover .ico-wechat {
+	BACKGROUND-POSITION: -180px -45px
+}
+.thirdparties .sub-links {
+	POSITION: absolute; TEXT-ALIGN: right; WIDTH: 50px; HEIGHT: 20px; OVERFLOW: hidden; TOP: 55px; RIGHT: 0px; -webkit-transition: width .2s ease-in-out; -moz-transition: width .2s ease-in-out; -o-transition: width .2s ease-in-out; transition: width .2s ease-in-out
+}
+.thirdparties .sub-links .handle {
+	POSITION: absolute; TOP: 0px; LEFT: 0px
+}
+.thirdparties .sub-links .panel {
+	POSITION: absolute; WIDTH: 120px; TOP: 0px; LEFT: 48px
+}
+.thirdparties .sub-links .panel A {
+	FLOAT: left; MARGIN-LEFT: 10px
+}
+.thirdparties .sub-links A:hover .ico-weibo {
+	BACKGROUND-POSITION: -150px -115px
+}
+.thirdparties .sub-links A:hover .ico-txweibo {
+	BACKGROUND-POSITION: 0px -115px
+}
+.thirdparties .sub-links A:hover .ico-renren {
+	BACKGROUND-POSITION: -30px -115px
+}
+.thirdparties .sub-links A:hover .ico-kaixin {
+	BACKGROUND-POSITION: -60px -115px
+}
+.thirdparties .sub-links-open {
+	WIDTH: 140px
+}
+.form-other {
+	MARGIN-TOP: 6px; COLOR: #909090
+}
+.mq-login {
+	DISPLAY: none
+}
+.mobile-text {
+	LINE-HEIGHT: 34px; HEIGHT: 34px; FONT-SIZE: 20px
+}
+.mobile-text A {
+	MARGIN-LEFT: 20px; FONT-SIZE: 14px
+}
+.captcha-area {
+	DISPLAY: none
+}
+.passport-win-status .head {
+	MARGIN-TOP: 40px; MARGIN-BOTTOM: 20px; FONT-SIZE: 20px
+}
+.win-stbox {
+	MARGIN: 0px auto; WIDTH: 240px
+}
+.win-stbox .result {
+	PADDING-LEFT: 45px; MARGIN-BOTTOM: 30px; FONT-SIZE: 24px
+}
+.win-stbox .result .info {
+	PADDING-LEFT: 40px; COLOR: #909090; FONT-SIZE: 12px
+}
+.win-stbox .formbox .tips {
+	MARGIN-BOTTOM: 5px; COLOR: #909090
+}
+.win-stbox .formbox .entry {
+	MARGIN-BOTTOM: 20px
+}
+.win-stbox .form-other {
+	POSITION: relative; MARGIN-TOP: 7px
+}
+.win-stbox .form-other .linkskip {
+	POSITION: absolute; BOTTOM: 0px; RIGHT: 0px
+}
+.st-success .result {
+	PADDING-TOP: 100px
+}
+.passport-tab {
+	BORDER-BOTTOM: #e7e7e7 2px solid; HEIGHT: 34px
+}
+.passport-tab UL {
+	FLOAT: left; _position: relative; _top: 2px
+}
+.passport-tab UL LI {
+	POSITION: relative; FLOAT: left
+}
+.passport-tab UL LI A {
+	BORDER-BOTTOM: #e7e7e7 2px solid; PADDING-BOTTOM: 0px; LINE-HEIGHT: 34px; PADDING-LEFT: 20px; PADDING-RIGHT: 20px; DISPLAY: block; COLOR: #555; FONT-SIZE: 20px; TEXT-DECORATION: none; PADDING-TOP: 0px
+}
+.passport-tab UL LI A.active {
+	BORDER-BOTTOM-COLOR: #06a7e1; BORDER-TOP-COLOR: #06a7e1; COLOR: #06a7e1; BORDER-RIGHT-COLOR: #06a7e1; BORDER-LEFT-COLOR: #06a7e1
+}
+.passport-tab .extand {
+	POSITION: relative; LINE-HEIGHT: 34px; FLOAT: right; FONT-SIZE: 14px; TOP: 4px; _top: 10px
+}
+.passport-tab .extand A {
+	COLOR: #06a7e1
+}
+.passport-tab .extand A:hover {
+	COLOR: #c31
+}
+.passport-win {
+	POSITION: relative; PADDING-BOTTOM: 10px; MARGIN: 0px auto; MIN-HEIGHT: 420px; PADDING-LEFT: 10px; WIDTH: 458px; PADDING-RIGHT: 10px; PADDING-TOP: 0px; _height: 420px
+}
+.passport-win .passport-body {
+	MARGIN-TOP: 20px
+}
+.passport-win .passport-main {
+	POSITION: relative; WIDTH: 240px
+}
+.passport-win .splitline-or {
+	MARGIN-TOP: 15px; MARGIN-BOTTOM: 15px
+}
+.passport-win .connect-head {
+	MARGIN-TOP: 10px
+}
+.passport-win .thirdparties .main-links UL {
+	MARGIN-BOTTOM: 10px
+}
+.passport-win .thirdparties .sub-links {
+	TOP: 50px
+}
+.passport-win .form_input_l {
+	PADDING-BOTTOM: 6px; PADDING-TOP: 6px
+}
+.passport-win .formbox .code .btn .btn-text {
+	PADDING-BOTTOM: 6px; PADDING-TOP: 6px
+}
+.passport-win .formbox .smscode-area .btn .btn-text {
+	PADDING-BOTTOM: 6px; PADDING-TOP: 6px
+}
+.passport-win .formbox .captcha-area .btn .btn-text {
+	PADDING-BOTTOM: 6px; PADDING-TOP: 6px
+}
+.passport-win .form_input_placeholder SPAN {
+	TOP: 7px
+}
+.passport-win .formbox .captcha-area IMG {
+	WIDTH: 100px; HEIGHT: 34px; RIGHT: 37px
+}
+.passport-win .formbox .captcha-area .btn {
+	WIDTH: 34px
+}
+.connect-head {
+	MARGIN: 20px 0px 7px; COLOR: #909090
+}
+.passport-adsignup {
+	POSITION: absolute; TOP: 0px; LEFT: 255px
+}
+.win-signup-pic {
+	WIDTH: 213px; BACKGROUND: url(/yk/passport/img/banner/win_signup.f5e30f97eb.png) no-repeat; HEIGHT: 250px
+}
+.win-eq-pic {
+	WIDTH: 213px; BACKGROUND: url(/yk/passport/img/banner/win_eq.6cfe5144eb.png) no-repeat; HEIGHT: 250px
+}
+.smscode-area {
+	POSITION: relative
+}
+.smscode-signup {
+	DISPLAY: none
+}
+.banner-winpassport01 {
+	MARGIN: 0px -40px; WIDTH: 538px; DISPLAY: block; BACKGROUND: no-repeat center top; HEIGHT: 74px
+}
+.banner-winpassport02 {
+	MARGIN: 0px -40px; WIDTH: 538px; DISPLAY: block; BACKGROUND: no-repeat center top; HEIGHT: 74px
+}
+.banner-winpassport03 {
+	MARGIN: 0px -40px; WIDTH: 538px; DISPLAY: block; BACKGROUND: no-repeat center top; HEIGHT: 74px
+}
+.banner-winpassport04 {
+	MARGIN: 0px -40px; WIDTH: 538px; DISPLAY: block; BACKGROUND: no-repeat center top; HEIGHT: 74px
+}
+.banner-winpassport05 {
+	MARGIN: 0px -40px; WIDTH: 538px; DISPLAY: block; BACKGROUND: no-repeat center top; HEIGHT: 74px
+}
+.banner-winpassport06 {
+	MARGIN: 0px -40px; WIDTH: 538px; DISPLAY: block; BACKGROUND: no-repeat center top; HEIGHT: 74px
+}
+.banner-winpassport07 {
+	MARGIN: 0px -40px; WIDTH: 538px; DISPLAY: block; BACKGROUND: no-repeat center top; HEIGHT: 74px
+}
+.banner-winpassport08 {
+	MARGIN: 0px -40px; WIDTH: 538px; DISPLAY: block; BACKGROUND: no-repeat center top; HEIGHT: 74px
+}
+.banner-winpassport01 {
+	BACKGROUND-IMAGE: url(/yk/passport/img/banner/bannertop_01.9125d274f2.png)
+}
+.banner-winpassport02 {
+	BACKGROUND-IMAGE: url(/yk/passport/img/banner/bannertop_02.c8f321351d.png)
+}
+.banner-winpassport03 {
+	BACKGROUND-IMAGE: url(/yk/passport/img/banner/bannertop_03.fb5b98b80b.png)
+}
+.banner-winpassport04 {
+	BACKGROUND-IMAGE: url(/yk/passport/img/banner/bannertop_04.fe80a17f79.png)
+}
+.banner-winpassport05 {
+	BACKGROUND-IMAGE: url(/yk/passport/img/banner/bannertop_05.380b22ec1a.png)
+}
+.banner-winpassport06 {
+	BACKGROUND-IMAGE: url(/yk/passport/img/banner/bannertop_06.7b614eebe9.png)
+}
+.banner-winpassport07 {
+	BACKGROUND-IMAGE: url(/yk/passport/img/banner/bannertop_07.db047553b1.png)
+}
+.banner-winpassport08 {
+	BACKGROUND-IMAGE: url(/yk/passport/img/banner/bannertop_08.988aab8261.png)
+}
+.signup-skin1 {
+	BACKGROUND-IMAGE: url(/yk/passport/img/signup/bg_supermario.cd2ca48f83.png); BACKGROUND-COLOR: #e8f5ff
+}
+HTML {
+	 HEIGHT: 100%; _width: 100%; _height: 760px
+}
+BODY {
+	  HEIGHT: 100%; _width: 100%; _height: 760px
+}
+.window {
+	 HEIGHT: 100%; _width: 100%; _height: 760px
+}
+.screen {
+	  HEIGHT: 100%; _width: 100%; _height: 760px
+}
+.passport-page {
+	 HEIGHT: 100%; _width: 100%; _height: 760px
+}
+.passport-page {
+	BACKGROUND-IMAGE: none; BACKGROUND-COLOR: transparent; BACKGROUND-REPEAT: no-repeat; BACKGROUND-POSITION: 100px 55px
+}
+
+.passport-page-userarea
+{
+     BACKGROUND-IMAGE: none; BACKGROUND-COLOR: transparent; BACKGROUND-REPEAT: no-repeat; BACKGROUND-POSITION: 600px 200px
+}
+
+.passport-page-password {
+	BACKGROUND-IMAGE: none; BACKGROUND-COLOR: transparent; BACKGROUND-REPEAT: no-repeat; BACKGROUND-POSITION: 160px 90px
+}
+.passport-page .mqform {
+	DISPLAY: none
+}
+.yk-header {
+	Z-INDEX: 10; POSITION: absolute;  WIDTH: 100%; BACKGROUND: #fff; HEIGHT: 75px; TOP: 0px; RIGHT: 0px; LEFT: 0px; _width: 970px
+}
+.yk-header .yk-box {
+	MARGIN: 0px auto; 
+}
+.yk-logo {
+	PADDING-BOTTOM: 10px; LINE-HEIGHT: 0; MARGIN-TOP: 15px; PADDING-LEFT: 10px; PADDING-RIGHT: 10px; DISPLAY: inline-block; FONT-SIZE: 0px; PADDING-TOP: 10px
+}
+.yk-logo I {
+	WIDTH: 320px; DISPLAY: inline-block; BACKGROUND: url(/sites/default/files/logo.png) no-repeat; HEIGHT: 45px
+}
+.yk-container {
+	POSITION: relative; MARGIN: 0px auto;  HEIGHT: 100%
+}
+.yk-container .right {
+	PADDING-BOTTOM: 0px;  PADDING-LEFT: 0px; WIDTH: 240px; PADDING-RIGHT: 0px; FLOAT: right; 
+}
+
+.userarea .right
+{
+    WIDTH: auto;
+    PADDING-top: 100px;
+}
+
+.userarea .form-submit
+{
+   MARGIN-TOP: 15px;
+}
+
+.yk-container .right .loginbox {
+	Z-INDEX: 2; POSITION: relative
+}
+.yk-container .right .loginbg {
+	Z-INDEX: 1; POSITION: absolute; WIDTH: 320px; BACKGROUND: url(/yk/passport/img/bg_form.550d5643c7.png) no-repeat; HEIGHT: 100%; TOP: 0px; RIGHT: 0px; _height: 750px; _background: none
+}
+.loginbox .loginhead {
+	LINE-HEIGHT: 30px; MARGIN-BOTTOM: 15px; HEIGHT: 30px
+}
+.loginbox .loginhead .title {
+	FLOAT: left; FONT-SIZE: 20px; FONT-WEIGHT: normal
+}
+.loginbox .loginhead .extand {
+	POSITION: relative; FLOAT: right; FONT-SIZE: 14px; TOP: 4px
+}
+.signup-skin1 {
+	BACKGROUND-IMAGE: url(/sites/all/themes/cainiang01/images/cailanzi1.jpg); BACKGROUND-COLOR: white;
+}
+
+.signup-skin2 {
+	BACKGROUND-IMAGE: url(/sites/all/themes/cainiang01/images/weizhi.gif); BACKGROUND-COLOR: white;
+}
+
+.signup-skin3 {
+	BACKGROUND-IMAGE: url(/sites/all/themes/cainiang01/images/mima1.jpg); BACKGROUND-COLOR: white;
+}
+
+
+.formbox INPUT[type=text] {
+	width: 240px;
+}
+.formbox INPUT[type=password] {
+	width: 240px;
+}
+.password-strength{
+  float:none;
+}
+
+.confirm-parent,password-parent{
+  width:auto !important;
+  float:none !important;
+}
+div.form-item div.password-suggestions{
+   width: 227.8px;
+}
+div.password-confirm{
+  float:none;
+}
+
+.form-submit{
+  width:240px;
+  height:30px;
+  font-size:18px;
+  border:0;
+  
+}
+.form-other{
+}
+.JingHeUserNav, .JingHeNav
+{
+   display:none;
+}
+
+div#page-wrapper
+{
+  top:0;
+  margin-top:0;
+  position:relative;
+}
+
+#page{
+	overflow:visible;
+}
+
+@media (max-width: 568px) {
+   .yk-container .right {
+	PADDING-BOTTOM: 0px;  PADDING-LEFT: 0px; WIDTH: 240px; PADDING-RIGHT: 0px;float:none;margin:0 auto;
+    }
+}
+
+@media (min-width: 568px) and (max-width: 992px) {
+
+ .yk-container .right {
+	PADDING-BOTTOM: 0px;  PADDING-LEFT: 0px; WIDTH: 240px; PADDING-RIGHT: 0px;float:none;
+    }
+  
+}

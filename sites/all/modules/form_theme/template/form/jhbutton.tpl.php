@@ -1,0 +1,1 @@
+<div class="JHAddToCart btn-group-lg"> <button name="op" class="btn btn-default btn-block form-submit" id="edit-submit" type="submit" value="收入菜篮子"> <span class="glyphicon glyphicon-shopping-cart"></span> 加入菜篮子 </button></div>

@@ -1,0 +1,19 @@
+#sheng-wrapper-div,#shi-wrapper-div,#xian-wrapper-div
+{
+  float:left;
+}
+@media (max-width: 568px) {
+   #sheng-wrapper-div,#shi-wrapper-div,#xian-wrapper-div,.form-item
+      {
+     float:none !important;
+   }
+}
+
+@media (min-width: 568px) and (max-width: 992px) {
+
+  #sheng-wrapper-div,#shi-wrapper-div,#xian-wrapper-div,.form-item
+      {
+     float:none !important;
+   }
+  
+}

@@ -1,0 +1,244 @@
+select
+i.FActName as FStatus,
+f.FID,
+p.FID as FProcInstanceID
+,p.FFormInsID
+,p.FStatus as FStatusInt
+,p.FProcInsNO as FAppID
+,f.applicantUser_DepID as FApplyUserDeptID
+,f.applicantUser_DepName as FApplyUserDeptName
+,f.CreateDepID as FCreateUserDeptID
+,f.CreateDepName as FCreateUserDeptName
+,f.FCreateUserID
+,f.FCreateUserName
+,'' as FProcType
+,p.FProcInsName as FProcInstName
+,p.FStartDate
+, NULL as FRequestStatus
+, f.applicantUserShow_value as FApplyUserID
+, f.applicantUserShow_text as FApplyUserName
+, f.FProposalNo
+, f.FProposalUserID
+, f.FPostType
+, f.FImproveType
+, f.FProposalType
+, f.FProposalName
+, f.FImpleType
+, f.FproposalAssigner
+, f.FproposalImple
+, f.FImproveBegin
+, f.FImproveEnd
+, f.FEstimateFinishDate
+, f.FFactFinishDate
+, f.FImpleStartDate
+, f.FOncePrice
+, f.FYearPrice
+, f.FSelfEvaluation
+, f.FImplePlan
+, f.FIETecAccount
+, 0 as FImpleEffectScore
+, 0 as FImpleNoEffectScore
+, f.FImpleCreateScore
+, f.FImpleDifficultyScore
+, '无' as FImpleGrade
+, '无' as FImpleAwardPrice
+, f.FIETecEffectScore
+, f.FIETecNoEffectScore
+, 0 as FIETecCreateScore
+, 0 as FIETecDifficultyScore
+, '无' as FIETecGrade
+, '无' as FIETecAwardPrice
+, f.FIEEngineerEffectScore
+, f.FIEEngineerNoEffectScore
+, f.FIEEngineerCreateScore
+, f.FIEEngineerDifficultyScore
+, f.FIEEngineerGrade
+, f.FIEEngineerAwardPrice
+, f.FDeptManagerEffectScore
+, f.FDeptManagerNoEffectScore
+, f.FDeptManagerCreateScore
+, f.FDeptManagerDifficultyScore
+, f.FDeptManagerGrade
+, f.FDeptManagerAwardPrice
+, f.FIEManagerEffectScore
+, f.FIEManagerNoEffectScore
+, f.FIEManagerCreateScore
+, f.FIEManagerDifficultyScore
+, f.FIEManagerGrade
+, f.FIEManagerAwardPrice
+, f.FDeptDirectorEffectScore
+, f.FDeptDirectorNoEffectScore
+, f.FDeptDirectorCreateScore
+, f.FDeptDirectorDifficultyScore
+, f.FDeptDirectorGrade
+, f.FDeptDirectorAwardPrice
+, NULL as FInactivateDate
+, f.FCreateBy
+, f.FCreationDate
+, f.FLastUpdateBy
+, f.FLastUpdateDate
+, f.FProposalImpleDate
+, f.FProposalWeekDate
+, f.FPriceType
+, f.FImpleTotalScore
+, f.FIETecTotalScore
+, f.FIEEngineerTotalScore
+, f.FDeptManagerTotalScore
+, f.FIEManagerTotalScore
+, f.FDeptDirectorTotalScore
+--, ISNULL(s.FProposalStatus, p.FProposalStatus) AS FProposalStatus   
+, s.FProposalStatus AS FProposalStatus 
+from
+(SELECT [FID]
+      ,[FProcID]
+      ,[FFormInsID]
+      ,[FK2ProcInsID]
+      ,[FProcInsBID]
+      ,[FProcInsName]
+      ,[FProcInsNO]
+      ,[FStartUserID]
+      ,[FStartDate]
+      ,[FCompletedDate]
+      ,[FStatus]
+      ,[FDescription]
+      ,[FInactivateDate]
+      ,[FCreateBy]
+      ,[FCreationDate]
+      ,[FLastUpdateBy]
+      ,[FLastUpdateDate]
+  FROM [EAWP_Workspace].[dbo].[TB_WMP_ProcInstanceHistory]
+   where  FprocInsNo like 'TAGS%'
+  UNION ALL
+  SELECT    [FID]
+      ,[FProcID]
+      ,[FFormInsID]
+      ,[FK2ProcInsID]
+      ,[FProcInsBID]
+      ,[FProcInsName]
+      ,[FProcInsNO]
+      ,[FStartUserID]
+      ,[FStartDate]
+      ,[FCompletedDate]
+      ,[FStatus]
+      ,[FDescription]
+      ,[FInactivateDate]
+      ,[FCreateBy]
+      ,[FCreationDate]
+      ,[FLastUpdateBy]
+      ,[FLastUpdateDate]
+       from [EAWP_Workspace].[dbo].[TB_WMP_ProcInstance]
+       where  FprocInsNo like 'TAGS%'
+)
+
+AS p
+left join
+(
+  select FID
+        ,FCreateBy
+        ,FCreationDate
+        ,FLastUpdateBy
+        ,FLastUpdateDate
+        ,Fdata.value('(FormData/txt_FProposalNo)[1]', 'nvarchar(200)') AS FProposalNo
+      ,Fdata.value('(FormData/txt_FProposalUserID)[1]', 'nvarchar(50)') AS FProposalUserID
+      ,Fdata.value('(FormData/txt_FPostType)[1]', 'nvarchar(50)') AS FPostType
+      ,left(Fdata.value('(FormData/selFImproveType)[1]', 'nvarchar(50)'),Charindex(';',Fdata.value('(FormData/selFImproveType)[1]', 'nvarchar(50)'))-1)  AS FImproveType
+      ,left(Fdata.value('(FormData/selFProposalType)[1]', 'nvarchar(50)'),Charindex(';',Fdata.value('(FormData/selFProposalType)[1]', 'nvarchar(50)'))-1)  AS FProposalType
+      --,Fdata.value('(FormData/selFProposalType)[1]', 'nvarchar(50)') AS FProposalType
+      ,Fdata.value('(FormData/txt_FProposalName)[1]', 'nvarchar(500)') AS FProposalName
+      ,Fdata.value('(FormData/selFImpleType)[1]', 'nvarchar(50)') AS FImpleType
+      ,Fdata.value('(FormData/txt_FImproveBegin)[1]', 'nvarchar(2000)') AS FImproveBegin
+      ,Fdata.value('(FormData/txt_FImproveEnd)[1]', 'nvarchar(2000)') AS FImproveEnd
+      ,Fdata.value('(FormData/txt_FSelfEvaluation)[1]', 'nvarchar(2000)') AS FSelfEvaluation
+      ,Fdata.value('(FormData/txt_FproposalImpleID)[1]', 'nvarchar(50)') AS FproposalImple
+      ,Fdata.value('(FormData/txt_FproposalAssignerID)[1]', 'nvarchar(50)') AS FproposalAssigner
+   
+      ,Fdata.value('(FormData/txt_FImpleStartDate)[1]', 'datetime') AS FImpleStartDate
+      ,Fdata.value('(FormData/txt_FImplePlan)[1]', 'nvarchar(2000)') AS  FImplePlan
+      ,Fdata.value('(FormData/txt_FImpleCreateScore)[1]', 'int') AS FImpleCreateScore
+      ,Fdata.value('(FormData/txt_FImpleDifficultyScore)[1]', 'int') AS FImpleDifficultyScore
+      ,Fdata.value('(FormData/txt_FImpleTotalScore)[1]', 'int') AS FImpleTotalScore
+      ,Fdata.value('(FormData/txt_FProposalImpleDate)[1]', 'nvarchar(50)') AS FProposalImpleDate
+      ,Fdata.value('(FormData/txt_FFactFinishDate)[1]', 'datetime') AS FFactFinishDate 
+      ,Fdata.value('(FormData/div_SealFPriceType)[1]', 'int') AS  FPriceType
+	  ,case when Fdata.value('(FormData/div_SealFPriceType)[1]', 'int') = '1' then 
+	  Fdata.value('(FormData/txt_SealFPriceType)[1]', 'nvarchar(200)') 
+	     else 'NULL' end
+	       AS  FOncePrice
+	  ,case when Fdata.value('(FormData/div_SealFPriceType)[1]', 'int') <> '1' then 
+	  Fdata.value('(FormData/txt_SealFPriceType)[1]', 'nvarchar(200)') 
+	     else 'NULL' end
+	       AS  FYearPrice
+  
+	,Fdata.value('(FormData/txt_FIETecAccount)[1]', 'nvarchar(2000)') AS  FIETecAccount
+	,Fdata.value('(FormData/txt_FIETecEffectScore)[1]', 'int') AS FIETecEffectScore
+	,Fdata.value('(FormData/txt_FIETecNoEffectScore)[1]', 'int') AS FIETecNoEffectScore
+	,Fdata.value('(FormData/txt_FIETecTotalScore)[1]', 'int') AS FIETecTotalScore
+	,Fdata.value('(FormData/txt_FIEEngineerEffectScore)[1]', 'int') AS FIEEngineerEffectScore
+	,Fdata.value('(FormData/txt_FIEEngineerNoEffectScore)[1]', 'int') AS FIEEngineerNoEffectScore
+	,Fdata.value('(FormData/txt_FIEEngineerCreateScore)[1]', 'int') AS FIEEngineerCreateScore
+	,Fdata.value('(FormData/txt_FIEEngineerDifficultyScore)[1]', 'int') AS FIEEngineerDifficultyScore
+	,Fdata.value('(FormData/txt_FIEEngineerGrade)[1]', 'nvarchar(100)') AS FIEEngineerGrade
+	,Fdata.value('(FormData/txt_FIEEngineerAwardPrice)[1]', 'nvarchar(100)') AS FIEEngineerAwardPrice
+	,Fdata.value('(FormData/txt_FIEEngineerTotalScore)[1]', 'int') AS FIEEngineerTotalScore
+	,Fdata.value('(FormData/txt_FProposalWeekDate)[1]', 'nvarchar(50)') AS FProposalWeekDate
+	,Fdata.value('(FormData/txt_FDeptManagerEffectScore)[1]', 'int') AS FDeptManagerEffectScore
+	,Fdata.value('(FormData/txt_FDeptManagerNoEffectScore)[1]', 'int') AS FDeptManagerNoEffectScore
+	,Fdata.value('(FormData/txt_FDeptManagerCreateScore)[1]', 'int') AS FDeptManagerCreateScore
+	,Fdata.value('(FormData/txt_FDeptManagerDifficultyScore)[1]', 'int') AS FDeptManagerDifficultyScore
+	,Fdata.value('(FormData/txt_FDeptManagerAwardPrice)[1]', 'nvarchar(100)') AS FDeptManagerAwardPrice
+	,Fdata.value('(FormData/txt_FDeptManagerTotalScore)[1]', 'int') AS FDeptManagerTotalScore
+	,Fdata.value('(FormData/txt_FIEManagerEffectScore)[1]', 'int') AS FIEManagerEffectScore
+	,Fdata.value('(FormData/txt_FIEManagerNoEffectScore)[1]', 'int') AS FIEManagerNoEffectScore
+	,Fdata.value('(FormData/txt_FIEManagerCreateScore)[1]', 'int') AS FIEManagerCreateScore
+	,Fdata.value('(FormData/txt_FIEManagerDifficultyScore)[1]', 'int') AS FIEManagerDifficultyScore
+	,Fdata.value('(FormData/txt_FIEManagerAwardPrice)[1]', 'nvarchar(100)') AS FIEManagerAwardPrice
+	,Fdata.value('(FormData/txt_FIEManagerTotalScore)[1]', 'int') AS FIEManagerTotalScore
+	,Fdata.value('(FormData/txt_FDeptDirectorEffectScore)[1]', 'int') AS FDeptDirectorEffectScore
+	,Fdata.value('(FormData/txt_FDeptDirectorNoEffectScore)[1]', 'int') AS FDeptDirectorNoEffectScore
+	,Fdata.value('(FormData/txt_FDeptDirectorCreateScore)[1]', 'int') AS FDeptDirectorCreateScore
+	,Fdata.value('(FormData/txt_FDeptDirectorDifficultyScore)[1]', 'int') AS FDeptDirectorDifficultyScore
+	,Fdata.value('(FormData/txt_FDeptDirectorGrade)[1]', 'nvarchar(100)') AS FDeptDirectorGrade
+    ,Fdata.value('(FormData/txt_FEstimateFinishDate)[1]', 'nvarchar(200)') AS FEstimateFinishDate
+	,Fdata.value('(FormData/txt_FDeptManagerGrade)[1]', 'nvarchar(100)') AS FDeptManagerGrade
+	,Fdata.value('(FormData/txt_FIEManagerGrade)[1]', 'nvarchar(100)') AS FIEManagerGrade
+	,Fdata.value('(FormData/txt_FDeptDirectorAwardPrice)[1]', 'nvarchar(100)') AS FDeptDirectorAwardPrice
+	,Fdata.value('(FormData/txt_FDeptDirectorTotalScore)[1]', 'int') AS FDeptDirectorTotalScore
+	,Fdata.value('(FormData/table_Header/Header_applicantUserShow_value)[1]', 'nvarchar(50)') AS applicantUserShow_value
+	,Fdata.value('(FormData/table_Header/Header_applicantUser_DepID)[1]', 'nvarchar(50)') AS applicantUser_DepID
+	,Fdata.value('(FormData/table_Header/Header_applicantUser_DepName)[1]', 'nvarchar(50)') AS applicantUser_DepName
+	,Fdata.value('(FormData/table_Header/Header_CreateDepID)[1]', 'nvarchar(50)') AS CreateDepID
+	,Fdata.value('(FormData/table_Header/Header_CreateDepName)[1]', 'nvarchar(50)') AS CreateDepName
+	,Fdata.value('(FormData/table_Header/Header_applicantUserShow_text)[1]', 'nvarchar(50)') AS applicantUserShow_text
+	,Fdata.value('(FormData/table_Header/Header_CreateUserName)[1]', 'nvarchar(50)') AS FCreateUserName
+	,Fdata.value('(FormData/table_Header/Header_CreateUserID)[1]', 'nvarchar(50)') AS FCreateUserID
+	
+  from
+  EAWP_Workspace.dbo.TB_WMP_FormData
+) as f
+on p.FFormInsID = f.FID
+left join
+EAWP_Workspace.dbo.TB_WMP_ActIns AS i ON p.FID = i.FProcInsID AND i.FInitStatus = 1 AND i.FStatus = 0 
+left join
+(SELECT     '部门经理审核及分配任务' AS FFlowAct, '评估中' AS FProposalStatus
+UNION ALL
+SELECT     'IE技术员改善判定' AS Expr1, '评估中' AS Expr2
+UNION ALL
+SELECT     'IE技术员实施结果确认及收益核算' AS Expr1, '实施中' AS Expr2
+UNION ALL
+SELECT     '总监评分' AS Expr1, '签核中' AS Expr2
+UNION ALL
+SELECT     'IE经理评分' AS Expr1, '签核中' AS Expr2
+UNION ALL
+SELECT     '重新提交' AS Expr1, '评估中' AS Expr2
+UNION ALL
+SELECT     '部门经理评分' AS Expr1, '签核中' AS Expr2
+UNION ALL
+SELECT     '提案实施' AS Expr1, '实施中' AS Expr2
+UNION ALL
+SELECT     '实施结果信息更改' AS Expr1, '签核中' AS Expr2
+UNION ALL
+SELECT     'IE工程师有效性确认' AS Expr1, '评估中' AS Expr2
+UNION ALL
+SELECT     'IE工程师评分' AS Expr1, '签核中' AS Expr2
+UNION ALL
+SELECT     '提案实施信息更改' AS Expr1, '签核中' AS Expr2) AS s ON i.FActName = s.FFlowAct

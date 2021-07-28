@@ -1,0 +1,2292 @@
+HTML {
+	LINE-HEIGHT: 1.428; FONT-FAMILY: "Microsoft YaHei", "微软雅黑", helvetica, arial, verdana, tahoma, sans-serif; DIRECTION: ltr; BACKGROUND: #fff; COLOR: #555; FONT-SIZE: 14px; -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%
+}
+BODY {
+	PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px
+}
+DIV {
+	PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px
+}
+DL {
+	PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px
+}
+DT {
+	PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px
+}
+DD {
+	PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px
+}
+UL {
+	PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px
+}
+OL {
+	PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px
+}
+LI {
+	PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px
+}
+H1 {
+	PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px
+}
+H2 {
+	PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px
+}
+H3 {
+	PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px
+}
+H4 {
+	PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px
+}
+H5 {
+	PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px
+}
+H6 {
+	PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px
+}
+PRE {
+	PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px
+}
+CODE {
+	PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px
+}
+FORM {
+	PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px
+}
+FIELDSET {
+	PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px
+}
+LEGEND {
+	PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px
+}
+INPUT {
+	PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px
+}
+TEXTAREA {
+	PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px
+}
+P {
+	PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px
+}
+BLOCKQUOTE {
+	PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px
+}
+TH {
+	PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px
+}
+TD {
+	PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px
+}
+HR {
+	PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px
+}
+BUTTON {
+	PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px
+}
+article {
+	PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px
+}
+aside {
+	PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px
+}
+details {
+	PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px
+}
+figcaption {
+	PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px
+}
+figure {
+	PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px
+}
+footer {
+	PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px
+}
+header {
+	PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px
+}
+hgroup {
+	PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px
+}
+MENU {
+	PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px
+}
+nav {
+	PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px
+}
+section {
+	PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px
+}
+article {
+	DISPLAY: block
+}
+aside {
+	DISPLAY: block
+}
+details {
+	DISPLAY: block
+}
+figcaption {
+	DISPLAY: block
+}
+figure {
+	DISPLAY: block
+}
+footer {
+	DISPLAY: block
+}
+header {
+	DISPLAY: block
+}
+hgroup {
+	DISPLAY: block
+}
+MENU {
+	DISPLAY: block
+}
+nav {
+	DISPLAY: block
+}
+section {
+	DISPLAY: block
+}
+audio {
+	DISPLAY: inline-block
+}
+canvas {
+	DISPLAY: inline-block
+}
+video {
+	DISPLAY: inline-block
+}
+IMG {
+	BORDER-BOTTOM: medium none; BORDER-LEFT: medium none; BORDER-TOP: medium none; BORDER-RIGHT: medium none
+}
+INPUT {
+	LINE-HEIGHT: 1.428; FONT-FAMILY: "Microsoft YaHei", "微软雅黑", helvetica, arial, verdana, tahoma, sans-serif; FONT-SIZE: 14px
+}
+TEXTAREA {
+	LINE-HEIGHT: 1.428; FONT-FAMILY: "Microsoft YaHei", "微软雅黑", helvetica, arial, verdana, tahoma, sans-serif; FONT-SIZE: 14px
+}
+BUTTON {
+	LINE-HEIGHT: 1.428; FONT-FAMILY: "Microsoft YaHei", "微软雅黑", helvetica, arial, verdana, tahoma, sans-serif; FONT-SIZE: 14px
+}
+SELECT {
+	LINE-HEIGHT: 1.428; FONT-FAMILY: "Microsoft YaHei", "微软雅黑", helvetica, arial, verdana, tahoma, sans-serif; FONT-SIZE: 14px
+}
+TEXTAREA {
+	resize: vertical
+}
+TABLE {
+	BORDER-SPACING: 0; BORDER-COLLAPSE: collapse
+}
+TH {
+	TEXT-ALIGN: inherit
+}
+FIELDSET {
+	BORDER-BOTTOM: 0px; BORDER-LEFT: 0px; BORDER-TOP: 0px; BORDER-RIGHT: 0px
+}
+IMG {
+	BORDER-BOTTOM: 0px; BORDER-LEFT: 0px; BORDER-TOP: 0px; BORDER-RIGHT: 0px
+}
+IFRAME {
+	DISPLAY: block
+}
+ABBR {
+	BORDER-BOTTOM: 0px; BORDER-LEFT: 0px; FONT-VARIANT: normal; BORDER-TOP: 0px; BORDER-RIGHT: 0px
+}
+ACRONYM {
+	BORDER-BOTTOM: 0px; BORDER-LEFT: 0px; FONT-VARIANT: normal; BORDER-TOP: 0px; BORDER-RIGHT: 0px
+}
+DEL {
+	TEXT-DECORATION: line-through
+}
+ADDRESS {
+	FONT-STYLE: normal; FONT-WEIGHT: 500
+}
+CAPTION {
+	FONT-STYLE: normal; FONT-WEIGHT: 500
+}
+CITE {
+	FONT-STYLE: normal; FONT-WEIGHT: 500
+}
+CODE {
+	FONT-STYLE: normal; FONT-WEIGHT: 500
+}
+DFN {
+	FONT-STYLE: normal; FONT-WEIGHT: 500
+}
+EM {
+	FONT-STYLE: normal; FONT-WEIGHT: 500
+}
+TH {
+	FONT-STYLE: normal; FONT-WEIGHT: 500
+}
+VAR {
+	FONT-STYLE: normal; FONT-WEIGHT: 500
+}
+OL {
+	LIST-STYLE-TYPE: none; LIST-STYLE-IMAGE: none
+}
+UL {
+	LIST-STYLE-TYPE: none; LIST-STYLE-IMAGE: none
+}
+H1 {
+	FONT-WEIGHT: normal
+}
+H2 {
+	FONT-WEIGHT: normal
+}
+H3 {
+	FONT-WEIGHT: normal
+}
+H4 {
+	FONT-WEIGHT: normal
+}
+H5 {
+	FONT-WEIGHT: normal
+}
+H6 {
+	FONT-WEIGHT: normal
+}
+CAPTION {
+	TEXT-ALIGN: left
+}
+TH {
+	TEXT-ALIGN: left
+}
+Q:before {
+	CONTENT: ''
+}
+Q:after {
+	CONTENT: ''
+}
+SUB {
+	POSITION: relative; LINE-HEIGHT: 0; FONT-SIZE: 75%; VERTICAL-ALIGN: baseline
+}
+SUP {
+	POSITION: relative; LINE-HEIGHT: 0; FONT-SIZE: 75%; VERTICAL-ALIGN: baseline
+}
+SUP {
+	TOP: -0.5em
+}
+SUB {
+	BOTTOM: -0.25em
+}
+A {
+	CURSOR: pointer
+}
+A:link {
+	COLOR: #555; TEXT-DECORATION: none
+}
+A:visited {
+	COLOR: #555; TEXT-DECORATION: none
+}
+A:hover {
+	COLOR: #cc3311; TEXT-DECORATION: none
+}
+A:active {
+	COLOR: #cc3311; TEXT-DECORATION: none
+}
+CODE {
+	FONT-FAMILY: monospace, serif; FONT-SIZE: 1em
+}
+KBD {
+	FONT-FAMILY: monospace, serif; FONT-SIZE: 1em
+}
+PRE {
+	FONT-FAMILY: monospace, serif; FONT-SIZE: 1em
+}
+SAMP {
+	FONT-FAMILY: monospace, serif; FONT-SIZE: 1em
+}
+.clearfix {
+	
+}
+.clearfix:before {
+	LINE-HEIGHT: 0; DISPLAY: table; CONTENT: ""
+}
+.clearfix:after {
+	LINE-HEIGHT: 0; DISPLAY: table; CONTENT: ""
+}
+.clearfix:after {
+	CLEAR: both
+}
+.hide-text {
+	BORDER-BOTTOM: 0px; BORDER-LEFT: 0px; BACKGROUND-COLOR: transparent; FONT: 0px/0 a; COLOR: transparent; BORDER-TOP: 0px; BORDER-RIGHT: 0px; text-shadow: none
+}
+.input-block-level {
+	BOX-SIZING: border-box; MIN-HEIGHT: 30px; WIDTH: 100%; DISPLAY: block; -webkit-box-sizing: border-box; -moz-box-sizing: border-box
+}
+.yk-col1 {
+	MIN-HEIGHT: 1px; FLOAT: left; MARGIN-LEFT: 10px; MARGIN-RIGHT: 10px
+}
+.yk-col2 {
+	MIN-HEIGHT: 1px; FLOAT: left; MARGIN-LEFT: 10px; MARGIN-RIGHT: 10px
+}
+.yk-col3 {
+	MIN-HEIGHT: 1px; FLOAT: left; MARGIN-LEFT: 10px; MARGIN-RIGHT: 10px
+}
+.yk-col4 {
+	MIN-HEIGHT: 1px; FLOAT: left; MARGIN-LEFT: 10px; MARGIN-RIGHT: 10px
+}
+.yk-col5 {
+	MIN-HEIGHT: 1px; FLOAT: left; MARGIN-LEFT: 10px; MARGIN-RIGHT: 10px
+}
+.yk-col6 {
+	MIN-HEIGHT: 1px; FLOAT: left; MARGIN-LEFT: 10px; MARGIN-RIGHT: 10px
+}
+.yk-col7 {
+	MIN-HEIGHT: 1px; FLOAT: left; MARGIN-LEFT: 10px; MARGIN-RIGHT: 10px
+}
+.yk-col8 {
+	MIN-HEIGHT: 1px; FLOAT: left; MARGIN-LEFT: 10px; MARGIN-RIGHT: 10px
+}
+.yk-col9 {
+	MIN-HEIGHT: 1px; FLOAT: left; MARGIN-LEFT: 10px; MARGIN-RIGHT: 10px
+}
+.yk-col10 {
+	MIN-HEIGHT: 1px; FLOAT: left; MARGIN-LEFT: 10px; MARGIN-RIGHT: 10px
+}
+.yk-col11 {
+	MIN-HEIGHT: 1px; FLOAT: left; MARGIN-LEFT: 10px; MARGIN-RIGHT: 10px
+}
+.yk-col12 {
+	MIN-HEIGHT: 1px; FLOAT: left; MARGIN-LEFT: 10px; MARGIN-RIGHT: 10px
+}
+.yk-col13 {
+	MIN-HEIGHT: 1px; FLOAT: left; MARGIN-LEFT: 10px; MARGIN-RIGHT: 10px
+}
+.yk-col14 {
+	MIN-HEIGHT: 1px; FLOAT: left; MARGIN-LEFT: 10px; MARGIN-RIGHT: 10px
+}
+.yk-col15 {
+	MIN-HEIGHT: 1px; FLOAT: left; MARGIN-LEFT: 10px; MARGIN-RIGHT: 10px
+}
+.yk-col16 {
+	MIN-HEIGHT: 1px; FLOAT: left; MARGIN-LEFT: 10px; MARGIN-RIGHT: 10px
+}
+.yk-col17 {
+	MIN-HEIGHT: 1px; FLOAT: left; MARGIN-LEFT: 10px; MARGIN-RIGHT: 10px
+}
+.yk-col18 {
+	MIN-HEIGHT: 1px; FLOAT: left; MARGIN-LEFT: 10px; MARGIN-RIGHT: 10px
+}
+.yk-col19 {
+	MIN-HEIGHT: 1px; FLOAT: left; MARGIN-LEFT: 10px; MARGIN-RIGHT: 10px
+}
+.yk-col20 {
+	MIN-HEIGHT: 1px; FLOAT: left; MARGIN-LEFT: 10px; MARGIN-RIGHT: 10px
+}
+.yk-col21 {
+	MIN-HEIGHT: 1px; FLOAT: left; MARGIN-LEFT: 10px; MARGIN-RIGHT: 10px
+}
+.yk-col22 {
+	MIN-HEIGHT: 1px; FLOAT: left; MARGIN-LEFT: 10px; MARGIN-RIGHT: 10px
+}
+.yk-col22 {
+	WIDTH: 1190px
+}
+.yk-col21 {
+	WIDTH: 1135px
+}
+.yk-col20 {
+	WIDTH: 1080px
+}
+.yk-col19 {
+	WIDTH: 1025px
+}
+.yk-col18 {
+	WIDTH: 970px
+}
+.yk-col17 {
+	WIDTH: 915px
+}
+.yk-col16 {
+	WIDTH: 860px
+}
+.yk-col15 {
+	WIDTH: 805px
+}
+.yk-col14 {
+	WIDTH: 750px
+}
+.yk-col13 {
+	WIDTH: 695px
+}
+.yk-col12 {
+	WIDTH: 640px
+}
+.yk-col11 {
+	WIDTH: 585px
+}
+.yk-col10 {
+	WIDTH: 530px
+}
+.yk-col9 {
+	WIDTH: 475px
+}
+.yk-col8 {
+	WIDTH: 420px
+}
+.yk-col7 {
+	WIDTH: 365px
+}
+.yk-col6 {
+	WIDTH: 310px
+}
+.yk-col5 {
+	WIDTH: 255px
+}
+.yk-col4 {
+	WIDTH: 200px
+}
+.yk-col3 {
+	WIDTH: 145px
+}
+.yk-col2 {
+	WIDTH: 90px
+}
+.yk-col1 {
+	WIDTH: 35px
+}
+.yk-row {
+	MARGIN-LEFT: -10px; MARGIN-RIGHT: -10px; _margin-left: -20px; _margin-right: -20px
+}
+.yk-row:before {
+	LINE-HEIGHT: 0; DISPLAY: table; CONTENT: ""
+}
+.yk-row:after {
+	LINE-HEIGHT: 0; DISPLAY: table; CONTENT: ""
+}
+.yk-row:after {
+	CLEAR: both
+}
+.yk-con {
+	WIDTH: 970px; MARGIN-LEFT: auto; MARGIN-RIGHT: auto
+}
+.yk-row .yk-offset22 {
+	MARGIN-LEFT: 1220px
+}
+.yk-row .yk-offset21 {
+	MARGIN-LEFT: 1165px
+}
+.yk-row .yk-offset20 {
+	MARGIN-LEFT: 1110px
+}
+.yk-row .yk-offset19 {
+	MARGIN-LEFT: 1055px
+}
+.yk-row .yk-offset18 {
+	MARGIN-LEFT: 1000px
+}
+.yk-row .yk-offset17 {
+	MARGIN-LEFT: 945px
+}
+.yk-row .yk-offset16 {
+	MARGIN-LEFT: 890px
+}
+.yk-row .yk-offset15 {
+	MARGIN-LEFT: 835px
+}
+.yk-row .yk-offset14 {
+	MARGIN-LEFT: 780px
+}
+.yk-row .yk-offset13 {
+	MARGIN-LEFT: 725px
+}
+.yk-row .yk-offset12 {
+	MARGIN-LEFT: 670px
+}
+.yk-row .yk-offset11 {
+	MARGIN-LEFT: 615px
+}
+.yk-row .yk-offset10 {
+	MARGIN-LEFT: 560px
+}
+.yk-row .yk-offset9 {
+	MARGIN-LEFT: 505px
+}
+.yk-row .yk-offset8 {
+	MARGIN-LEFT: 450px
+}
+.yk-row .yk-offset7 {
+	MARGIN-LEFT: 395px
+}
+.yk-row .yk-offset6 {
+	MARGIN-LEFT: 340px
+}
+.yk-row .yk-offset5 {
+	MARGIN-LEFT: 285px
+}
+.yk-row .yk-offset4 {
+	MARGIN-LEFT: 230px
+}
+.yk-row .yk-offset3 {
+	MARGIN-LEFT: 175px
+}
+.yk-row .yk-offset2 {
+	MARGIN-LEFT: 120px
+}
+.yk-row .yk-offset1 {
+	MARGIN-LEFT: 65px
+}
+.red {
+	COLOR: #f00
+}
+.ico__loading_16 {
+	WIDTH: 16px; DISPLAY: inline-block; BACKGROUND: url(/yk/lib/img/icon/ico_loading_16.76f1f49c23.gif) no-repeat 0px 0px; HEIGHT: 15px; VERTICAL-ALIGN: text-bottom
+}
+.ico__loading_24 {
+	WIDTH: 24px; DISPLAY: inline-block; BACKGROUND: url(/yk/lib/img/icon/ico_loading_24.0d286060ff.gif) no-repeat 0px 0px; HEIGHT: 23px; VERTICAL-ALIGN: text-bottom
+}
+.ico__loading_32 {
+	WIDTH: 32px; DISPLAY: inline-block; BACKGROUND: url(/yk/lib/img/icon/ico_loading_32.d1f3a40598.gif) no-repeat 0px 0px; HEIGHT: 31px; VERTICAL-ALIGN: text-bottom
+}
+.ico__loading_40 {
+	WIDTH: 40px; DISPLAY: inline-block; BACKGROUND: url(/yk/lib/img/icon/ico_loading_40.721d91d3a0.gif) no-repeat 0px 0px; HEIGHT: 38px; VERTICAL-ALIGN: text-bottom
+}
+.ico__loading_64 {
+	WIDTH: 64px; DISPLAY: inline-block; BACKGROUND: url(/yk/lib/img/icon/ico_loading_64.b95d48db52.gif) no-repeat 0px 0px; HEIGHT: 62px; VERTICAL-ALIGN: text-bottom
+}
+.qwindow {
+	Z-INDEX: 30000; POSITION: absolute; PADDING-BOTTOM: 10px; PADDING-LEFT: 10px; PADDING-RIGHT: 10px; DISPLAY: none; TOP: 0px; PADDING-TOP: 10px; LEFT: 0px
+}
+.qwindow .winbox {
+	Z-INDEX: 2; BORDER-BOTTOM: #cacaca 1px solid; POSITION: relative; BORDER-LEFT: #cacaca 1px solid; BORDER-TOP: #cacaca 1px solid; BORDER-RIGHT: #cacaca 1px solid
+}
+.qwindow .winbg {
+	Z-INDEX: 1; POSITION: absolute; FILTER: alpha(opacity=20); WIDTH: 100%; BACKGROUND: #545454; HEIGHT: 100%; TOP: 0px; LEFT: 0px; opacity: 0.2; -webkit-border-radius: 3px; -moz-border-radius: 3px; border-radius: 3px; -webkit-box-shadow: 0 0 5px #395680; -moz-box-shadow: 0 0 5px #395680; box-shadow: 0 0 5px #395680
+}
+.qwindow .winhead {
+	Z-INDEX: 2; POSITION: relative; BACKGROUND: #fff
+}
+.qwindow .winhead .wintitle {
+	BORDER-BOTTOM: #c5c5c5 1px solid; LINE-HEIGHT: 30px; PADDING-LEFT: 10px; DISPLAY: none; HEIGHT: 30px; COLOR: #555; FONT-SIZE: 14px; OVERFLOW: hidden; FONT-WEIGHT: bold
+}
+.qwindow .winhead .winclose {
+	POSITION: absolute; WIDTH: 30px; DISPLAY: none; BACKGROUND: url(/yk/lib/img/widget/window/ico_close.f92e7183c8.png) no-repeat 0px 0px; HEIGHT: 30px; TOP: 0px; CURSOR: pointer; RIGHT: 0px
+}
+.qwindow .winbody {
+	Z-INDEX: 1; POSITION: relative; BACKGROUND: #fff; OVERFLOW: hidden
+}
+.qwindow .winbody IFRAME {
+	WIDTH: 100%; HEIGHT: 100%
+}
+.qwindow_mask {
+	Z-INDEX: 30000; POSITION: absolute; FILTER: alpha(opacity=50); WIDTH: 100%; DISPLAY: none; BACKGROUND: #545454; HEIGHT: 100%; TOP: 0px; LEFT: 0px; opacity: 0.50
+}
+.yk-header .ico-user-l2 {
+	BACKGROUND: url(/yk/lib/img/widget/header/header.8c0e4b57fe.png) no-repeat
+}
+.yk-header .ico-myspace-l2 {
+	BACKGROUND: url(/yk/lib/img/widget/header/header.8c0e4b57fe.png) no-repeat
+}
+.yk-header .ico-channels-l2 {
+	BACKGROUND: url(/yk/lib/img/widget/header/header.8c0e4b57fe.png) no-repeat
+}
+.yk-header .ico-videomanage-l2 {
+	BACKGROUND: url(/yk/lib/img/widget/header/header.8c0e4b57fe.png) no-repeat
+}
+.yk-header .ico-notifications-l2 {
+	BACKGROUND: url(/yk/lib/img/widget/header/header.8c0e4b57fe.png) no-repeat
+}
+.yk-header .ico-upload-l2 {
+	BACKGROUND: url(/yk/lib/img/widget/header/header.8c0e4b57fe.png) no-repeat
+}
+.yk-header .ico-mydrama-l2 {
+	BACKGROUND: url(/yk/lib/img/widget/header/header.8c0e4b57fe.png) no-repeat
+}
+.yk-header .ico-member-l2 {
+	BACKGROUND: url(/yk/lib/img/widget/header/header.8c0e4b57fe.png) no-repeat
+}
+.yk-header .ico-VR-l2 {
+	BACKGROUND: url(/yk/lib/img/widget/header/header.8c0e4b57fe.png) no-repeat
+}
+.yk-header .ico-subscription-l2 {
+	BACKGROUND: url(/yk/lib/img/widget/header/header.8c0e4b57fe.png) no-repeat
+}
+.yk-header .ico-favorite-l2 {
+	BACKGROUND: url(/yk/lib/img/widget/header/header.8c0e4b57fe.png) no-repeat
+}
+.yk-header .ico-record-l2 {
+	BACKGROUND: url(/yk/lib/img/widget/header/header.8c0e4b57fe.png) no-repeat
+}
+.yk-header .ico-sharing-l2 {
+	BACKGROUND: url(/yk/lib/img/widget/header/header.8c0e4b57fe.png) no-repeat
+}
+.yk-header .ico-app-l2 {
+	BACKGROUND: url(/yk/lib/img/widget/header/header.8c0e4b57fe.png) no-repeat
+}
+.yk-header .caret {
+	BACKGROUND: url(/yk/lib/img/widget/header/header.8c0e4b57fe.png) no-repeat
+}
+.yk-header .yk-hpanel-ico {
+	BACKGROUND: url(/yk/lib/img/widget/header/header.8c0e4b57fe.png) no-repeat
+}
+.yk-nav .caret {
+	BACKGROUND: url(/yk/lib/img/widget/header/header.8c0e4b57fe.png) no-repeat
+}
+.yk-nav .ico-toggle {
+	BACKGROUND: url(/yk/lib/img/widget/header/header.8c0e4b57fe.png) no-repeat
+}
+.yk-nav .ico-setting {
+	BACKGROUND: url(/yk/lib/img/widget/header/header.8c0e4b57fe.png) no-repeat
+}
+.yk-nav .ico-addsub {
+	BACKGROUND: url(/yk/lib/img/widget/header/header.8c0e4b57fe.png) no-repeat
+}
+.yk-ucenter .yk-playrecords .yk-records .records-list .r-del {
+	BACKGROUND: url(/yk/lib/img/widget/header/header.8c0e4b57fe.png) no-repeat
+}
+.yk-ucenter .yk-playrecords .yk-notice .yk-notice-success .ico-notice-ok {
+	BACKGROUND: url(/yk/lib/img/widget/header/header.8c0e4b57fe.png) no-repeat
+}
+.yk-header .yk-so-box BUTTON {
+	BACKGROUND: url(/yk/lib/img/widget/header/header.8c0e4b57fe.png) no-repeat
+}
+.yk-ucenter .yk-msgbox .handle I {
+	BACKGROUND: url(/yk/lib/img/widget/header/header.8c0e4b57fe.png) no-repeat
+}
+.yk-ucenter .yk-msgbox .videomsg .hint I {
+	BACKGROUND: url(/yk/lib/img/widget/header/header.8c0e4b57fe.png) no-repeat
+}
+.yk-ucenter .yk-playrecords .yk-records .records-list .r-stat I {
+	BACKGROUND: url(/yk/lib/img/widget/header/header.8c0e4b57fe.png) no-repeat
+}
+.reward-entry-integral {
+	FONT-STYLE: normal
+}
+.reward-integral-fake {
+	Z-INDEX: 999999; COLOR: #909090; FONT-SIZE: 14px
+}
+.yk-header A {
+	COLOR: #555; CURSOR: pointer; TEXT-DECORATION: none
+}
+.yk-nav A {
+	COLOR: #555; CURSOR: pointer; TEXT-DECORATION: none
+}
+.yk-header A:hover {
+	COLOR: #c31; TEXT-DECORATION: none
+}
+.yk-nav A:hover {
+	COLOR: #c31; TEXT-DECORATION: none
+}
+.yk-header UL {
+	PADDING-BOTTOM: 0px; LIST-STYLE-TYPE: none; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; LIST-STYLE-IMAGE: none; PADDING-TOP: 0px
+}
+.yk-nav UL {
+	PADDING-BOTTOM: 0px; LIST-STYLE-TYPE: none; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; LIST-STYLE-IMAGE: none; PADDING-TOP: 0px
+}
+.yk-header .splite {
+	MARGIN: 0px 3px; COLOR: #909090
+}
+.yk-nav .splite {
+	MARGIN: 0px 3px; COLOR: #909090
+}
+.yk-header .caret {
+	LINE-HEIGHT: 0; WIDTH: 8px; DISPLAY: inline-block; BACKGROUND-POSITION: -120px -4px; HEIGHT: 4px; FONT-SIZE: 0px; VERTICAL-ALIGN: middle; OVERFLOW: hidden
+}
+.yk-nav .caret {
+	LINE-HEIGHT: 0; WIDTH: 8px; DISPLAY: inline-block; BACKGROUND-POSITION: -120px -4px; HEIGHT: 4px; FONT-SIZE: 0px; VERTICAL-ALIGN: middle; OVERFLOW: hidden
+}
+.yk-header .ico-toggle {
+	LINE-HEIGHT: 0; MARGIN-TOP: -1px; WIDTH: 14px; DISPLAY: inline-block; BACKGROUND-POSITION: 0px -140px; HEIGHT: 12px; FONT-SIZE: 0px; VERTICAL-ALIGN: middle; MARGIN-RIGHT: 5px
+}
+.yk-nav .ico-toggle {
+	LINE-HEIGHT: 0; MARGIN-TOP: -1px; WIDTH: 14px; DISPLAY: inline-block; BACKGROUND-POSITION: 0px -140px; HEIGHT: 12px; FONT-SIZE: 0px; VERTICAL-ALIGN: middle; MARGIN-RIGHT: 5px
+}
+.yk-header .ico-setting {
+	LINE-HEIGHT: 0; MARGIN: -2px 5px 0px 0px; WIDTH: 12px; DISPLAY: inline-block; BACKGROUND-POSITION: -60px -140px; HEIGHT: 12px; FONT-SIZE: 0px; VERTICAL-ALIGN: middle
+}
+.yk-nav .ico-setting {
+	LINE-HEIGHT: 0; MARGIN: -2px 5px 0px 0px; WIDTH: 12px; DISPLAY: inline-block; BACKGROUND-POSITION: -60px -140px; HEIGHT: 12px; FONT-SIZE: 0px; VERTICAL-ALIGN: middle
+}
+.yk-header .dropdown {
+	POSITION: relative
+}
+.yk-nav .dropdown {
+	POSITION: relative
+}
+.yk-header .dropdown .handle {
+	Z-INDEX: 3; POSITION: absolute; PADDING-BOTTOM: 0px; PADDING-LEFT: 10px; PADDING-RIGHT: 10px; TOP: 0px; CURSOR: default; PADDING-TOP: 0px; LEFT: 0px
+}
+.yk-nav .dropdown .handle {
+	Z-INDEX: 3; POSITION: absolute; PADDING-BOTTOM: 0px; PADDING-LEFT: 10px; PADDING-RIGHT: 10px; TOP: 0px; CURSOR: default; PADDING-TOP: 0px; LEFT: 0px
+}
+.yk-header .dropdown .handle .caret {
+	POSITION: absolute; -webkit-transition: all .3s ease-in; -moz-transition: all .3s ease-in; -o-transition: all .3s ease-in; transition: all .3s ease-in; -ms-transition: transform .3s ease-in
+}
+.yk-nav .dropdown .handle .caret {
+	POSITION: absolute; -webkit-transition: all .3s ease-in; -moz-transition: all .3s ease-in; -o-transition: all .3s ease-in; transition: all .3s ease-in; -ms-transition: transform .3s ease-in
+}
+.yk-header .dropdown .panel {
+	Z-INDEX: 2; POSITION: absolute; PADDING-BOTTOM: 19px; PADDING-LEFT: 19px; PADDING-RIGHT: 19px; DISPLAY: none; TOP: 100%; PADDING-TOP: 19px; LEFT: 0px
+}
+.yk-nav .dropdown .panel {
+	Z-INDEX: 2; POSITION: absolute; PADDING-BOTTOM: 19px; PADDING-LEFT: 19px; PADDING-RIGHT: 19px; DISPLAY: none; TOP: 100%; PADDING-TOP: 19px; LEFT: 0px
+}
+.yk-header .dropdown .mask {
+	Z-INDEX: 1; BORDER-BOTTOM: medium none; POSITION: absolute; FILTER: alpha(opacity=0); BORDER-LEFT: medium none; WIDTH: 0px; DISPLAY: none; BACKGROUND: #fff; HEIGHT: 0px; BORDER-TOP: medium none; TOP: 60px; BORDER-RIGHT: medium none; LEFT: 0px; opacity: 0
+}
+.yk-nav .dropdown .mask {
+	Z-INDEX: 1; BORDER-BOTTOM: medium none; POSITION: absolute; FILTER: alpha(opacity=0); BORDER-LEFT: medium none; WIDTH: 0px; DISPLAY: none; BACKGROUND: #fff; HEIGHT: 0px; BORDER-TOP: medium none; TOP: 60px; BORDER-RIGHT: medium none; LEFT: 0px; opacity: 0
+}
+.yk-header .dropdown-open .handle {
+	BORDER-BOTTOM: #ddd 1px solid; BORDER-LEFT: #ddd 1px solid; BACKGROUND: #fff; BORDER-TOP: #ddd 1px solid; BORDER-RIGHT: #ddd 1px solid
+}
+.yk-nav .dropdown-open .handle {
+	BORDER-BOTTOM: #ddd 1px solid; BORDER-LEFT: #ddd 1px solid; BACKGROUND: #fff; BORDER-TOP: #ddd 1px solid; BORDER-RIGHT: #ddd 1px solid
+}
+.yk-header .dropdown-open .panel {
+	BORDER-BOTTOM: #ddd 1px solid; BORDER-LEFT: #ddd 1px solid; BACKGROUND: #fff; BORDER-TOP: #ddd 1px solid; BORDER-RIGHT: #ddd 1px solid
+}
+.yk-nav .dropdown-open .panel {
+	BORDER-BOTTOM: #ddd 1px solid; BORDER-LEFT: #ddd 1px solid; BACKGROUND: #fff; BORDER-TOP: #ddd 1px solid; BORDER-RIGHT: #ddd 1px solid
+}
+.yk-header .dropdown-open .handle {
+	BORDER-BOTTOM: medium none
+}
+.yk-nav .dropdown-open .handle {
+	BORDER-BOTTOM: medium none
+}
+.yk-header .dropdown-open .handle .caret {
+	-webkit-transform: rotate(180deg); -moz-transform: rotate(180deg); -o-transform: rotate(180deg); transform: rotate(180deg); -ms-transform: rotate(0)
+}
+.yk-nav .dropdown-open .handle .caret {
+	-webkit-transform: rotate(180deg); -moz-transform: rotate(180deg); -o-transform: rotate(180deg); transform: rotate(180deg); -ms-transform: rotate(0)
+}
+.yk-header .dropdown-open .panel {
+	DISPLAY: block
+}
+.yk-nav .dropdown-open .panel {
+	DISPLAY: block
+}
+.yk-header .dropdown-open .ico-arrow-top-grey {
+	DISPLAY: block
+}
+.yk-nav .dropdown-open .ico-arrow-top-grey {
+	DISPLAY: block
+}
+.yk-header .dropdown-open .mask {
+	DISPLAY: block
+}
+.yk-nav .dropdown-open .mask {
+	DISPLAY: block
+}
+.yk-header .w970-show {
+	DISPLAY: block
+}
+.yk-nav .w970-show {
+	DISPLAY: block
+}
+.yk-header .w1190-show {
+	DISPLAY: none
+}
+.yk-nav .w1190-show {
+	DISPLAY: none
+}
+.yk-header .ico-user-l2 {
+	LINE-HEIGHT: 0; DISPLAY: inline-block; FONT-SIZE: 0px; VERTICAL-ALIGN: middle
+}
+.yk-header .ico-myspace-l2 {
+	LINE-HEIGHT: 0; DISPLAY: inline-block; FONT-SIZE: 0px; VERTICAL-ALIGN: middle
+}
+.yk-header .ico-channels-l2 {
+	LINE-HEIGHT: 0; DISPLAY: inline-block; FONT-SIZE: 0px; VERTICAL-ALIGN: middle
+}
+.yk-header .ico-videomanage-l2 {
+	LINE-HEIGHT: 0; DISPLAY: inline-block; FONT-SIZE: 0px; VERTICAL-ALIGN: middle
+}
+.yk-header .ico-notifications-l2 {
+	LINE-HEIGHT: 0; DISPLAY: inline-block; FONT-SIZE: 0px; VERTICAL-ALIGN: middle
+}
+.yk-header .ico-upload-l2 {
+	LINE-HEIGHT: 0; DISPLAY: inline-block; FONT-SIZE: 0px; VERTICAL-ALIGN: middle
+}
+.yk-header .ico-mydrama-l2 {
+	LINE-HEIGHT: 0; DISPLAY: inline-block; FONT-SIZE: 0px; VERTICAL-ALIGN: middle
+}
+.yk-header .ico-member-l2 {
+	LINE-HEIGHT: 0; DISPLAY: inline-block; FONT-SIZE: 0px; VERTICAL-ALIGN: middle
+}
+.yk-header .ico-VR-l2 {
+	LINE-HEIGHT: 0; DISPLAY: inline-block; FONT-SIZE: 0px; VERTICAL-ALIGN: middle
+}
+.yk-header .ico-subscription-l2 {
+	LINE-HEIGHT: 0; DISPLAY: inline-block; FONT-SIZE: 0px; VERTICAL-ALIGN: middle
+}
+.yk-header .ico-favorite-l2 {
+	LINE-HEIGHT: 0; DISPLAY: inline-block; FONT-SIZE: 0px; VERTICAL-ALIGN: middle
+}
+.yk-header .ico-record-l2 {
+	LINE-HEIGHT: 0; DISPLAY: inline-block; FONT-SIZE: 0px; VERTICAL-ALIGN: middle
+}
+.yk-header .ico-sharing-l2 {
+	LINE-HEIGHT: 0; DISPLAY: inline-block; FONT-SIZE: 0px; VERTICAL-ALIGN: middle
+}
+.yk-header .ico-app-l2 {
+	LINE-HEIGHT: 0; DISPLAY: inline-block; FONT-SIZE: 0px; VERTICAL-ALIGN: middle
+}
+.yk-header .ico-user-l2 {
+	WIDTH: 20px; HEIGHT: 20px
+}
+.yk-header .ico-myspace-l2 {
+	WIDTH: 20px; HEIGHT: 20px
+}
+.yk-header .ico-channels-l2 {
+	WIDTH: 20px; HEIGHT: 20px
+}
+.yk-header .ico-videomanage-l2 {
+	WIDTH: 20px; HEIGHT: 20px
+}
+.yk-header .ico-notifications-l2 {
+	WIDTH: 20px; HEIGHT: 20px
+}
+.yk-header .ico-upload-l2 {
+	WIDTH: 20px; HEIGHT: 20px
+}
+.yk-header .ico-mydrama-l2 {
+	WIDTH: 20px; HEIGHT: 20px
+}
+.yk-header .ico-member-l2 {
+	WIDTH: 20px; HEIGHT: 20px
+}
+.yk-header .ico-VR-l2 {
+	WIDTH: 20px; HEIGHT: 20px
+}
+.yk-header .ico-subscription-l2 {
+	WIDTH: 20px; HEIGHT: 20px
+}
+.yk-header .ico-favorite-l2 {
+	WIDTH: 20px; HEIGHT: 20px
+}
+.yk-header .ico-record-l2 {
+	WIDTH: 20px; HEIGHT: 20px
+}
+.yk-header .ico-sharing-l2 {
+	WIDTH: 20px; HEIGHT: 20px
+}
+.yk-header .ico-app-l2 {
+	WIDTH: 20px; HEIGHT: 20px
+}
+.yk-header .ico-user-l2 {
+	BACKGROUND-POSITION: 0px 0px
+}
+.yk-header .ico-myspace-l2 {
+	BACKGROUND-POSITION: -20px 0px
+}
+.yk-header .ico-channels-l2 {
+	BACKGROUND-POSITION: -40px 0px
+}
+.yk-header .ico-videomanage-l2 {
+	BACKGROUND-POSITION: 0px -20px
+}
+.yk-header .ico-notifications-l2 {
+	BACKGROUND-POSITION: -20px -20px
+}
+.yk-header .ico-upload-l2 {
+	BACKGROUND-POSITION: -40px -20px
+}
+.yk-header .ico-mydrama-l2 {
+	BACKGROUND-POSITION: 0px -40px
+}
+.yk-header .ico-member-l2 {
+	BACKGROUND-POSITION: -20px -40px
+}
+.yk-header .ico-VR-l2 {
+	BACKGROUND-POSITION: -40px -40px
+}
+.yk-header .ico-subscription-l2 {
+	BACKGROUND-POSITION: 0px -60px
+}
+.yk-header .ico-favorite-l2 {
+	BACKGROUND-POSITION: -20px -60px
+}
+.yk-header .ico-record-l2 {
+	BACKGROUND-POSITION: -40px -60px
+}
+.yk-header .ico-sharing-l2 {
+	BACKGROUND-POSITION: 0px -80px
+}
+.yk-header .ico-app-l2 {
+	BACKGROUND-POSITION: -20px -80px
+}
+.yk-header A:hover .ico-user-l2 {
+	BACKGROUND-POSITION: -60px 0px
+}
+.yk-header A:hover .ico-myspace-l2 {
+	BACKGROUND-POSITION: -80px 0px
+}
+.yk-header A:hover .ico-channels-l2 {
+	BACKGROUND-POSITION: -100px 0px
+}
+.yk-header A:hover .ico-videomanage-l2 {
+	BACKGROUND-POSITION: -60px -20px
+}
+.yk-header A:hover .ico-notifications-l2 {
+	BACKGROUND-POSITION: -80px -20px
+}
+.yk-header A:hover .ico-upload-l2 {
+	BACKGROUND-POSITION: -100px -20px
+}
+.yk-header A:hover .ico-mydrama-l2 {
+	BACKGROUND-POSITION: -60px -40px
+}
+.yk-header A:hover .ico-member-l2 {
+	BACKGROUND-POSITION: -80px -40px
+}
+.yk-header A:hover .ico-VR-l2 {
+	BACKGROUND-POSITION: -100px -40px
+}
+.yk-header A:hover .ico-subscription-l2 {
+	BACKGROUND-POSITION: -60px -60px
+}
+.yk-header A:hover .ico-favorite-l2 {
+	BACKGROUND-POSITION: -80px -60px
+}
+.yk-header A:hover .ico-record-l2 {
+	BACKGROUND-POSITION: -100px -60px
+}
+.yk-header A:hover .ico-sharing-l2 {
+	BACKGROUND-POSITION: -60px -80px
+}
+.yk-header A:hover .ico-app-l2 {
+	BACKGROUND-POSITION: -80px -80px
+}
+.yk-ucenter .yk-msgbox .handle I {
+	BACKGROUND-POSITION: -120px -11px
+}
+.yk-ucenter .yk-msgbox .handle:hover I {
+	BACKGROUND-POSITION: -120px -20px
+}
+.yk-ucenter .yk-msgbox .videomsg .hint .ico-new {
+	BACKGROUND-POSITION: -120px -60px
+}
+.yk-ucenter .yk-msgbox .videomsg .hint .ico-success {
+	BACKGROUND-POSITION: -120px -100px
+}
+.yk-ucenter .yk-msgbox .videomsg .hint .ico-notice {
+	BACKGROUND-POSITION: -120px -120px
+}
+.yk-ucenter .yk-msgbox .videomsg .hint .ico-subscription {
+	BACKGROUND-POSITION: -120px -185px
+}
+.dropdown .panel .yk-hpanel-loading {
+	POSITION: absolute; WIDTH: 100%; HEIGHT: 100%; TOP: 0px; LEFT: 0px
+}
+.dropdown .panel .yk-hpanel-loading .ico-loading-64 {
+	Z-INDEX: 1; POSITION: absolute; MARGIN-TOP: -32px; WIDTH: 64px; DISPLAY: block; BACKGROUND: url(/yk/lib/img/icon/ico_loading_64.b95d48db52.gif) no-repeat; HEIGHT: 64px; MARGIN-LEFT: -32px; TOP: 50%; LEFT: 50%
+}
+.yk-header {
+	POSITION: static; WIDTH: 100%; HEIGHT: 60px; TOP: 0px; LEFT: 0px
+}
+.yk-header-container {
+	BOX-SIZING: border-box; BORDER-BOTTOM: #e1e1e1 1px solid; MIN-WIDTH: 990px; WIDTH: 100%; BACKGROUND: #fff; HEIGHT: 61px; -webkit-box-sizing: border-box; -moz-box-sizing: border-box
+}
+.yk-header-container * {
+	FONT-FAMILY: "Microsoft YaHei", "微软雅黑", helvetica, arial, verdana, tahoma, sans-serif
+}
+.yk-header-container .mask {
+	BORDER-BOTTOM: medium none; POSITION: absolute; FILTER: alpha(opacity=0); BORDER-LEFT: medium none; WIDTH: 100%; BACKGROUND: #fff; HEIGHT: 60px; BORDER-TOP: medium none; TOP: 0px; BORDER-RIGHT: medium none; LEFT: 0px; opacity: 0
+}
+.yk-header-container .yk-box {
+	Z-INDEX: 1290; BORDER-BOTTOM: #e1e1e1 1px solid; POSITION: relative; PADDING-BOTTOM: 0px; PADDING-LEFT: 10px; WIDTH: 100%; PADDING-RIGHT: 10px; HEIGHT: 60px; PADDING-TOP: 0px
+}
+.yk-header-container .yk-box:before {
+	LINE-HEIGHT: 0; DISPLAY: table; CONTENT: ""
+}
+.yk-header-container .yk-box:after {
+	LINE-HEIGHT: 0; DISPLAY: table; CONTENT: ""
+}
+.yk-header-container .yk-box:after {
+	CLEAR: both
+}
+.yk-header-container .yk-logo {
+	BORDER-BOTTOM: #e1e1e1 1px solid; PADDING-BOTTOM: 5px; PADDING-LEFT: 20px; PADDING-RIGHT: 0px; BACKGROUND: #fff; FLOAT: left; HEIGHT: 50px; MARGIN-RIGHT: 20px; PADDING-TOP: 5px
+}
+.yk-header-container .yk-logo IMG {
+	BORDER-BOTTOM: 0px; BORDER-LEFT: 0px; BORDER-TOP: 0px; BORDER-RIGHT: 0px
+}
+.yk-header-container .yk-logo OBJECT {
+	BORDER-BOTTOM: 0px; BORDER-LEFT: 0px; BORDER-TOP: 0px; BORDER-RIGHT: 0px
+}
+.yk-header-container .yk-menus-wrap {
+	MARGIN-TOP: 0px; FLOAT: left; HEIGHT: 60px
+}
+.yk-header-container .yk-menus {
+	Z-INDEX: 1051; HEIGHT: 60px
+}
+.yk-header-container .yk-menus .yk-menus-item {
+	LINE-HEIGHT: 60px; FLOAT: left; HEIGHT: 100%; _line-height: 58px
+}
+.yk-header-container .yk-menus .yk-menus-item * {
+	FONT-SIZE: 14px
+}
+.yk-header-container .yk-menus .yk-menus-item A {
+	FLOAT: left
+}
+.yk-header-container .yk-menus .yk-menus-item-home {
+	WIDTH: 40px
+}
+.yk-header-container .yk-guide {
+	WIDTH: 74px; HEIGHT: 100%
+}
+.yk-header-container .yk-guide .dropdown {
+	WIDTH: 74px; HEIGHT: 100%
+}
+.yk-header-container .yk-guide .handle {
+	PADDING-BOTTOM: 18px; LINE-HEIGHT: 24px; WIDTH: 58px; HEIGHT: 24px; PADDING-TOP: 18px
+}
+.yk-header-container .yk-guide .handle I {
+	MARGIN-TOP: -2px; MARGIN-RIGHT: 3px; _margin-top: 0; _vertical-align: text-bottom
+}
+.yk-header-container .yk-guide .handle A {
+	PADDING-BOTTOM: 0px; LINE-HEIGHT: 24px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; DISPLAY: block; COLOR: #555; CURSOR: default; PADDING-TOP: 0px
+}
+.yk-header-container .yk-guide .panel {
+	PADDING-BOTTOM: 10px; PADDING-LEFT: 10px; WIDTH: 684px; PADDING-RIGHT: 10px; PADDING-TOP: 10px
+}
+.yk-header-container .yk-guide .dropdown-open .handle .caret {
+	TOP: 28px; RIGHT: 13px
+}
+.yk-header-container .yk-guide .yk-guide-entry {
+	MARGIN-BOTTOM: -10px; FLOAT: left
+}
+.yk-header-container .yk-guide .yk-guide-entry .yk-guide-item {
+	MARGIN: 0px 0px 10px; WHITE-SPACE: nowrap; HEIGHT: 30px
+}
+.yk-header-container .yk-guide .yk-guide-entry .yk-guide-item DT {
+	MARGIN: 0px; FLOAT: left
+}
+.yk-header-container .yk-guide .yk-guide-entry .yk-guide-item DD {
+	MARGIN: 0px; FLOAT: left
+}
+.yk-header-container .yk-guide .yk-guide-entry .yk-guide-item LABEL {
+	PADDING-BOTTOM: 0px; LINE-HEIGHT: 30px; PADDING-LEFT: 10px; PADDING-RIGHT: 10px; DISPLAY: block; FLOAT: left; PADDING-TOP: 0px
+}
+.yk-header-container .yk-guide .yk-guide-entry .yk-guide-item A {
+	PADDING-BOTTOM: 0px; LINE-HEIGHT: 30px; PADDING-LEFT: 10px; PADDING-RIGHT: 10px; DISPLAY: block; FLOAT: left; PADDING-TOP: 0px
+}
+.yk-header-container .yk-guide .yk-guide-entry .yk-guide-item LABEL {
+	WIDTH: 56px; COLOR: #909090
+}
+.yk-header-container .yk-guide .yk-guide-entry .yk-guide-item .current A {
+	BACKGROUND: #06a7e1; COLOR: #fff
+}
+.yk-header-container .yk-guide .yk-channels {
+	WIDTH: 378px
+}
+.yk-header-container .yk-guide .yk-services {
+	BORDER-LEFT: #e4e4e4 1px dashed; PADDING-LEFT: 10px; WIDTH: 285px; HEIGHT: 150px; MARGIN-LEFT: 10px
+}
+.yk-header-container .yk-so {
+	MARGIN: 0px auto; HEIGHT: 100%
+}
+.yk-header-container .yk-ucenter {
+	Z-INDEX: 1050; POSITION: absolute; WIDTH: 330px; HEIGHT: 100%; TOP: 0px; RIGHT: 50px
+}
+.yk-ucenter .yk-userlog-before .ico-user-l2 {
+	MARGIN-TOP: -2px; MARGIN-RIGHT: 2px; _margin-top: 0; _vertical-align: text-bottom
+}
+.yk-ucenter .yk-userlog-after .ico-user-l2 {
+	MARGIN-TOP: -2px; MARGIN-RIGHT: 2px; _margin-top: 0; _vertical-align: text-bottom
+}
+.yk-ucenter .yk-upload {
+	FLOAT: right; HEIGHT: 100%
+}
+.yk-ucenter .yk-notice {
+	FLOAT: right; HEIGHT: 100%
+}
+.yk-ucenter .yk-vipentry {
+	FLOAT: right; HEIGHT: 100%
+}
+.yk-ucenter .yk-appentry {
+	FLOAT: right; HEIGHT: 100%
+}
+.yk-ucenter .yk-userlog {
+	FLOAT: right; HEIGHT: 100%
+}
+.yk-ucenter .yk-userlog {
+	WIDTH: 110px
+}
+.yk-ucenter .yk-upload {
+	WIDTH: 80px
+}
+.yk-ucenter .yk-vipentry {
+	WIDTH: 48px
+}
+.yk-ucenter .yk-appentry {
+	WIDTH: 78px
+}
+.yk-ucenter .yk-userlog-before {
+	WIDTH: 110px; FLOAT: right; HEIGHT: 100%
+}
+.yk-ucenter .yk-userlog-after {
+	WIDTH: 110px; FLOAT: right; HEIGHT: 100%
+}
+.yk-ucenter .yk-vipentry .entry {
+	TEXT-ALIGN: center; PADDING-BOTTOM: 18px; LINE-HEIGHT: 24px; PADDING-LEFT: 8px; PADDING-RIGHT: 8px; HEIGHT: 24px; FONT-SIZE: 14px; PADDING-TOP: 18px
+}
+.yk-ucenter .yk-appentry .entry {
+	TEXT-ALIGN: center; PADDING-BOTTOM: 18px; LINE-HEIGHT: 24px; PADDING-LEFT: 8px; PADDING-RIGHT: 8px; HEIGHT: 24px; FONT-SIZE: 14px; PADDING-TOP: 18px
+}
+.yk-ucenter .yk-userlog-before .entry {
+	TEXT-ALIGN: right; PADDING-BOTTOM: 18px; LINE-HEIGHT: 24px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; WORD-WRAP: break-word; HEIGHT: 24px; FONT-SIZE: 14px; WORD-BREAK: break-all; PADDING-TOP: 18px
+}
+.yk-ucenter .yk-userlog-after .entry {
+	TEXT-ALIGN: right; PADDING-BOTTOM: 18px; LINE-HEIGHT: 24px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; WORD-WRAP: break-word; HEIGHT: 24px; FONT-SIZE: 14px; WORD-BREAK: break-all; PADDING-TOP: 18px
+}
+.yk-ucenter .yk-userlog-before {
+	MARGIN-RIGHT: 10px
+}
+.yk-ucenter .yk-userlog-after .ico-arrow-top-grey {
+	POSITION: absolute; WIDTH: 40px; BACKGROUND-POSITION: -92px -100px; HEIGHT: 20px; TOP: -14px; LEFT: 230px; _display: none
+}
+.yk-ucenter .yk-userlog-after .dropdown {
+	Z-INDEX: 2; WIDTH: 100%; HEIGHT: 100%
+}
+.yk-ucenter .yk-userlog-after .dropdown .mask {
+	LEFT: -205px
+}
+.yk-ucenter .yk-userlog-after .dropdown .handle {
+	BORDER-BOTTOM: medium none; BORDER-LEFT: medium none; PADDING-BOTTOM: 18px; LINE-HEIGHT: 24px; PADDING-LEFT: 9px; WIDTH: 100%; PADDING-RIGHT: 9px; HEIGHT: 24px; FONT-SIZE: 14px; BORDER-TOP: medium none; BORDER-RIGHT: medium none; PADDING-TOP: 18px
+}
+.yk-ucenter .yk-userlog-after .dropdown .handle .yk-userlog-after-meta {
+	POSITION: absolute; PADDING-LEFT: 25px; WIDTH: auto; DISPLAY: block; MAX-WIDTH: 110px; HEIGHT: 24px; TOP: 18px; LEFT: 10px
+}
+.yk-ucenter .yk-userlog-after .dropdown .handle .yk-userlog-after-meta .yk-header-user-avatar {
+	POSITION: relative; DISPLAY: inline-block; HEIGHT: 20px; VERTICAL-ALIGN: middle
+}
+.yk-ucenter .yk-userlog-after .dropdown .handle .yk-userlog-after-meta .yk-userlog-after-avatar {
+	POSITION: absolute; WIDTH: 20px; HEIGHT: 20px; TOP: 0px; LEFT: 0px
+}
+.yk-ucenter .yk-userlog-after .dropdown .handle .yk-userlog-after-meta .yk-header-user-name {
+	DISPLAY: inline-block; MAX-WIDTH: 75px; WORD-WRAP: break-word; WHITE-SPACE: nowrap; VERTICAL-ALIGN: middle; OVERFLOW: hidden; _width: 75px
+}
+.yk-ucenter .yk-userlog-after .dropdown .handle .yk-userlog-after-meta .yk-userlog-after-name {
+	TEXT-OVERFLOW: ellipsis; DISPLAY: block; MAX-WIDTH: 80px; WHITE-SPACE: nowrap; HEIGHT: 24px; OVERFLOW: hidden; _width: 80px; -o-text-overflow: ellipsis
+}
+.yk-ucenter .yk-userlog-after .dropdown .handle .caret {
+	TOP: 10px; RIGHT: -10px
+}
+.yk-ucenter .yk-userlog-after .panel {
+	Z-INDEX: 10; BOX-SIZING: border-box; POSITION: absolute; TEXT-ALIGN: left; BORDER-LEFT: #ccc 1px solid; PADDING-BOTTOM: 0px; PADDING-LEFT: 0px; WIDTH: 330px; PADDING-RIGHT: 0px; ZOOM: 1; BACKGROUND: #fff; HEIGHT: 400px; COLOR: #555; TOP: 60px; PADDING-TOP: 0px; LEFT: -205px; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; -webkit-box-shadow: 0 0 10px #bbb; -moz-box-shadow: 0 0 10px #bbb; box-shadow: 0 0 10px #bbb; _position: absolute
+}
+.yk-ucenter .yk-notice .dropdown {
+	Z-INDEX: 2; WIDTH: 80px; HEIGHT: 100%
+}
+.yk-ucenter .yk-notice .handle {
+	BORDER-BOTTOM: medium none; BORDER-LEFT: medium none; PADDING-BOTTOM: 18px; LINE-HEIGHT: 24px; PADDING-LEFT: 9px; WIDTH: 62px; PADDING-RIGHT: 9px; HEIGHT: 24px; FONT-SIZE: 14px; BORDER-TOP: medium none; BORDER-RIGHT: medium none; PADDING-TOP: 18px
+}
+.yk-ucenter .yk-notice .handle .caret {
+	TOP: 30px; RIGHT: 10px; _top: 28px
+}
+.yk-ucenter .yk-notice .handle .spot {
+	POSITION: absolute; TEXT-ALIGN: center; LINE-HEIGHT: 16px; WIDTH: 16px; BACKGROUND: #f00; HEIGHT: 16px; COLOR: #fff; FONT-SIZE: 12px; TOP: 18px; LEFT: 20px; -webkit-border-radius: 50%; -moz-border-radius: 50%; border-radius: 50%; -o-border-radius: 50%; -ms-border-radius: 50%
+}
+.yk-ucenter .yk-notice .panel {
+	Z-INDEX: 10; BOX-SIZING: border-box; POSITION: absolute; TEXT-ALIGN: left; BORDER-LEFT: #ccc 1px solid; PADDING-BOTTOM: 0px; PADDING-LEFT: 0px; WIDTH: 330px; PADDING-RIGHT: 0px; ZOOM: 1; BACKGROUND: #fff; HEIGHT: 400px; COLOR: #555; TOP: 60px; PADDING-TOP: 0px; LEFT: -125px; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; -webkit-box-shadow: 0 0 10px #bbb 0; -moz-box-shadow: 0 0 10px #bbb; box-shadow: 0 0 10px #bbb; _position: absolute
+}
+.yk-ucenter .yk-notice .mask {
+	Z-INDEX: 10; BOX-SIZING: border-box; POSITION: absolute; TEXT-ALIGN: left; BORDER-LEFT: #ccc 1px solid; PADDING-BOTTOM: 0px; PADDING-LEFT: 0px; WIDTH: 330px; PADDING-RIGHT: 0px; ZOOM: 1; BACKGROUND: #fff; HEIGHT: 400px; COLOR: #555; TOP: 60px; PADDING-TOP: 0px; LEFT: -125px; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; -webkit-box-shadow: 0 0 10px #bbb 0; -moz-box-shadow: 0 0 10px #bbb; box-shadow: 0 0 10px #bbb; _position: absolute
+}
+.yk-ucenter .yk-notice .panel .ico-arrow-top-white {
+	POSITION: absolute; WIDTH: 40px; BACKGROUND-POSITION: -92px -140px; HEIGHT: 20px; TOP: -14px; LEFT: 130px; _display: none
+}
+.yk-ucenter .yk-notice .mask .ico-arrow-top-white {
+	POSITION: absolute; WIDTH: 40px; BACKGROUND-POSITION: -92px -140px; HEIGHT: 20px; TOP: -14px; LEFT: 130px; _display: none
+}
+.yk-ucenter .yk-notice .panel .icon-notice-hd {
+	MARGIN-TOP: 4px; DISPLAY: inline-block; BACKGROUND-POSITION: 0px -247px; VERTICAL-ALIGN: middle
+}
+.yk-ucenter .yk-notice .mask .icon-notice-hd {
+	MARGIN-TOP: 4px; DISPLAY: inline-block; BACKGROUND-POSITION: 0px -247px; VERTICAL-ALIGN: middle
+}
+.yk-ucenter .yk-notice .panel .panel-ani {
+	POSITION: relative; WIDTH: 100%; HEIGHT: 100%; OVERFLOW: hidden
+}
+.yk-ucenter .yk-notice .mask .panel-ani {
+	POSITION: relative; WIDTH: 100%; HEIGHT: 100%; OVERFLOW: hidden
+}
+.yk-ucenter .yk-notice .mask {
+	Z-INDEX: 1
+}
+.yk-ucenter .yk-upload .dropdown {
+	Z-INDEX: 2; WIDTH: 80px; HEIGHT: 100%
+}
+.yk-ucenter .yk-upload .dropdown .mask {
+	LEFT: -45px
+}
+.yk-ucenter .yk-upload .handle {
+	PADDING-BOTTOM: 18px; LINE-HEIGHT: 24px; PADDING-LEFT: 9px; WIDTH: 62px; PADDING-RIGHT: 9px; HEIGHT: 24px; FONT-SIZE: 14px; PADDING-TOP: 18px
+}
+.yk-ucenter .yk-upload .handle .caret {
+	TOP: 30px; RIGHT: 10px; _top: 28px
+}
+.yk-ucenter .yk-upload .panel {
+	WIDTH: 270px
+}
+.yk-ucenter .yk-upload .dropdown-open .handle {
+	BORDER-BOTTOM: medium none; BORDER-LEFT: medium none; BORDER-TOP: medium none; BORDER-RIGHT: medium none
+}
+.yk-ucenter .yk-upload .dropdown-open .handle .caret {
+	TOP: 29px; RIGHT: 9px; _top: 27px
+}
+.yk-ucenter .yk-upload .dropdown-open .panel {
+	Z-INDEX: 10; BOX-SIZING: border-box; POSITION: absolute; TEXT-ALIGN: left; BORDER-LEFT: #ccc 1px solid; PADDING-BOTTOM: 30px; PADDING-LEFT: 30px; WIDTH: 330px; PADDING-RIGHT: 30px; ZOOM: 1; BACKGROUND: #fff; HEIGHT: 140px; COLOR: #555; TOP: 60px; PADDING-TOP: 30px; LEFT: -45px; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; -webkit-box-shadow: 0 0 10px #bbb; -moz-box-shadow: 0 0 10px #bbb; box-shadow: 0 0 10px #bbb
+}
+.yk-ucenter .yk-upload .dropdown-open .panel .ico-arrow-top-white {
+	POSITION: absolute; WIDTH: 40px; BACKGROUND-POSITION: -92px -140px; HEIGHT: 20px; TOP: -14px; LEFT: 50px; _display: none
+}
+.yk-ucenter .yk-userservices-list {
+	MARGIN-BOTTOM: -10px
+}
+.yk-ucenter .yk-userservices-list:before {
+	LINE-HEIGHT: 0; DISPLAY: table; CONTENT: ""
+}
+.yk-ucenter .yk-userservices-list:after {
+	LINE-HEIGHT: 0; DISPLAY: table; CONTENT: ""
+}
+.yk-ucenter .yk-userservices-list:after {
+	CLEAR: both
+}
+.yk-ucenter .yk-userservices-list LI {
+	POSITION: relative; LINE-HEIGHT: 20px; PADDING-LEFT: 30px; WIDTH: 100px; ZOOM: 1; MARGIN-BOTTOM: 10px; FLOAT: left; FONT-SIZE: 14px
+}
+.yk-ucenter .yk-userservices-list LI SPAN {
+	COLOR: #f60
+}
+.yk-ucenter .yk-userservices-list LI I {
+	POSITION: absolute; TOP: 0px; LEFT: 3px; _top: -2px
+}
+.yk-header-fixed {
+	POSITION: static
+}
+.yk-header-fixed .yk-header-container {
+	Z-INDEX: 20000; POSITION: fixed; WIDTH: 100%; TOP: 0px; LEFT: 0px; _position: absolute
+}
+.yk-menus-wrap .yk-menus .yk-guide .dropdown .mask {
+	LEFT: -80px
+}
+.yk-menus-wrap .yk-menus .yk-guide .dropdown .panel {
+	Z-INDEX: 10; BOX-SIZING: border-box; POSITION: absolute; PADDING-BOTTOM: 30px; PADDING-LEFT: 30px; WIDTH: 750px; PADDING-RIGHT: 30px; ZOOM: 1; BACKGROUND: #fff; COLOR: #555; TOP: 60px; PADDING-TOP: 30px; LEFT: -80px; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; -webkit-box-shadow: 0 0 10px #bbb; -moz-box-shadow: 0 0 10px #bbb; box-shadow: 0 0 10px #bbb
+}
+.yk-menus-wrap .yk-menus .yk-guide .dropdown .panel .ico-arrow-top-white {
+	POSITION: absolute; WIDTH: 40px; BACKGROUND-POSITION: -92px -140px; HEIGHT: 20px; TOP: -14px; LEFT: 85px; _display: none
+}
+.yk-menus-wrap .yk-menus .yk-guide .dropdown-open .handle {
+	BORDER-BOTTOM: medium none; BORDER-LEFT: medium none; BORDER-TOP: medium none; BORDER-RIGHT: medium none
+}
+.yk-header .yk-so {
+	POSITION: absolute; MARGIN-TOP: -20px; WIDTH: 320px; HEIGHT: 40px; MARGIN-LEFT: -160px; TOP: 50%; LEFT: 50%
+}
+.yk-header .yk-so .yk-so-box {
+	Z-INDEX: 1100; POSITION: relative; WIDTH: 320px; HEIGHT: 40px
+}
+.yk-header .yk-so .yk-so-box INPUT {
+	BORDER-BOTTOM: #a0a0a0 2px solid; BORDER-LEFT: #a0a0a0 2px solid; PADDING-BOTTOM: 8px; LINE-HEIGHT: 20px; MARGIN: 0px; OUTLINE-STYLE: none; OUTLINE-COLOR: invert; PADDING-LEFT: 8px; OUTLINE-WIDTH: 0px; WIDTH: 186px; PADDING-RIGHT: 34px; BACKGROUND: #fff; FLOAT: left; HEIGHT: 20px; COLOR: #555; FONT-SIZE: 14px; VERTICAL-ALIGN: middle; BORDER-TOP: #a0a0a0 2px solid; BORDER-RIGHT: 0px; PADDING-TOP: 8px
+}
+.yk-header .yk-so .yk-so-box .input-default {
+	COLOR: #bbb
+}
+.yk-header .yk-so .yk-so-box INPUT:focus {
+	BORDER-BOTTOM-COLOR: #3eabff; BORDER-TOP-COLOR: #3eabff; BORDER-RIGHT-COLOR: #3eabff; BORDER-LEFT-COLOR: #3eabff; -webkit-box-shadow: 0 0 1px #91bbd9, inset 1px 1px 2px #e5e5e5; -moz-box-shadow: 0 0 1px #91bbd9, inset 1px 1px 2px #e5e5e5; box-shadow: 0 0 1px #91bbd9, inset 1px 1px 2px #e5e5e5
+}
+.yk-header .yk-so .yk-so-box BUTTON {
+	BORDER-BOTTOM: 0px; POSITION: absolute; BORDER-LEFT: 0px; PADDING-BOTTOM: 0px; MARGIN: 0px; OUTLINE-STYLE: none; OUTLINE-COLOR: invert; PADDING-LEFT: 0px; OUTLINE-WIDTH: 0px; WIDTH: 90px; PADDING-RIGHT: 0px; BACKGROUND-POSITION: 0px -160px; HEIGHT: 40px; OVERFLOW: hidden; BORDER-TOP: 0px; TOP: 0px; CURSOR: pointer; RIGHT: 0px; BORDER-RIGHT: 0px; PADDING-TOP: 0px; -webkit-backface-visibility: hidden; -moz-backface-visibility: hidden; -ms-backface-visibility: hidden; -o-backface-visibility: hidden; backface-visibility: hidden
+}
+.yk-header .yk-so .yk-so-box BUTTON EM {
+	DISPLAY: none
+}
+BODY.yk-w1190 .yk-nav .yk-box {
+	WIDTH: 1190px
+}
+BODY.yk-w1190 .yk-header .yk-so {
+	WIDTH: 320px
+}
+BODY.yk-w1190 .yk-header .yk-so .yk-so-box {
+	WIDTH: 320px
+}
+BODY.yk-w1190 .yk-header .yk-so .yk-so-box INPUT {
+	WIDTH: 212px
+}
+BODY.yk-w1190 .w970-show {
+	DISPLAY: none
+}
+BODY.yk-w1190 .w1190-show {
+	DISPLAY: block
+}
+.yk-toolbar-gte-w1280 .yk-header .yk-so {
+	POSITION: absolute; MARGIN-TOP: -20px; WIDTH: 540px; MARGIN-LEFT: -270px; TOP: 50%; LEFT: 50%
+}
+BODY.yk-w1190 .yk-header .yk-so {
+	POSITION: absolute; MARGIN-TOP: -20px; WIDTH: 540px; MARGIN-LEFT: -270px; TOP: 50%; LEFT: 50%
+}
+.yk-toolbar-gte-w1280 .yk-header .yk-so .yk-so-box {
+	WIDTH: 540px
+}
+BODY.yk-w1190 .yk-header .yk-so .yk-so-box {
+	WIDTH: 540px
+}
+.yk-toolbar-gte-w1280 .yk-header .yk-so .yk-so-box INPUT {
+	WIDTH: 406px
+}
+BODY.yk-w1190 .yk-header .yk-so .yk-so-box INPUT {
+	WIDTH: 406px
+}
+.yk-header .yk-so .yk-so-box .rankq {
+	POSITION: absolute; WIDTH: 34px; DISPLAY: block; HEIGHT: 40px; TOP: 0px; RIGHT: 90px
+}
+.yk-header .yk-so .yk-so-box .rankq:link {
+	BORDER-BOTTOM: medium none; BORDER-LEFT: medium none; OUTLINE-STYLE: none; OUTLINE-COLOR: invert; OUTLINE-WIDTH: 0px; BORDER-TOP: medium none; BORDER-RIGHT: medium none
+}
+.yk-header .yk-so .yk-so-box .rankq:visited {
+	BORDER-BOTTOM: medium none; BORDER-LEFT: medium none; OUTLINE-STYLE: none; OUTLINE-COLOR: invert; OUTLINE-WIDTH: 0px; BORDER-TOP: medium none; BORDER-RIGHT: medium none
+}
+.yk-header .yk-so .yk-so-box .rankq I {
+	MARGIN: 8px 0px auto 6px; WIDTH: 20px; DISPLAY: block; BACKGROUND: url(/yk/lib/img/widget/header/rank.f2a398d1f3.png) no-repeat 0px -180px; HEIGHT: 24px
+}
+#qheader_notice_show .ico-notifications-l2 {
+	MARGIN-TOP: -9px; VERTICAL-ALIGN: middle
+}
+#qheader_notice_show A {
+	TEXT-ALIGN: left; LINE-HEIGHT: 0; TEXT-INDENT: 0px; WIDTH: 100%; DISPLAY: block; HEIGHT: 100%; FONT-SIZE: 0px
+}
+#qheader_notice_show A SPAN {
+	LINE-HEIGHT: 24px; FONT-SIZE: 14px
+}
+.yk-header .qtips {
+	Z-INDEX: 100; BORDER-BOTTOM: #ecdda0 1px solid; POSITION: absolute; BORDER-LEFT: #ecdda0 1px solid; PADDING-BOTTOM: 10px; BACKGROUND-COLOR: #ffffe5; PADDING-LEFT: 10px; WIDTH: 200px; PADDING-RIGHT: 20px; BORDER-TOP: #ecdda0 1px solid; BORDER-RIGHT: #ecdda0 1px solid; PADDING-TOP: 10px
+}
+.yk-header .qtips .content {
+	MIN-HEIGHT: 20px; COLOR: #000; FONT-SIZE: 12px; _height: 20px
+}
+.yk-footer {
+	MIN-WIDTH: 990px; MARGIN-BOTTOM: 20px; _margin-bottom: 0
+}
+.yk-footer A {
+	LINE-HEIGHT: 20px; FONT-FAMILY: arial, helvetica, verdana, tahoma, sans-serif
+}
+.yk-footer LABEL {
+	LINE-HEIGHT: 20px; FONT-FAMILY: arial, helvetica, verdana, tahoma, sans-serif
+}
+.yk-footer P {
+	LINE-HEIGHT: 20px; FONT-FAMILY: arial, helvetica, verdana, tahoma, sans-serif
+}
+.yk-footer B {
+	LINE-HEIGHT: 20px; FONT-FAMILY: arial, helvetica, verdana, tahoma, sans-serif
+}
+.yk-footer .copyright {
+	LINE-HEIGHT: 20px; FONT-FAMILY: arial, helvetica, verdana, tahoma, sans-serif
+}
+.yk-footer .yk-footer-con {
+	WIDTH: 970px; MARGIN-LEFT: auto; OVERFLOW: hidden; BORDER-TOP: #ddd 2px solid; MARGIN-RIGHT: auto
+}
+.yk-footer A {
+	COLOR: #555555; TEXT-DECORATION: none
+}
+.yk-footer A:hover {
+	COLOR: #cc3311
+}
+.yk-footer UL {
+	PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; WHITE-SPACE: nowrap; PADDING-TOP: 0px
+}
+.yk-footer LI {
+	PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; WHITE-SPACE: nowrap; PADDING-TOP: 0px
+}
+.yk-footer P {
+	PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; WHITE-SPACE: nowrap; PADDING-TOP: 0px
+}
+.yk-footer .icon-footer-icp {
+	BACKGROUND-IMAGE: url(/yk/lib/img/widget/footer/footer.b5854f96aa.png); BACKGROUND-REPEAT: no-repeat
+}
+.yk-footer .icon-footer-union {
+	BACKGROUND-IMAGE: url(/yk/lib/img/widget/footer/footer.b5854f96aa.png); BACKGROUND-REPEAT: no-repeat
+}
+.yk-footer .icon-footer-report {
+	BACKGROUND-IMAGE: url(/yk/lib/img/widget/footer/footer.b5854f96aa.png); BACKGROUND-REPEAT: no-repeat
+}
+.yk-footer .icon-footer-submit {
+	BACKGROUND-IMAGE: url(/yk/lib/img/widget/footer/footer.b5854f96aa.png); BACKGROUND-REPEAT: no-repeat
+}
+.yk-footer .icon-footer-icbu {
+	BACKGROUND-IMAGE: url(/yk/lib/img/widget/footer/footer.b5854f96aa.png); BACKGROUND-REPEAT: no-repeat
+}
+.yk-footer .qcode {
+	BACKGROUND-IMAGE: url(/yk/lib/img/widget/footer/footer.b5854f96aa.png); BACKGROUND-REPEAT: no-repeat
+}
+.yk-footer BUTTON {
+	BACKGROUND-IMAGE: url(/yk/lib/img/widget/footer/footer.b5854f96aa.png); BACKGROUND-REPEAT: no-repeat
+}
+.yk-footer .icon-footer-icp {
+	WIDTH: 16px; DISPLAY: inline-block; HEIGHT: 16px; VERTICAL-ALIGN: middle
+}
+.yk-footer .icon-footer-union {
+	WIDTH: 16px; DISPLAY: inline-block; HEIGHT: 16px; VERTICAL-ALIGN: middle
+}
+.yk-footer .icon-footer-report {
+	WIDTH: 16px; DISPLAY: inline-block; HEIGHT: 16px; VERTICAL-ALIGN: middle
+}
+.yk-footer .icon-footer-submit {
+	WIDTH: 16px; DISPLAY: inline-block; HEIGHT: 16px; VERTICAL-ALIGN: middle
+}
+.yk-footer .icon-footer-icbu {
+	WIDTH: 16px; DISPLAY: inline-block; HEIGHT: 16px; VERTICAL-ALIGN: middle
+}
+.yk-footer .icon-footer-icp {
+	BACKGROUND-POSITION: 0px 0px
+}
+.yk-footer .icon-footer-union {
+	BACKGROUND-POSITION: -16px 0px
+}
+.yk-footer .icon-footer-report {
+	BACKGROUND-POSITION: -32px 0px
+}
+.yk-footer .icon-footer-submit {
+	BACKGROUND-POSITION: -48px 0px
+}
+.yk-footer .icon-footer-icbu {
+	BACKGROUND-POSITION: -64px 0px
+}
+.yk-footer .footer-link {
+	MARGIN: 20px -40px 40px 0px; FONT-SIZE: 0px; WORD-SPACING: -3px
+}
+.yk-footer UL {
+	LIST-STYLE-TYPE: none; DISPLAY: inline-block; FONT-SIZE: 0px; LIST-STYLE-IMAGE: none; MARGIN-RIGHT: 26px; WORD-SPACING: -6px
+}
+.yk-footer .narrow {
+	MARGIN-RIGHT: 5px
+}
+.yk-footer LI {
+	LINE-HEIGHT: 1em; MARGIN-BOTTOM: 8px; COLOR: #909090; FONT-SIZE: 0px; WORD-SPACING: -3px
+}
+.yk-footer LI A {
+	FONT-SIZE: 12px; MARGIN-RIGHT: 12px; WORD-SPACING: 0px
+}
+.yk-footer LI LABEL {
+	FONT-SIZE: 12px
+}
+.yk-footer LABEL A {
+	MARGIN-RIGHT: 0px
+}
+.yk-footer .cert {
+	MARGIN: 20px -100px 40px 0px; COLOR: #909090; FONT-SIZE: 0px; VERTICAL-ALIGN: top
+}
+.yk-footer .cert .cert-list {
+	DISPLAY: inline-block; FONT-SIZE: 12px; VERTICAL-ALIGN: top; MARGIN-RIGHT: 48px
+}
+.yk-footer .cert P {
+	LINE-HEIGHT: 16px; MARGIN-BOTTOM: 8px; VERTICAL-ALIGN: middle
+}
+.yk-footer .cert P SPAN {
+	LINE-HEIGHT: 16px; FONT-SIZE: 12px
+}
+.yk-footer .cert P A {
+	LINE-HEIGHT: 16px; FONT-SIZE: 12px
+}
+.yk-footer .cert B {
+	FONT-WEIGHT: normal
+}
+.yk-footer .qcode {
+	PADDING-LEFT: 110px; WIDTH: 105px; DISPLAY: inline-block; BACKGROUND-POSITION: 0px -65px; HEIGHT: 90px
+}
+.yk-footer .qcode .wrap {
+	PADDING-BOTTOM: 18px; LINE-HEIGHT: 25px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; DISPLAY: inline-block; PADDING-TOP: 18px
+}
+.yk-footer .qcode .title {
+	DISPLAY: inline-block; FONT-SIZE: 16px
+}
+.yk-footer .copyright {
+	TEXT-ALIGN: center; COLOR: #909090; CLEAR: both; FONT-SIZE: 12px
+}
+.yk-w970 .yk-footer-con {
+	WIDTH: 970px
+}
+.yk-w1190 .yk-footer-con {
+	WIDTH: 1190px
+}
+.yk-w1190 .yk-footer .footer-link {
+	MARGIN-RIGHT: -80px
+}
+.yk-w1190 .yk-footer UL {
+	MARGIN-RIGHT: 76px
+}
+.yk-w1190 .yk-footer .narrow {
+	MARGIN-RIGHT: 10px
+}
+.yk-w1190 .yk-footer .cert {
+	MARGIN-RIGHT: -123px
+}
+.yk-w1190 .yk-footer .cert-list {
+	MARGIN-RIGHT: 108px
+}
+.s_miniFooter {
+	MIN-WIDTH: 960px; CLEAR: both; FONT-SIZE: 12px
+}
+.s_miniFooter .footerBox {
+	PADDING-BOTTOM: 0px; MARGIN: 0px auto; PADDING-LEFT: 15px; WIDTH: 930px; PADDING-RIGHT: 15px; PADDING-TOP: 0px
+}
+.s_miniFooter .declare {
+	TEXT-ALIGN: left; MARGIN: 0px auto; WIDTH: 549px; COLOR: #909090
+}
+.s_miniFooter .copyright {
+	TEXT-ALIGN: center; PADDING-BOTTOM: 15px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; HEIGHT: 20px; PADDING-TOP: 15px
+}
+.s_miniFooter .copyright A {
+	ZOOM: 1; COLOR: #909090; TEXT-DECORATION: underline
+}
+.s_miniFooter .copyright .icp {
+	WIDTH: 13px; DISPLAY: inline-block; BACKGROUND: url(/yk/lib/img/widget/minifooter/ico_icp.93fd3750f8.png) no-repeat 0px 0px; HEIGHT: 16px; VERTICAL-ALIGN: middle
+}
+.yk-w1190 {
+	OVERFLOW-X: hidden
+}
+.body-offset-sidebar-large {
+	OVERFLOW-X: hidden; PADDING-LEFT: 160px
+}
+.body-offset-sidebar-small {
+	PADDING-LEFT: 50px
+}
+.body-offset-sidebar-mini {
+	PADDING-LEFT: 20px
+}
+.yk-sidebar {
+	Z-INDEX: 995; POSITION: fixed; HEIGHT: 100%; TOP: 0px; LEFT: 0px; _position: absolute
+}
+.yk-sidebar-large {
+	Z-INDEX: 3; POSITION: fixed; WIDTH: 160px; BACKGROUND: #f5f5f5; HEIGHT: 100%; TOP: 0px; LEFT: -160px; _position: absolute
+}
+.yk-sidebar-large .yk-side-menu {
+	PADDING-TOP: 60px
+}
+.yk-sidebar-large .yk-side-menu .ykSideMenu {
+	BORDER-BOTTOM: #e1e1e1 1px solid; PADDING-BOTTOM: 11px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 15px
+}
+.yk-sidebar-large .yk-side-menu .ykSideMenu LI {
+	POSITION: relative
+}
+.yk-sidebar-large .yk-side-menu .ykSideMenu LI .subInfoTipOuter {
+	Z-INDEX: 1001; POSITION: absolute; ZOOM: 1; DISPLAY: none; TOP: 0px; LEFT: 160px
+}
+.yk-sidebar-large .yk-side-menu .ykSideMenu LI .subInfoTipOuter .subTip_mask {
+	Z-INDEX: -1; BORDER-BOTTOM: 0px; POSITION: absolute; BORDER-LEFT: 0px; WIDTH: 152px; HEIGHT: 38px; BORDER-TOP: 0px; TOP: 0px; BORDER-RIGHT: 0px; LEFT: 0px
+}
+.yk-sidebar-large .yk-side-menu .ykSideMenu LI .subInfoTipOuter .subInfoTip {
+	POSITION: relative; PADDING-BOTTOM: 9px; PADDING-LEFT: 12px; WIDTH: 130px; PADDING-RIGHT: 12px; FONT-FAMILY: "Microsoft Yahei", "微软雅黑", "SimHei", "黑体", Arial, sans-serif; BACKGROUND: #222; COLOR: #fff; FONT-SIZE: 14px; TOP: 0px; PADDING-TOP: 9px; LEFT: 0px
+}
+.yk-sidebar-large .yk-side-menu .ykSideMenu LI .subInfoTipOuter .subInfoTip .arrow {
+	BORDER-BOTTOM: transparent 8px solid; POSITION: absolute; BORDER-LEFT: transparent 8px solid; BORDER-TOP: transparent 8px solid; TOP: 10px; BORDER-RIGHT: #222 8px solid; LEFT: -16px
+}
+.yk-sidebar-large .yk-side-menu .ykSideMenu LI .subInfoTipOuter .subInfoTip .closeIcon {
+	POSITION: absolute; WIDTH: 12px; BACKGROUND: url(/yk/lib/img/widget/sidebar/sidebar.078c054ab4.png) -60px -140px; HEIGHT: 12px; TOP: 13px; CURSOR: pointer; RIGHT: 10px
+}
+.yk-sidebar-large .yk-side-menu .ykSideMenu LI A {
+	POSITION: relative; LINE-HEIGHT: 40px; TEXT-INDENT: 3.5em; WIDTH: 160px; DISPLAY: block; FONT-FAMILY: "Microsoft Yahei", "微软雅黑", "SimHei", "黑体", Arial, sans-serif; HEIGHT: 40px; COLOR: #555; FONT-SIZE: 14px; TEXT-DECORATION: none
+}
+.yk-sidebar-large .yk-side-menu .ykSideMenu LI A.selected:hover {
+	BACKGROUND: #06a7e1; COLOR: #fff
+}
+.yk-sidebar-large .yk-side-menu .ykSideMenu LI A.selected {
+	BACKGROUND: #06a7e1; COLOR: #fff
+}
+.yk-sidebar-large .yk-side-menu .ykSideMenu LI A.selected:hover .icon-1 {
+	BACKGROUND: url(/yk/lib/img/widget/sidebar/sidebar.078c054ab4.png) no-repeat 0px 0px
+}
+.yk-sidebar-large .yk-side-menu .ykSideMenu LI A.selected .icon-1 {
+	BACKGROUND: url(/yk/lib/img/widget/sidebar/sidebar.078c054ab4.png) no-repeat 0px 0px
+}
+.yk-sidebar-large .yk-side-menu .ykSideMenu LI A.selected:hover .icon-2 {
+	BACKGROUND: url(/yk/lib/img/widget/sidebar/sidebar.078c054ab4.png) no-repeat 0px -30px
+}
+.yk-sidebar-large .yk-side-menu .ykSideMenu LI A.selected .icon-2 {
+	BACKGROUND: url(/yk/lib/img/widget/sidebar/sidebar.078c054ab4.png) no-repeat 0px -30px
+}
+.yk-sidebar-large .yk-side-menu .ykSideMenu LI A.selected:hover .icon-3 {
+	BACKGROUND: url(/yk/lib/img/widget/sidebar/sidebar.078c054ab4.png) no-repeat 0px -60px
+}
+.yk-sidebar-large .yk-side-menu .ykSideMenu LI A.selected .icon-3 {
+	BACKGROUND: url(/yk/lib/img/widget/sidebar/sidebar.078c054ab4.png) no-repeat 0px -60px
+}
+.yk-sidebar-large .yk-side-menu .ykSideMenu LI A.selected:hover .icon-4 {
+	BACKGROUND: url(/yk/lib/img/widget/sidebar/sidebar.078c054ab4.png) no-repeat 0px -90px
+}
+.yk-sidebar-large .yk-side-menu .ykSideMenu LI A.selected .icon-4 {
+	BACKGROUND: url(/yk/lib/img/widget/sidebar/sidebar.078c054ab4.png) no-repeat 0px -90px
+}
+.yk-sidebar-large .yk-side-menu .ykSideMenu LI A.selected:hover .icon-5 {
+	BACKGROUND: url(/yk/lib/img/widget/sidebar/sidebar.078c054ab4.png) no-repeat 0px -120px
+}
+.yk-sidebar-large .yk-side-menu .ykSideMenu LI A.selected .icon-5 {
+	BACKGROUND: url(/yk/lib/img/widget/sidebar/sidebar.078c054ab4.png) no-repeat 0px -120px
+}
+.yk-sidebar-large .yk-side-menu .ykSideMenu LI A:hover {
+	BACKGROUND: #e7e7e7
+}
+.yk-sidebar-large .yk-side-menu .ykSideMenu LI A DIV {
+	POSITION: absolute; MARGIN-TOP: -8px; WIDTH: 18px; HEIGHT: 16px; TOP: 50%; LEFT: 22px
+}
+.yk-sidebar-large .yk-side-menu .ykSideMenu LI A .icon-1 {
+	BACKGROUND: url(/yk/lib/img/widget/sidebar/sidebar.078c054ab4.png) no-repeat -30px 0px
+}
+.yk-sidebar-large .yk-side-menu .ykSideMenu LI A .icon-2 {
+	BACKGROUND: url(/yk/lib/img/widget/sidebar/sidebar.078c054ab4.png) no-repeat -30px -30px
+}
+.yk-sidebar-large .yk-side-menu .ykSideMenu LI A .icon-3 {
+	BACKGROUND: url(/yk/lib/img/widget/sidebar/sidebar.078c054ab4.png) no-repeat -30px -60px
+}
+.yk-sidebar-large .yk-side-menu .ykSideMenu LI A .icon-4 {
+	BACKGROUND: url(/yk/lib/img/widget/sidebar/sidebar.078c054ab4.png) no-repeat -30px -90px
+}
+.yk-sidebar-large .yk-side-menu .ykSideMenu LI A .icon-5 {
+	BACKGROUND: url(/yk/lib/img/widget/sidebar/sidebar.078c054ab4.png) no-repeat -30px -120px
+}
+.yk-sidebar-large .yk-side-menu .ykSideMenu LI A .sub-update {
+	POSITION: absolute; WIDTH: 8px; BACKGROUND: #f00; HEIGHT: 8px; TOP: 14px; LEFT: 33px; -webkit-border-radius: 10px; -moz-border-radius: 10px; border-radius: 10px
+}
+.yk-sidebar-large .yk-side-menu .ykSideMenu LI A .sub-update-num {
+	POSITION: absolute; TEXT-ALIGN: center; LINE-HEIGHT: 20px; MARGIN-TOP: -10px; TEXT-INDENT: 0px; WIDTH: 20px; BACKGROUND: #f00; HEIGHT: 20px; COLOR: #fff; FONT-SIZE: 12px; TOP: 50%; RIGHT: 27px; LEFT: auto; -webkit-border-radius: 50%; -moz-border-radius: 50%; border-radius: 50%
+}
+.yk-sidebar-large .yk-side-menu .ykSideMenu LI A .sub-update-nonum {
+	LINE-HEIGHT: 12px
+}
+.yk-sidebar-large .yk-side-sub {
+	POSITION: relative; OVERFLOW-Y: hidden
+}
+.yk-sidebar-large .yk-side-sub .header {
+	POSITION: relative; PADDING-BOTTOM: 15px; MARGIN: 0px auto; PADDING-LEFT: 0px; WIDTH: 120px; PADDING-RIGHT: 0px; HEIGHT: 18px; PADDING-TOP: 15px
+}
+.yk-sidebar-large .yk-side-sub .header H2 {
+	LINE-HEIGHT: 18px; DISPLAY: inline; FONT-FAMILY: "Microsoft Yahei", "微软雅黑", "SimHei", "黑体", Arial, sans-serif; COLOR: #909090; FONT-SIZE: 14px; FONT-WEIGHT: normal; MARGIN-RIGHT: 6px
+}
+.yk-sidebar-large .yk-side-sub .header A {
+	LINE-HEIGHT: 18px; FONT-FAMILY: "Microsoft Yahei", "微软雅黑", "SimHei", "黑体", Arial, sans-serif; COLOR: #555; FONT-SIZE: 12px
+}
+.yk-sidebar-large .yk-side-sub .header A:hover {
+	COLOR: #cd3311
+}
+.yk-sidebar-large .yk-side-sub .header .more-icon {
+	POSITION: absolute; WIDTH: 14px; DISPLAY: block; BACKGROUND: url(/yk/lib/img/widget/sidebar/sidebar.078c054ab4.png) no-repeat -50px -28px; HEIGHT: 18px; TOP: 0px; CURSOR: pointer; RIGHT: 0px
+}
+.yk-sidebar-large .yk-side-sub .header .more-icon:hover {
+	BACKGROUND: url(/yk/lib/img/widget/sidebar/sidebar.078c054ab4.png) no-repeat -50px -58px
+}
+.yk-sidebar-large .yk-side-sub .mySub {
+	MARGIN-BOTTOM: 15px
+}
+.yk-sidebar-large .yk-side-sub .mySub UL.mySub-list LI.new-item {
+	POSITION: relative; PADDING-BOTTOM: 0px; PADDING-LEFT: 0px; WIDTH: 100%; PADDING-RIGHT: 0px; DISPLAY: none; HEIGHT: 30px; PADDING-TOP: 0px
+}
+.yk-sidebar-large .yk-side-sub .mySub UL.mySub-list LI.new-item .bg-layer {
+	LINE-HEIGHT: 30px; TEXT-INDENT: 9.5em; WIDTH: 100%; BACKGROUND: #90d7f6; HEIGHT: 100%; COLOR: #fff; FONT-SIZE: 12px
+}
+.yk-sidebar-large .yk-side-sub .mySub UL.mySub-list LI.new-item .content-layer {
+	POSITION: absolute; PADDING-BOTTOM: 0px; PADDING-LEFT: 20px; PADDING-RIGHT: 20px; HEIGHT: 30px; PADDING-TOP: 0px
+}
+.yk-sidebar-large .yk-side-sub .mySub UL.mySub-list LI.new-item .content-layer A {
+	LINE-HEIGHT: 30px; WIDTH: 90px; TEXT-OVERFLOW: ellipsis; DISPLAY: inline-block; FONT-FAMILY: "Microsoft Yahei", "微软雅黑", "SimHei", "黑体", Arial, sans-serif; WORD-WRAP: break-word; WHITE-SPACE: nowrap; HEIGHT: 30px; COLOR: #fff; FONT-SIZE: 12px; OVERFLOW: hidden; TEXT-DECORATION: none; -o-text-overflow: ellipsis
+}
+.yk-sidebar-large .yk-side-sub .mySub UL.mySub-list LI.new-item .content-layer A IMG {
+	WIDTH: 20px; HEIGHT: 20px; VERTICAL-ALIGN: middle; MARGIN-RIGHT: 10px
+}
+.yk-sidebar-large .yk-side-sub .mySub UL.mySub-list LI {
+	POSITION: relative; PADDING-BOTTOM: 0px; PADDING-LEFT: 20px; PADDING-RIGHT: 20px; HEIGHT: 30px; PADDING-TOP: 0px
+}
+.yk-sidebar-large .yk-side-sub .mySub UL.mySub-list LI A {
+	LINE-HEIGHT: 30px; WIDTH: 90px; TEXT-OVERFLOW: ellipsis; DISPLAY: inline-block; FONT-FAMILY: "Microsoft Yahei", "微软雅黑", "SimHei", "黑体", Arial, sans-serif; WORD-WRAP: break-word; WHITE-SPACE: nowrap; HEIGHT: 30px; COLOR: #555; FONT-SIZE: 12px; OVERFLOW: hidden; TEXT-DECORATION: none; -o-text-overflow: ellipsis
+}
+.yk-sidebar-large .yk-side-sub .mySub UL.mySub-list LI A IMG {
+	WIDTH: 20px; HEIGHT: 20px; VERTICAL-ALIGN: middle; MARGIN-RIGHT: 10px
+}
+.yk-sidebar-large .yk-side-sub .mySub UL.mySub-list LI .updateNum {
+	POSITION: absolute; LINE-HEIGHT: 30px; FONT-FAMILY: "Microsoft Yahei", "微软雅黑", "SimHei", "黑体", Arial, sans-serif; HEIGHT: 30px; COLOR: #909090; FONT-SIZE: 12px; TOP: 0px; RIGHT: 20px
+}
+.yk-sidebar-large .split-inner {
+	BORDER-BOTTOM: #e1e1e1 1px solid; MARGIN: 0px auto; WIDTH: 120px; HEIGHT: 1px
+}
+.yk-sidebar-large .yk-side-sub .recommend UL.rec-list LI {
+	POSITION: relative; PADDING-BOTTOM: 0px; PADDING-LEFT: 20px; PADDING-RIGHT: 20px; HEIGHT: 30px; PADDING-TOP: 0px
+}
+.yk-sidebar-large .yk-side-sub .recommend UL.rec-list LI A.info {
+	LINE-HEIGHT: 30px; WIDTH: 90px; TEXT-OVERFLOW: ellipsis; DISPLAY: inline-block; FONT-FAMILY: "Microsoft Yahei", "微软雅黑", "SimHei", "黑体", Arial, sans-serif; WORD-WRAP: break-word; WHITE-SPACE: nowrap; HEIGHT: 30px; COLOR: #555; FONT-SIZE: 12px; OVERFLOW: hidden; TEXT-DECORATION: none; -o-text-overflow: ellipsis
+}
+.yk-sidebar-large .yk-side-sub .recommend UL.rec-list LI A.info IMG {
+	WIDTH: 20px; HEIGHT: 20px; VERTICAL-ALIGN: middle; MARGIN-RIGHT: 10px
+}
+.yk-sidebar-large .yk-side-sub .recommend UL.rec-list LI A.subBtn {
+	POSITION: absolute; LINE-HEIGHT: 30px; DISPLAY: none; FONT-FAMILY: "Microsoft Yahei", "微软雅黑", "SimHei", "黑体", Arial, sans-serif; COLOR: #3399e0; FONT-SIZE: 12px; TOP: 0px; CURSOR: pointer; RIGHT: 15px; TEXT-DECORATION: none
+}
+.yk-sidebar-large .yk-side-sub .recommend UL.rec-list LI A.subBtn:hover {
+	COLOR: #cd3311
+}
+.yk-sidebar-large .yk-side-sub .recommend UL.rec-list LI A.subBtn-disable {
+	COLOR: #909090; CURSOR: default
+}
+.yk-sidebar-large .yk-side-sub .recommend UL.rec-list LI A.subBtn-disable:hover {
+	COLOR: #909090
+}
+.yk-sidebar-large .yk-side-manage {
+	BORDER-BOTTOM: #e1e1e1 1px solid; POSITION: absolute; LINE-HEIGHT: 40px; TEXT-INDENT: 4em; WIDTH: 160px; BOTTOM: 0px; DISPLAY: block; FONT-FAMILY: "Microsoft Yahei", "微软雅黑", "SimHei", "黑体", Arial, sans-serif; BACKGROUND: #e7e7e7; HEIGHT: 40px; COLOR: #3399e0; FONT-SIZE: 14px; BORDER-TOP: #e1e1e1 1px solid; CURSOR: pointer; TEXT-DECORATION: none; LEFT: 0px
+}
+.yk-sidebar-large .yk-side-manage:hover {
+	BACKGROUND: #e7e7e7; COLOR: #3399e0
+}
+.yk-sidebar-large .yk-side-manage .add-icon {
+	POSITION: absolute; MARGIN-TOP: -9px; WIDTH: 18px; DISPLAY: block; BACKGROUND: url(/yk/lib/img/widget/sidebar/sidebar.078c054ab4.png) no-repeat -60px 0px; HEIGHT: 18px; TOP: 50%; LEFT: 22px
+}
+.yk-sidebar-small {
+	Z-INDEX: 2; POSITION: fixed; WIDTH: 50px; BACKGROUND: #f5f5f5; HEIGHT: 100%; TOP: 0px; LEFT: -50px; _position: absolute
+}
+.yk-sidebar-small .yk-side-menu {
+	PADDING-TOP: 60px
+}
+.yk-sidebar-small .yk-side-menu .ykSideMenu {
+	BORDER-BOTTOM: #e1e1e1 1px solid; PADDING-BOTTOM: 10px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 15px
+}
+.yk-sidebar-small .yk-side-menu .ykSideMenu LI {
+	POSITION: relative
+}
+.yk-sidebar-small .yk-side-menu .ykSideMenu LI .subInfoTipOuter {
+	Z-INDEX: 1001; POSITION: absolute; ZOOM: 1; DISPLAY: none; TOP: 10px; LEFT: 50px
+}
+.yk-sidebar-small .yk-side-menu .ykSideMenu LI .subInfoTipOuter .subTip_mask {
+	Z-INDEX: -1; BORDER-BOTTOM: 0px; POSITION: absolute; BORDER-LEFT: 0px; WIDTH: 152px; HEIGHT: 38px; BORDER-TOP: 0px; TOP: 0px; BORDER-RIGHT: 0px; LEFT: 0px
+}
+.yk-sidebar-small .yk-side-menu .ykSideMenu LI .subInfoTipOuter .subInfoTip {
+	POSITION: relative; PADDING-BOTTOM: 9px; PADDING-LEFT: 12px; WIDTH: 130px; PADDING-RIGHT: 12px; FONT-FAMILY: "Microsoft Yahei", "微软雅黑", "SimHei", "黑体", Arial, sans-serif; BACKGROUND: #222; COLOR: #fff; FONT-SIZE: 14px; TOP: 0px; PADDING-TOP: 9px; LEFT: 0px
+}
+.yk-sidebar-small .yk-side-menu .ykSideMenu LI .subInfoTipOuter .subInfoTip .arrow {
+	BORDER-BOTTOM: transparent 8px solid; POSITION: absolute; BORDER-LEFT: transparent 8px solid; BORDER-TOP: transparent 8px solid; TOP: 10px; BORDER-RIGHT: #222 8px solid; LEFT: -16px
+}
+.yk-sidebar-small .yk-side-menu .ykSideMenu LI .subInfoTipOuter .subInfoTip .closeIcon {
+	POSITION: absolute; WIDTH: 12px; BACKGROUND: url(/yk/lib/img/widget/sidebar/sidebar.078c054ab4.png) -60px -140px; HEIGHT: 12px; TOP: 13px; CURSOR: pointer; RIGHT: 10px
+}
+.yk-sidebar-small .yk-side-menu .ykSideMenu LI A {
+	POSITION: relative; PADDING-BOTTOM: 0px; PADDING-LEFT: 10px; WIDTH: 30px; PADDING-RIGHT: 10px; DISPLAY: block; FONT-FAMILY: "Microsoft Yahei", "微软雅黑", "SimHei", "黑体", Arial, sans-serif; HEIGHT: 55px; COLOR: #555; FONT-SIZE: 12px; TEXT-DECORATION: none; PADDING-TOP: 1px
+}
+.yk-sidebar-small .yk-side-menu .ykSideMenu LI A.selected:hover {
+	BACKGROUND: #06a7e1; COLOR: #fff
+}
+.yk-sidebar-small .yk-side-menu .ykSideMenu LI A.selected {
+	BACKGROUND: #06a7e1; COLOR: #fff
+}
+.yk-sidebar-small .yk-side-menu .ykSideMenu LI A.selected:hover .icon-1 {
+	BACKGROUND: url(/yk/lib/img/widget/sidebar/sidebar.078c054ab4.png) no-repeat 0px -140px
+}
+.yk-sidebar-small .yk-side-menu .ykSideMenu LI A.selected .icon-1 {
+	BACKGROUND: url(/yk/lib/img/widget/sidebar/sidebar.078c054ab4.png) no-repeat 0px -140px
+}
+.yk-sidebar-small .yk-side-menu .ykSideMenu LI A.selected:hover .icon-2 {
+	BACKGROUND: url(/yk/lib/img/widget/sidebar/sidebar.078c054ab4.png) no-repeat 0px -170px
+}
+.yk-sidebar-small .yk-side-menu .ykSideMenu LI A.selected .icon-2 {
+	BACKGROUND: url(/yk/lib/img/widget/sidebar/sidebar.078c054ab4.png) no-repeat 0px -170px
+}
+.yk-sidebar-small .yk-side-menu .ykSideMenu LI A.selected:hover .icon-3 {
+	BACKGROUND: url(/yk/lib/img/widget/sidebar/sidebar.078c054ab4.png) no-repeat 0px -200px
+}
+.yk-sidebar-small .yk-side-menu .ykSideMenu LI A.selected .icon-3 {
+	BACKGROUND: url(/yk/lib/img/widget/sidebar/sidebar.078c054ab4.png) no-repeat 0px -200px
+}
+.yk-sidebar-small .yk-side-menu .ykSideMenu LI A.selected:hover .icon-4 {
+	BACKGROUND: url(/yk/lib/img/widget/sidebar/sidebar.078c054ab4.png) no-repeat 0px -230px
+}
+.yk-sidebar-small .yk-side-menu .ykSideMenu LI A.selected .icon-4 {
+	BACKGROUND: url(/yk/lib/img/widget/sidebar/sidebar.078c054ab4.png) no-repeat 0px -230px
+}
+.yk-sidebar-small .yk-side-menu .ykSideMenu LI A.selected:hover .icon-5 {
+	BACKGROUND: url(/yk/lib/img/widget/sidebar/sidebar.078c054ab4.png) no-repeat 0px -260px
+}
+.yk-sidebar-small .yk-side-menu .ykSideMenu LI A.selected .icon-5 {
+	BACKGROUND: url(/yk/lib/img/widget/sidebar/sidebar.078c054ab4.png) no-repeat 0px -260px
+}
+.yk-sidebar-small .yk-side-menu .ykSideMenu LI A:hover {
+	BACKGROUND: #e7e7e7
+}
+.yk-sidebar-small .yk-side-menu .ykSideMenu LI A DIV {
+	MARGIN: 10px auto 0px; WIDTH: 22px; HEIGHT: 20px
+}
+.yk-sidebar-small .yk-side-menu .ykSideMenu LI A .icon-1 {
+	BACKGROUND: url(/yk/lib/img/widget/sidebar/sidebar.078c054ab4.png) no-repeat -30px -140px
+}
+.yk-sidebar-small .yk-side-menu .ykSideMenu LI A .icon-2 {
+	BACKGROUND: url(/yk/lib/img/widget/sidebar/sidebar.078c054ab4.png) no-repeat -30px -170px
+}
+.yk-sidebar-small .yk-side-menu .ykSideMenu LI A .icon-3 {
+	BACKGROUND: url(/yk/lib/img/widget/sidebar/sidebar.078c054ab4.png) no-repeat -30px -200px
+}
+.yk-sidebar-small .yk-side-menu .ykSideMenu LI A .icon-4 {
+	BACKGROUND: url(/yk/lib/img/widget/sidebar/sidebar.078c054ab4.png) no-repeat -30px -230px
+}
+.yk-sidebar-small .yk-side-menu .ykSideMenu LI A .icon-5 {
+	BACKGROUND: url(/yk/lib/img/widget/sidebar/sidebar.078c054ab4.png) no-repeat -30px -260px
+}
+.yk-sidebar-small .yk-side-menu .ykSideMenu LI A H2 {
+	TEXT-ALIGN: center; MARGIN: 0px auto; WIDTH: 100%; FONT-FAMILY: "Microsoft Yahei", "微软雅黑", "黑体", Arial, sans-serif; HEIGHT: 20px; FONT-SIZE: 12px; FONT-WEIGHT: normal
+}
+.yk-sidebar-small .yk-side-menu .ykSideMenu LI A .sub-update {
+	POSITION: absolute; WIDTH: 8px; BACKGROUND: #f00; HEIGHT: 8px; TOP: -3px; LEFT: 27px; -webkit-border-radius: 10px; -moz-border-radius: 10px; border-radius: 10px
+}
+.yk-sidebar-small .yk-side-menu .ykSideMenu LI A .sub-update-num {
+	POSITION: absolute; TEXT-ALIGN: center; LINE-HEIGHT: 20px; TEXT-INDENT: 0px; WIDTH: 20px; BACKGROUND: #f00; HEIGHT: 20px; COLOR: #fff; FONT-SIZE: 12px; TOP: -10px; RIGHT: 5px; LEFT: auto; -webkit-border-radius: 50%; -moz-border-radius: 50%; border-radius: 50%
+}
+.yk-sidebar-small .yk-side-menu .ykSideMenu LI A .sub-update-nonum {
+	LINE-HEIGHT: 12px
+}
+.yk-sidebar-small .yk-nside-sub {
+	POSITION: relative; PADDING-TOP: 20px
+}
+.yk-sidebar-small .yk-nside-sub UL {
+	PADDING-BOTTOM: 0px; LIST-STYLE-TYPE: none; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; LIST-STYLE-IMAGE: none; PADDING-TOP: 0px
+}
+.yk-sidebar-small .yk-nside-sub .nSub-header {
+	TEXT-ALIGN: center; LINE-HEIGHT: 14px; MARGIN: 0px 0px 15px; FONT-FAMILY: "Microsoft Yahei", "微软雅黑", "SimHei", "黑体", Arial, sans-serif; COLOR: #909090; FONT-SIZE: 14px; FONT-WEIGHT: normal
+}
+.yk-sidebar-small .yk-nside-sub UL LI {
+	POSITION: relative; TEXT-ALIGN: center
+}
+.yk-sidebar-small .yk-nside-sub UL LI A {
+	DISPLAY: block; HEIGHT: 44px
+}
+.yk-sidebar-small .yk-nside-sub UL LI A:hover {
+	BACKGROUND: #e7e7e7
+}
+.yk-sidebar-small .yk-nside-sub UL LI A IMG.userImg {
+	MARGIN-TOP: 10px; WIDTH: 24px; HEIGHT: 24px
+}
+.yk-sidebar-small .yk-nside-sub .detailTip_mask {
+	Z-INDEX: -1; BORDER-BOTTOM: 0px; POSITION: absolute; BORDER-LEFT: 0px; WIDTH: 100%; HEIGHT: 100%; BORDER-TOP: 0px; TOP: 0px; BORDER-RIGHT: 0px; LEFT: 0px
+}
+.yk-sidebar-small .yk-nside-sub .detailTip {
+	BORDER-BOTTOM: #e7e7e7 1px solid; POSITION: absolute; BORDER-LEFT: #e7e7e7 1px solid; PADDING-BOTTOM: 10px; PADDING-LEFT: 10px; WIDTH: 140px; PADDING-RIGHT: 10px; BACKGROUND: #fff; HEIGHT: 50px; BORDER-TOP: #e7e7e7 1px solid; TOP: 0px; BORDER-RIGHT: #e7e7e7 1px solid; PADDING-TOP: 10px; LEFT: 47px; -webkit-box-shadow: 0 0 10px #8c8c8c; -moz-box-shadow: 0 0 10px #8c8c8c; box-shadow: 0 0 10px #8c8c8c
+}
+.yk-sidebar-small .yk-nside-sub .detailTip IMG {
+	POSITION: absolute; WIDTH: 50px; HEIGHT: 50px; TOP: 10px; LEFT: 10px
+}
+.yk-sidebar-small .yk-nside-sub .detailTip H2 {
+	LINE-HEIGHT: 20px; MARGIN: 0px auto; PADDING-LEFT: 50px; TEXT-OVERFLOW: ellipsis; FONT-FAMILY: "Microsoft Yahei", "微软雅黑", "SimHei", "黑体", Arial, sans-serif; WORD-WRAP: break-word; WHITE-SPACE: nowrap; HEIGHT: 20px; COLOR: #555; FONT-SIZE: 12px; OVERFLOW: hidden; FONT-WEIGHT: normal; -o-text-overflow: ellipsis
+}
+.yk-sidebar-small .yk-nside-sub .detailTip .sub-btn {
+	BORDER-BOTTOM: #007dcc 1px solid; BORDER-LEFT: #007dcc 1px solid; LINE-HEIGHT: 21px; MARGIN-TOP: 7px; WIDTH: 58px; FONT-FAMILY: "Microsoft Yahei", "微软雅黑", "SimHei", "黑体", Arial, sans-serif; BACKGROUND: #1c98e7; HEIGHT: 22px; COLOR: #fff; MARGIN-LEFT: 60px; FONT-SIZE: 12px; BORDER-TOP: #007dcc 1px solid; CURSOR: pointer; BORDER-RIGHT: #007dcc 1px solid
+}
+.yk-sidebar-small .yk-nside-sub .detailTip .sub-btn-disable {
+	BORDER-BOTTOM: #e2e2e2 1px solid; BORDER-LEFT: #e2e2e2 1px solid; LINE-HEIGHT: 21px; MARGIN-TOP: 7px; WIDTH: 58px; FONT-FAMILY: "Microsoft Yahei", "微软雅黑", "SimHei", "黑体", Arial, sans-serif; BACKGROUND: #f2f2f2; HEIGHT: 22px; COLOR: #bbb; MARGIN-LEFT: 60px; FONT-SIZE: 12px; BORDER-TOP: #e2e2e2 1px solid; CURSOR: default; BORDER-RIGHT: #e2e2e2 1px solid
+}
+.yk-sidebar-small .yk-nside-sub .detailTip .arrow {
+	BORDER-BOTTOM: transparent 7px solid; POSITION: absolute; BORDER-LEFT: transparent 7px solid; BORDER-TOP: transparent 7px solid; TOP: 18px; BORDER-RIGHT: #fff 7px solid; LEFT: -14px
+}
+.yk-sidebar-small .yk-nside-sub .detailTip-sub {
+	BORDER-BOTTOM: #e7e7e7 1px solid; POSITION: absolute; BORDER-LEFT: #e7e7e7 1px solid; PADDING-BOTTOM: 0px; PADDING-LEFT: 10px; PADDING-RIGHT: 10px; BACKGROUND: #fff; HEIGHT: 35px; BORDER-TOP: #e7e7e7 1px solid; TOP: 3px; BORDER-RIGHT: #e7e7e7 1px solid; PADDING-TOP: 0px; LEFT: 47px; -webkit-box-shadow: 0 0 10px #8c8c8c; -moz-box-shadow: 0 0 10px #8c8c8c; box-shadow: 0 0 10px #8c8c8c
+}
+.yk-sidebar-small .yk-nside-sub .detailTip-sub .detailTip_mask {
+	
+}
+.yk-sidebar-small .yk-nside-sub .detailTip-sub IMG {
+	DISPLAY: none
+}
+.yk-sidebar-small .yk-nside-sub .detailTip-sub H2 {
+	LINE-HEIGHT: 35px; MARGIN: 0px auto; TEXT-OVERFLOW: ellipsis; FONT-FAMILY: "Microsoft Yahei", "微软雅黑", "SimHei", "黑体", Arial, sans-serif; WHITE-SPACE: nowrap; COLOR: #555; FONT-SIZE: 12px; FONT-WEIGHT: normal; -o-text-overflow: ellipsis
+}
+.yk-sidebar-small .yk-nside-sub .detailTip-sub .sub-btn {
+	DISPLAY: none
+}
+.yk-sidebar-small .yk-nside-sub .detailTip-sub .sub-btn-disable {
+	DISPLAY: none
+}
+.yk-sidebar-small .yk-nside-sub .detailTip-sub .arrow {
+	BORDER-BOTTOM: transparent 7px solid; POSITION: absolute; BORDER-LEFT: transparent 7px solid; BORDER-TOP: transparent 7px solid; TOP: 10px; BORDER-RIGHT: #fff 7px solid; LEFT: -14px; _display: none
+}
+.yk-sidebar-small .yk-side-manage {
+	POSITION: absolute; TEXT-ALIGN: center; LINE-HEIGHT: 85px; WIDTH: 50px; BOTTOM: 0px; DISPLAY: block; BACKGROUND: #f0f0f0; HEIGHT: 60px; COLOR: #3399e0; FONT-SIZE: 12px; BORDER-TOP: #e1e1e1 1px solid; CURSOR: pointer; TEXT-DECORATION: none; LEFT: 0px
+}
+.yk-sidebar-small .yk-side-manage:hover {
+	BACKGROUND: #e7e7e7; COLOR: #3399e0
+}
+.yk-sidebar-small .yk-side-manage .add-icon {
+	POSITION: absolute; MARGIN-TOP: -20px; WIDTH: 18px; DISPLAY: block; BACKGROUND: url(/yk/lib/img/widget/sidebar/sidebar.078c054ab4.png) no-repeat -60px 0px; HEIGHT: 18px; TOP: 50%; LEFT: 15px
+}
+.yk-sidebar-mini {
+	Z-INDEX: 1; BORDER-BOTTOM: #b1b1b1 1px solid; POSITION: fixed; BORDER-LEFT: #b1b1b1 1px solid; WIDTH: 17px; BACKGROUND: #b1b1b1; HEIGHT: 64px; BORDER-TOP: #b1b1b1 1px solid; TOP: 45%; CURSOR: pointer; BORDER-RIGHT: #b1b1b1 1px solid; LEFT: -19px; -webkit-border-radius: 0 4px 4px 0; -moz-border-radius: 0 4px 4px 0; border-radius: 0 4px 4px 0; _position: absolute
+}
+.yk-sidebar-mini .mini-icon {
+	MARGIN: 10px auto 6px; WIDTH: 15px; BACKGROUND: url(/yk/lib/img/widget/sidebar/sidebar.078c054ab4.png) no-repeat -60px -90px; HEIGHT: 10px
+}
+.yk-sidebar-mini P {
+	TEXT-ALIGN: center; LINE-HEIGHT: 14px; MARGIN: 0px; COLOR: #fff; FONT-SIZE: 12px
+}
+.yk-sidebar-mask {
+	Z-INDEX: 0; POSITION: fixed; WIDTH: 50px; DISPLAY: block; HEIGHT: 100%; TOP: 0px; MARGIN-RIGHT: auto; LEFT: 0px; _position: absolute; _height: 600px
+}
+.yk-sidebar-small .showSubBtn {
+	TEXT-ALIGN: center; WIDTH: 100%; DISPLAY: block
+}
+.yk-sidebar-small .showSubBtn:hover .text {
+	COLOR: #c31
+}
+.yk-sidebar-small .showSubBtn .text {
+	LINE-HEIGHT: 14px; FONT-FAMILY: "Microsoft Yahei", "微软雅黑", "SimHei", "黑体", Arial, sans-serif; COLOR: #909090; FONT-SIZE: 12px
+}
+.yk-sidebar-small .showSubBtn .icon {
+	MARGIN: 3px auto 0px; WIDTH: 12px; BACKGROUND: url(/yk/lib/img/widget/sidebar/sidebar.078c054ab4.png) no-repeat -60px -120px; HEIGHT: 10px
+}
+.yk-sidebar-large .showSubBtn {
+	TEXT-ALIGN: center; WIDTH: 100%; DISPLAY: block; PADDING-TOP: 10px
+}
+.yk-sidebar-large .showSubBtn:hover .text {
+	COLOR: #c31
+}
+.yk-sidebar-large .showSubBtn .text {
+	LINE-HEIGHT: 14px; DISPLAY: inline; FONT-FAMILY: "Microsoft Yahei", "微软雅黑", "SimHei", "黑体", Arial, sans-serif; COLOR: #909090; FONT-SIZE: 14px
+}
+.yk-sidebar-large .showSubBtn .icon {
+	MARGIN: 3px 0px 0px 5px; WIDTH: 12px; DISPLAY: inline-block; BACKGROUND: url(/yk/lib/img/widget/sidebar/sidebar.078c054ab4.png) no-repeat -60px -120px; HEIGHT: 10px
+}
+.qcard {
+	Z-INDEX: 2000; POSITION: absolute; VISIBILITY: hidden; TOP: 0px; LEFT: 0px
+}
+.qcard .qcard_box {
+	BORDER-BOTTOM: #c6c6c6 1px solid; BORDER-LEFT: #c6c6c6 1px solid; PADDING-BOTTOM: 3px; PADDING-LEFT: 3px; PADDING-RIGHT: 3px; BACKGROUND: #f1f1f1; BORDER-TOP: #c6c6c6 1px solid; BORDER-RIGHT: #c6c6c6 1px solid; PADDING-TOP: 3px
+}
+.qcard .qcard_content {
+	MIN-WIDTH: 150px; PADDING-BOTTOM: 10px; MIN-HEIGHT: 20px; PADDING-LEFT: 10px; PADDING-RIGHT: 10px; BACKGROUND: #fff; PADDING-TOP: 10px; _width: 150px; _height: 20px
+}
+.qcard .qcard_pointer {
+	POSITION: absolute; OVERFLOW: hidden
+}
+.qcard .qcard_pointer_t {
+	WIDTH: 16px; BOTTOM: -8px; BACKGROUND: url(/yk/lib/img/widget/card/pointer.ec627f72f0.png) no-repeat 0px -12px; HEIGHT: 12px
+}
+.qcard .qcard_pointer_b {
+	WIDTH: 16px; BACKGROUND: url(/yk/lib/img/widget/card/pointer.ec627f72f0.png) no-repeat 0px 0px; HEIGHT: 12px; TOP: -8px
+}
+.qcard .qcard_pointer_l {
+	WIDTH: 12px; BACKGROUND: url(/yk/lib/img/widget/card/pointer.ec627f72f0.png) no-repeat -32px 0px; HEIGHT: 16px; RIGHT: -8px
+}
+.qcard .qcard_pointer_r {
+	WIDTH: 12px; BACKGROUND: url(/yk/lib/img/widget/card/pointer.ec627f72f0.png) no-repeat -20px 0px; HEIGHT: 16px; LEFT: -8px
+}
+.qcard .qcard_pointer_tl {
+	LEFT: 17px
+}
+.qcard .qcard_pointer_tr {
+	RIGHT: 17px
+}
+.qcard .qcard_pointer_bl {
+	LEFT: 17px
+}
+.qcard .qcard_pointer_br {
+	RIGHT: 17px
+}
+.qcard .qcard_pointer_lt {
+	TOP: 17px
+}
+.qcard .qcard_pointer_lb {
+	BOTTOM: 17px
+}
+.qcard .qcard_pointer_rt {
+	TOP: 17px
+}
+.qcard .qcard_pointer_rb {
+	BOTTOM: 17px
+}
+.user-grade-icon {
+	BACKGROUND-IMAGE: url(http://static.youku.com/lvip/img/rank/rank-icons.png); MARGIN-TOP: -3px; WIDTH: 22px; DISPLAY: inline-block; BACKGROUND-REPEAT: no-repeat; HEIGHT: 16px; VERTICAL-ALIGN: middle
+}
+.user-grade-lv1 {
+	BACKGROUND-POSITION: 0px 0px
+}
+.user-grade-lv2 {
+	BACKGROUND-POSITION: 0px -16px
+}
+.user-grade-lv3 {
+	BACKGROUND-POSITION: 0px -32px
+}
+.user-grade-lv4 {
+	BACKGROUND-POSITION: 0px -48px
+}
+.user-grade-lv5 {
+	BACKGROUND-POSITION: 0px -64px
+}
+.user-grade-lv6 {
+	BACKGROUND-POSITION: 0px -80px
+}
+.user-grade-lv7 {
+	BACKGROUND-POSITION: 0px -96px
+}
+.user-grade-lv8 {
+	BACKGROUND-POSITION: 0px -112px
+}
+.user-grade-lv9 {
+	BACKGROUND-POSITION: 0px -128px
+}
+.user-grade-lv10 {
+	BACKGROUND-POSITION: 0px -144px
+}
+.user-grade-lv11 {
+	BACKGROUND-POSITION: 0px -160px
+}
+.user-grade-lv12 {
+	BACKGROUND-POSITION: 0px -176px
+}
+.user-grade-lv13 {
+	BACKGROUND-POSITION: 0px -192px
+}
+.user-grade-lv14 {
+	BACKGROUND-POSITION: 0px -208px
+}
+.user-grade-lv15 {
+	BACKGROUND-POSITION: 0px -224px
+}
+.user-grade-lv16 {
+	BACKGROUND-POSITION: 0px -240px
+}
+.user-grade-lv17 {
+	BACKGROUND-POSITION: 0px -256px
+}
+.user-grade-lv18 {
+	BACKGROUND-POSITION: 0px -272px
+}
+.user-grade-lv19 {
+	BACKGROUND-POSITION: 0px -288px
+}
+.user-grade-lv20 {
+	BACKGROUND-POSITION: 0px -304px
+}
+.user-grade-lv21 {
+	BACKGROUND-POSITION: 0px -320px
+}
+.user-grade-lv22 {
+	BACKGROUND-POSITION: 0px -336px
+}
+.user-grade-lv23 {
+	BACKGROUND-POSITION: 0px -352px
+}
+.user-grade-lv24 {
+	BACKGROUND-POSITION: 0px -368px
+}
+.user-grade-lv25 {
+	BACKGROUND-POSITION: 0px -384px
+}
+.user-grade-lv26 {
+	BACKGROUND-POSITION: 0px -400px
+}
+.user-grade-lv27 {
+	BACKGROUND-POSITION: 0px -416px
+}
+.user-grade-lv28 {
+	BACKGROUND-POSITION: 0px -432px
+}
+.user-grade-lv29 {
+	BACKGROUND-POSITION: 0px -448px
+}
+.user-grade-lv30 {
+	BACKGROUND-POSITION: 0px -464px
+}
+.user-grade-lv31 {
+	BACKGROUND-POSITION: 0px -480px
+}
+.user-grade-lv32 {
+	BACKGROUND-POSITION: 0px -496px
+}
+.user-grade-lv33 {
+	BACKGROUND-POSITION: 0px -512px
+}
+.user-grade-lv34 {
+	BACKGROUND-POSITION: 0px -528px
+}
+.user-grade-lv35 {
+	BACKGROUND-POSITION: 0px -544px
+}
+.user-grade-lv36 {
+	BACKGROUND-POSITION: 0px -560px
+}
+.user-grade-lv37 {
+	BACKGROUND-POSITION: 0px -576px
+}
+.user-grade-lv38 {
+	BACKGROUND-POSITION: 0px -592px
+}
+.user-grade-lv39 {
+	BACKGROUND-POSITION: 0px -608px
+}
+.user-grade-lv40 {
+	BACKGROUND-POSITION: 0px -624px
+}
+.user-grade-lv41 {
+	BACKGROUND-POSITION: 0px -640px
+}
+.user-grade-lv42 {
+	BACKGROUND-POSITION: 0px -656px
+}
+.user-grade-lv43 {
+	BACKGROUND-POSITION: 0px -672px
+}
+.user-grade-lv44 {
+	BACKGROUND-POSITION: 0px -688px
+}
+.user-grade-lv45 {
+	BACKGROUND-POSITION: 0px -704px
+}
+.user-grade-lv46 {
+	BACKGROUND-POSITION: 0px -720px
+}
+.user-grade-lv47 {
+	BACKGROUND-POSITION: 0px -736px
+}
+.user-grade-lv48 {
+	BACKGROUND-POSITION: 0px -752px
+}
+.user-grade-lv49 {
+	BACKGROUND-POSITION: 0px -768px
+}
+.user-grade-lv50 {
+	BACKGROUND-POSITION: 0px -784px
+}
+.user-grade-lv51 {
+	BACKGROUND-POSITION: 0px -800px
+}
+.user-grade-lv52 {
+	BACKGROUND-POSITION: 0px -816px
+}
+.user-grade-lv53 {
+	BACKGROUND-POSITION: 0px -832px
+}
+.user-grade-lv54 {
+	BACKGROUND-POSITION: 0px -848px
+}
+.user-grade-lv55 {
+	BACKGROUND-POSITION: 0px -864px
+}
+.user-grade-lv56 {
+	BACKGROUND-POSITION: 0px -880px
+}
+.user-grade-lv57 {
+	BACKGROUND-POSITION: 0px -896px
+}
+.user-grade-lv58 {
+	BACKGROUND-POSITION: 0px -912px
+}
+.user-grade-lv59 {
+	BACKGROUND-POSITION: 0px -928px
+}
+.user-grade-lv60 {
+	BACKGROUND-POSITION: 0px -944px
+}
+.user-grade-lv61 {
+	BACKGROUND-POSITION: 0px -960px
+}
+.user-grade-lv62 {
+	BACKGROUND-POSITION: 0px -976px
+}
+.user-grade-lv63 {
+	BACKGROUND-POSITION: 0px -992px
+}
+.user-grade-lv64 {
+	BACKGROUND-POSITION: 0px -1008px
+}
+.user-grade-lv65 {
+	BACKGROUND-POSITION: 0px -1024px
+}
+.user-grade-lv66 {
+	BACKGROUND-POSITION: 0px -1040px
+}
+.user-grade-lv67 {
+	BACKGROUND-POSITION: 0px -1056px
+}
+.user-grade-lv68 {
+	BACKGROUND-POSITION: 0px -1072px
+}
+.user-grade-lv69 {
+	BACKGROUND-POSITION: 0px -1088px
+}
+.user-grade-lv70 {
+	BACKGROUND-POSITION: 0px -1104px
+}
+.user-grade-lv71 {
+	BACKGROUND-POSITION: 0px -1120px
+}
+.user-grade-lv72 {
+	BACKGROUND-POSITION: 0px -1136px
+}
+.user-grade-lv73 {
+	BACKGROUND-POSITION: 0px -1152px
+}
+.user-grade-lv74 {
+	BACKGROUND-POSITION: 0px -1168px
+}
+.user-grade-lv75 {
+	BACKGROUND-POSITION: 0px -1184px
+}
+.user-grade-lv76 {
+	BACKGROUND-POSITION: 0px -1200px
+}
+.user-grade-lv77 {
+	BACKGROUND-POSITION: 0px -1216px
+}
+.user-grade-lv78 {
+	BACKGROUND-POSITION: 0px -1232px
+}
+.user-grade-lv79 {
+	BACKGROUND-POSITION: 0px -1248px
+}
+.user-grade-lv80 {
+	BACKGROUND-POSITION: 0px -1264px
+}
+.user-grade-lv81 {
+	BACKGROUND-POSITION: 0px -1280px
+}
+.user-grade-lv82 {
+	BACKGROUND-POSITION: 0px -1296px
+}
+.user-grade-lv83 {
+	BACKGROUND-POSITION: 0px -1312px
+}
+.user-grade-lv84 {
+	BACKGROUND-POSITION: 0px -1328px
+}
+.user-grade-lv85 {
+	BACKGROUND-POSITION: 0px -1344px
+}
+.user-grade-lv86 {
+	BACKGROUND-POSITION: 0px -1360px
+}
+.user-grade-lv87 {
+	BACKGROUND-POSITION: 0px -1376px
+}
+.user-grade-lv88 {
+	BACKGROUND-POSITION: 0px -1392px
+}
+.user-grade-lv89 {
+	BACKGROUND-POSITION: 0px -1408px
+}
+.user-grade-lv90 {
+	BACKGROUND-POSITION: 0px -1424px
+}
+.user-grade-lv91 {
+	BACKGROUND-POSITION: 0px -1440px
+}
+.user-grade-lv92 {
+	BACKGROUND-POSITION: 0px -1456px
+}
+.user-grade-lv93 {
+	BACKGROUND-POSITION: 0px -1472px
+}
+.user-grade-lv94 {
+	BACKGROUND-POSITION: 0px -1488px
+}
+.user-grade-lv95 {
+	BACKGROUND-POSITION: 0px -1504px
+}
+.user-grade-lv96 {
+	BACKGROUND-POSITION: 0px -1520px
+}
+.user-grade-lv97 {
+	BACKGROUND-POSITION: 0px -1536px
+}
+.user-grade-lv98 {
+	BACKGROUND-POSITION: 0px -1552px
+}
+.user-grade-lv99 {
+	BACKGROUND-POSITION: 0px -1568px
+}
+.user-grade-lv100 {
+	WIDTH: 24px; BACKGROUND-POSITION: 0px -1584px
+}

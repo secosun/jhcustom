@@ -1,0 +1,13 @@
+name = Image Upload JingHe
+description = Costom Theme Moudle.  
+package = Vegetable King Development
+core = 7.x
+
+files[] = image_upload.module
+
+; Information added by Drupal.org packaging script on 2015-03-18
+version = "7.x-3.1+7-dev"
+core = "7.x"
+project = "Image Upload JingHe"
+datestamp = "1426704489"
+

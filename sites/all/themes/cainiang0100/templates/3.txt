@@ -1,0 +1,11 @@
+ <!--<?php   print $row["edit_quantity"]; ?>
+	  <?php   print $row["edit_delete"]; ?>-->
+
+  <line-Item title="<?php   print $row["line_item_title"]; ?>" total0="<?php   print $row["commerce_total"]; ?>" price0= "<?php   print $row["commerce_unit_price"]; ?>"></line-Item>
+
+
+	   
+	   
+     <!--  <?php foreach ($rows as $row_count => $row): ?>
+	   <tr ><td><?php   print $row["line_item_title"]; ?></td> <td><?php   print $row["commerce_unit_price"]; ?></td> <td><?php   print $row["edit_quantity"]; ?></td> <td><?php   print $row["commerce_total"]; ?></td> <td><?php   print $row["edit_delete"]; ?></td></tr>
+	   <?php endforeach; ?>-->

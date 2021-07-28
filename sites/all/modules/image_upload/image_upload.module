@@ -1,0 +1,327 @@
+<?php
+
+/**
+ * @file
+ * Enables users to comment on published content.
+ *
+ * When enabled, the Drupal comment module creates a discussion
+ * board for each Drupal node. Users can post comments to discuss
+ * a forum topic, weblog post, story, collaborative book page, etc.
+ */
+
+/**
+ * Implements hook_theme($existing, $type, $theme, $path) .
+ */
+function image_upload_theme($existing, $type, $theme, $path) {
+    
+    // Ex 2: a custom form that comes from a custom module's "custom_donate_form()" function.
+    $items['image_upload'] = array(
+        'render element' => 'form',
+        'template' => 'image_upload',
+        'path' => drupal_get_path('module', 'form_theme') . '/template/form',
+    );
+    
+    return $items;
+}
+
+/**
+ * Implements hook_menu().
+ */
+function image_upload_menu() {
+  $items = array();
+
+ 
+  //$directory_path = file_stream_wrapper_get_instance_by_scheme('public')->getDirectoryPath();
+  
+  // Generate and deliver image derivatives of private files.
+  // These image derivatives are always delivered through the menu system.
+  $items['uploadimages'] = array(
+    'title' => 'Generate image style',
+    'page callback' => 'uploadimages',
+    'page arguments' => array(3),
+    'access callback' => TRUE,
+    'type' => MENU_CALLBACK,
+  );
+
+   $items['choosePicture'] = array(
+    'title' => '上传头像',
+    'page callback' => 'drupal_get_form',
+    'page arguments' => array('fileUploadForm'),
+    'access callback' => TRUE,
+    'type' => MENU_CALLBACK,
+  );
+  $items['crop'] = array(
+    'title' => '剪切头像',
+    'page callback' => 'cropimages',
+    'page arguments' => array(1),
+    'access callback' => TRUE,
+	//'theme callback' => 'image_upload',
+    'type' => MENU_CALLBACK,
+  );
+  return $items;
+}
+
+
+function fileUploadForm($form, &$form_state)
+{
+    $form['picture']['picture_upload'] = array(
+    '#type' => 'file',
+    '#title' => t('Upload picture'),
+    '#size' => 48,
+    '#description' => t('Your virtual face or picture. Pictures larger than @dimensions pixels will be scaled down.', array('@dimensions' => variable_get('user_picture_dimensions', '85x85'))) . ' ' . filter_xss_admin(variable_get('user_picture_guidelines', '')),
+    );
+	
+	$form['#validate'][] = 'image_upload_validate_picture';
+	
+   $form['submit'] = array(
+      '#type' => 'submit',
+      '#value' => '上传头像',
+      '#submit' => array('image_upload_submit'),//调用提交函数
+	  '#attributes'=>array('class'=>array('btn btn-default')),
+   );
+	return $form;
+}
+
+
+/**
+ * Page callback: Generates a derivative, given a style and image path.
+ *
+ * After generating an image, transfer it to the requesting agent.
+ *
+ * @param $style
+ *   The image style
+ */
+function uploadimages() {
+    global $user;
+	if($user->uid ==0)
+	{
+	  echo "请先登录";
+	  //drupal_goto('user/login');
+	}
+	else{
+	   //file_load_multiple($picture_fids)
+      //echo $user->picture;
+	}
+	//print_r( $_POST);
+	//return;
+  $args = func_get_args();
+  
+	$source = urldecode($_POST["imageSource"]);
+	$viewPortW = $_POST["viewPortW"];
+	$viewPortH = $_POST["viewPortH"];
+	$pWidth = $_POST["imageW"];
+	$pHeight =  $_POST["imageH"];
+	$selectorX = $_POST["selectorX"];
+	$selectorY = $_POST["selectorY"];
+	$iS = explode(".",$_POST["imageSource"]);
+	$ext = end($iS);
+
+	//Create the image from the image sent
+	 
+	//$img = new Imagick($source);
+	//http://192.168.1.107/sites/default/files/styles/thumbnail/public/pictures/picture-1-1475730866.jpg?itok=v4EOw47g
+	//C:\wamp\www\drupal-7.36\Web\cropzoom-master\demo\chicas1024.jpg
+	//C:\wamp\www\drupal-7.36\sites\default\files\styles\thumbnail\public\pictures
+	
+    $RootDir = $_SERVER['DOCUMENT_ROOT']; 
+	//$image = image_load($RootDir."Web\cropzoom-master\chicas1024.jpg");
+	//http://192.168.1.107/sites/default/files/pictures/picture-1-1478952857.jpg?w=768&h=1024
+	$image = image_load($RootDir. explode('?',substr($source,1))[0]);
+	//Obtain width and height from the original source.
+	$width = $image->info['width'];
+	$height = $image->info['height'];
+	
+	//calculate the position from the source image if we need to crop and where
+	//we need to put into the target image.
+     
+	 //resize the image if the width and height doesn't match
+	 //echo $pWidth;
+	 //echo $width;
+	 //echo $pHeight;
+	 //echo $height;
+	 //return;
+	//watchdog('uploadimages', explode('?',$source)[0]);
+	//watchdog('uploadimages', '$pWidth'.$pWidth.'$width'.$width.'$pHeight'.$pHeight.'$height'.$height);
+	if($pWidth != $width && $pHeight != $height){
+		image_resize($image,$pWidth, $pHeight);
+		$width = $image->info['width'];
+		$height = $image->info['height'];
+	}
+	
+	//Check if we have to rotate the image
+	if($_POST["imageRotate"]){
+		$angle = $_POST["imageRotate"];
+		//rotate the image and set 'transparent' as background of rotation
+		//$img->rotateImage(new ImagickPixel('none'), $angle);
+		image_rotate($image, $angle);
+		$rotated_width = $image->info['width'];
+		$rotated_height =  $image->info['height'];
+
+		//obtain the difference between sizes so we can move the x,y points.
+		$diffW = abs($rotated_width - $width) / 2;
+		$diffH = abs($rotated_height - $height) / 2;
+
+		$_POST["imageX"] = ($rotated_width > $width ? $_POST["imageX"] - $diffW : $_POST["imageX"] + $diffW);
+		$_POST["imageY"] = ($rotated_height > $height ? $_POST["imageY"] - $diffH : $_POST["imageY"] + $diffH);
+
+	}
+	
+	//calculate the position from the source image if we need to crop and where
+	//we need to put into the target image.
+
+	$dst_x = $src_x = $dst_y = $src_y = 0;
+
+	if($_POST["imageX"] > 0)
+	{
+		$dst_x = abs($_POST["imageX"]);
+	}
+	else
+	{
+		$src_x = abs($_POST["imageX"]);
+	}
+	if($_POST["imageY"] > 0)
+	{
+		$dst_y = abs($_POST["imageY"]);
+	}
+	else
+	{
+		$src_y = abs($_POST["imageY"]);
+	}
+
+	//This fix the page of the image so it crops fine!
+	//$img->setimagepage(0, 0, 0, 0);
+	//crop the image with the viewed into the viewport
+	image_crop($image, $src_x, $src_y,$viewPortW, $viewPortH);
+	$cropX = $selectorX;
+	$cropY = $selectorY;
+	if($_POST["imageX"] > 0)
+	{
+		$cropX = $selectorX - $_POST["imageX"] ;
+	}
+	if($_POST["imageY"] > 0)
+	{
+	    $cropY = $selectorY - $_POST["imageY"];
+	}
+	//watchdog('uploadimages', explode('?',$source)[0]);
+	//watchdog('uploadimages', '$pWidth'.$pWidth.'$width'.$width.'$pHeight'.$pHeight.'$height'.$height);
+	//$_POST["selectorW"],$_POST["selectorH"], $selectorX, $selectorY
+	if(image_crop($image,$cropX, $cropY,$_POST["selectorW"],$_POST["selectorH"])){
+		 //$targetFile = 'sites/default/files/styles/thumbnail/public/pictures_'.time().".".$ext;
+		 //只需要将图片放到public目录中，主题系统会自动搬到缩略图文件夹中
+		 $targetFile = substr(explode('?',$source)[0],1);
+		 if(image_save($image,$RootDir. $targetFile)){
+		    //echo '/'. $targetFile;
+			echo $targetFile;
+            
+			//echo 'home';
+		 }
+		 else{
+		    echo "Save Failure" ;
+		 }
+	}
+	else{
+	     echo "NO" ;
+	}
+	
+
+  
+}
+
+
+/**
+ * Validates an image uploaded by a user.
+ *
+ * @see user_account_form()
+ */
+function image_upload_validate_picture(&$form, &$form_state) {
+  // If required, validate the uploaded picture.
+  $validators = array(
+    'file_validate_is_image' => array(),
+    'file_validate_image_resolution' => array(variable_get('user_picture_dimensions', '85x85')),
+    'file_validate_size' => array(variable_get('user_picture_file_size', '30') * 1024),
+  );
+
+  // Save the file as a temporary file.
+  $file = file_save_upload('picture_upload', $validators);//保存到临时目录
+  //dsm($file);
+  if ($file === FALSE) {
+    form_set_error('picture_upload', t("Failed to upload the picture image; the %directory directory doesn't exist or is not writable.", array('%directory' => variable_get('user_picture_path', 'pictures'))));
+  }
+  elseif ($file !== NULL) {
+     
+     $form_state['values']['picture_upload'] = $file;
+  }
+}
+
+
+
+function image_upload_submit($form, &$form_state) {
+  if(user_is_logged_in())
+  {
+    global $user;
+    $account= user_load($user->uid);
+    $picture = $form_state['values']['picture_upload']; 
+	if ($picture) {
+
+		
+		//image_save($image,$RootDir.$picture->filename);
+		 $u = user_save($account, array('picture' => $picture));//保存到公共目录
+		 if($u){
+		    //dsm($u);
+			//dsm(file_create_url($u->picture->uri));
+			//$url = '/Web/cropzoom-master/version1.0/index.html?p='.$u->picture->filename;
+			
+			
+			//dsm($_SERVER['DOCUMENT_ROOT']);//C:/wamp/www/drupal-7.36/
+			$RootDir = $_SERVER['DOCUMENT_ROOT'].'sites/default/files/pictures/'; 
+			//dsm($RootDir.$picture->filename);
+			$image = image_load($RootDir.$u->picture->filename );
+			//dsm($image);
+			$width = $image->info['width'];
+			$height = $image->info['height'];
+			$url = '/crop/'.$u->picture->filename.'?w='.$width.'&h='.$height;
+			//$url = '/crop/'.$u->picture->filename;
+			drupal_goto($url);
+			
+			
+
+			//dsm($url);
+			//$form_state['redirect'] = $url;
+			//header("Location:".$url); 
+		 }
+		 else{
+		    $form_state['redirect'] = '';
+		 }
+	}
+	//dsm($picture);
+
+    
+    return;
+  }
+  else{
+       $form_state['redirect'] = 'user/login';
+    }
+}
+
+function cropimages()
+{
+
+	
+   $args = func_get_args();
+   //print_r($args);
+   
+  //if(strpos(current_path(),'crop') === false)
+   //   echo '100';
+	//  else
+	//  echo '200';
+   $output =  $args[1];  
+  
+  return $output;  
+}
+
+
+
+
+
+
+

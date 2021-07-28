@@ -1,0 +1,35 @@
+﻿<html>
+ <head>
+ <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  </head>
+ <body>
+     <form id="pay_form"
+         action="https://101.231.204.80:5000/gateway/api/frontTransReq.do"
+          method="post">
+          <input type="hidden" name="txnType" id="txnType" value="01" /><input
+             type="hidden" name="frontUrl" id="frontUrl"
+             value="http://localhost:8080/ACPTest/acp_front_url.do" /><input
+             type="hidden" name="currencyCode" id="currencyCode" value="156" /><input
+             type="hidden" name="channelType" id="channelType" value="08" /><input
+             type="hidden" name="merId" id="merId" value="700000000000001" /><input
+             type="hidden" name="txnSubType" id="txnSubType" value="01" /><input
+             type="hidden" name="txnAmt" id="txnAmt" value="1" /><input
+             type="hidden" name="version" id="version" value="5.0.0" /><input
+             type="hidden" name="signMethod" id="signMethod" value="01" /><input
+             type="hidden" name="backUrl" id="backUrl"
+             value="http://222.222.222.222:8080/ACPTest/acp_back_url.do" /><input
+             type="hidden" name="certId" id="certId"
+             value="124876885185794726986301355951670452718" /><input
+             type="hidden" name="encoding" id="encoding" value="UTF-8" /><input
+             type="hidden" name="bizType" id="bizType" value="000201" /><input
+             type="hidden" name="signature" id="signature"
+             value="UfR4EHEma3rnwsQPIQOsdzEiVgEyT/tEza6vXiy1AjnlSS5C2qVVeV1TWClTXVA6OPh5Y9E7OyOwQYbWeuK+a4hCreY/R7oESNiF9gZs7KCphGp54daKOjRV1zNRcL2pDT2YhleBGQPgH/dwdhrOuprrFtvJBhi0TbRxFX2LSBU=" /><input
+             type="hidden" name="orderId" id="orderId" value="20150829171948" /><input
+             type="hidden" name="accessType" id="accessType" value="0" /><input
+             type="hidden" name="txnTime" id="txnTime" value="20150829171948" />
+     </form>
+ </body>
+ <script type="text/javascript">
+     document.all.pay_form.submit();
+ </script>
+ </html>

@@ -1,0 +1,44 @@
+<style>
+
+#bodybg { 
+
+    position: absolute;
+
+    width: 100%;
+
+    height: 100%;
+
+    left: 0px;
+
+    top: 0px;
+
+    z-index: 0;
+
+}
+
+#bodybg .stretch { width:100%;height:100%;} 
+
+</style>
+
+
+
+<!--/±³¾°À­Éì-->
+
+<div id="bodybg">
+
+  <img src=/img/bg.jpg class="stretch" />
+
+</div>
+
+function bartik_cainiang_theme1111(){
+   $items = array();
+   //create custom user_login.tpl.php
+   $items['user_login'] = array(
+         'render element' => 'form',
+         'path' => drupal_get_path('theme','bartik_cainiang'.'/templates',
+         'template' => 'user_login',
+         'preprocess function' => array('bartik_cainiang_preprocess_user_login')
+
+    );
+   return $items ;
+}

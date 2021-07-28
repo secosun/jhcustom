@@ -1,0 +1,340 @@
+<?php
+
+/**
+ * @file
+ * Enables users to comment on published content.
+ *
+ * When enabled, the Drupal comment module creates a discussion
+ * board for each Drupal node. Users can post comments to discuss
+ * a forum topic, weblog post, story, collaborative book page, etc.
+ */
+ 
+ 
+ function comment_area_menu(){
+ 
+  $items['getmylike'] = array(
+    'page callback' => 'comment_area_nodecommentlikequery',
+	'access arguments' => array('access comments'),
+	'delivery callback' =>'drupal_json_output',
+  );
+ 
+  $items['commentcache'] = array(
+    'page callback' => 'comment_area_view',
+	 'access arguments' => array('access comments'),
+  );
+   $items['commentlike'] = array(
+    'page callback' => 'comment_area_commentlike',
+	 'access arguments' => array('access comments'),
+	 'delivery callback' =>'drupal_json_output',
+  );
+  $items['commentdislike'] = array(
+    'page callback' => 'comment_area_commentdislike',
+	 'access arguments' => array('access comments'),
+	 'delivery callback' =>'drupal_json_output',
+  );
+  $items['commentnodelike'] = array(
+    'page callback' => 'comment_area_nodecommentlike',
+	 'access arguments' => array('access comments'),
+	 'delivery callback' =>'drupal_json_output',
+  );
+  $items['commentnodedislike'] = array(
+    'page callback' => 'comment_area_nodecommentdislike',
+	 'access arguments' => array('access comments'),
+	 'delivery callback' =>'drupal_json_output',
+  );
+  return $items;
+ }
+ 
+ function comment_area_nodecommentlikequery(){
+       global $user;
+       $areaid=user_load($user->uid)->field_area['und']['0']['value'];
+     $comment_number = db_select('comment_area_melike')
+        ->fields('comment_area_melike',array('data'))
+		->condition('areaid', $areaid)
+        ->condition('userid', $user->uid)
+        ->execute()
+        ->fetchAssoc();
+     return unserialize($comment_number["data"]);
+   
+ }
+ 
+ /**
+ * Implements comment_area_commentdislike($comment) .
+ */
+function comment_area_nodecommentdislike($nid,$areaid) {
+ $transaction = db_transaction();
+ try{
+  db_update('comment_area_like')
+  ->expression('like_number',  'like_number - :number',array('number' => 1))
+  ->condition('area_id', $areaid)
+  ->condition('node_id', $nid)
+  ->execute();
+  
+  $data=array();
+  global $user;
+   $mylikedata = db_select('comment_area_melike')
+        ->fields('comment_area_melike',array('data'))
+		->condition('areaid', $areaid)
+        ->condition('userid', $user->uid)
+        ->execute()
+        ->fetchAssoc();
+   if(isset($mylikedata["data"])){
+      $data=$mylikedata["data"];
+      $data=unserialize($data);
+	  $nodeidarr = array_column($data, 'nodeid');
+	  $found_key = array_search($nid, $nodeidarr);
+	  if ($found_key !== false){
+	    array_splice($data, $found_key, 1);
+	  }
+	  $data=serialize($data);
+	  $num_updated=db_update('comment_area_melike')
+      ->fields(array(
+        'data' => $data,
+      ))
+     ->condition('areaid', $areaid)
+     ->condition('userid', $user->uid)
+     ->execute();
+   }
+  
+   return ['nodeid'=>$nid,'commentid'=>'','resultCode'=>'ok','areaid'=>$areaid];
+   }
+  catch(Exception $exception){
+     $transaction->rollback();
+     return ['nodeid'=>$nid,'commentid'=>'','resultCode'=>'error','areaid'=>$areaid];
+  }
+}
+ 
+ 
+ /**
+ * Implements comment_area_nodecommentlike($comment) .
+ */
+function comment_area_nodecommentlike($nid,$areaid) {
+ $transaction = db_transaction();
+  try{
+ // update vegtableking.comment_area_like set like_number=like_number+1 where comment_area_id = 1;
+  $num_updated=db_update('comment_area_like')
+  ->expression('like_number',  'like_number + :number',array('number' => 1))
+  ->condition('area_id', $areaid)
+  ->condition('node_id', $nid)
+  ->execute();
+   if($num_updated==0){
+     db_insert('comment_area_like')
+        ->fields(array(
+          'area_id' => $areaid,
+          'node_id' => $nid,
+          'like_number' => 1,
+        ))
+        ->execute();
+   }
+   
+   $data=array();
+   //{nodeid:id,commentid:'',like:false} array_push($data,array("nodeid"=>$id,"commentid"=>"","like"=>true))
+   //{nodeid:'',commentid:id,like:false} array_push($data,array("nodeid"=>"","commentid"=>$id,"like"=>true))
+   global $user;
+   $mylikedata = db_select('comment_area_melike')
+        ->fields('comment_area_melike',array('data'))
+		->condition('areaid', $areaid)
+        ->condition('userid', $user->uid)
+        ->execute()
+        ->fetchAssoc();
+   if(isset($mylikedata["data"])){
+      $data=$mylikedata["data"];
+      $data=unserialize($data);
+	  array_push($data,array("nodeid"=>$nid,"commentid"=>"","like"=>true));
+	  $data=serialize($data);
+	  $num_updated=db_update('comment_area_melike')
+      ->fields(array(
+        'data' => $data,
+      ))
+     ->condition('areaid', $areaid)
+     ->condition('userid', $user->uid)
+     ->execute();
+   }
+   else{
+      array_push($data,array("nodeid"=>$nid,"commentid"=>"","like"=>true));
+      db_insert('comment_area_melike')
+        ->fields(array(
+          'areaid' => $areaid,
+          'userid' => $user->uid,
+          'data' => serialize($data),
+        ))
+        ->execute();
+   }  
+   return ['nodeid'=>$nid,'commentid'=>'','resultCode'=>'ok','areaid'=>$areaid];
+  }
+  catch(Exception $exception){
+     $transaction->rollback();
+     return ['nodeid'=>$nid,'commentid'=>'','resultCode'=>'error','areaid'=>$areaid];
+  }
+}
+ 
+ /**
+ * Implements comment_area_commentlike($comment) .
+ */
+function comment_area_commentlike($cid) {
+$transaction = db_transaction();
+try{
+  global $user;
+  $user_id=$user->uid;
+  $areaid=user_load($user->uid)->field_area['und']['0']['value'];
+   // Select all the user-defined styles.
+  $comment_number = db_select('field_data_field_like_number')
+        ->fields('field_data_field_like_number',array('field_like_number_value'))
+		->condition('entity_id', $cid)
+        ->execute()
+        ->fetchAssoc();
+   $number=$comment_number["field_like_number_value"];
+  // Reindex the node when comments are added.
+  db_update('field_data_field_like_number')
+  ->fields(array(
+        'field_like_number_value' => $number+1,
+      ))
+  ->condition('entity_id', $cid)
+  ->execute();
+  //cache_clear_all('field:comment:', 'cache_field', TRUE); 
+  $data=array();
+   $mylikedata = db_select('comment_area_melike')
+        ->fields('comment_area_melike',array('data'))
+		->condition('areaid', $areaid)
+        ->condition('userid', $user->uid)
+        ->execute()
+        ->fetchAssoc();
+   if(isset($mylikedata["data"])){
+      $data=$mylikedata["data"];
+      $data=unserialize($data);
+	  array_push($data,array("nodeid"=>"","commentid"=>$cid,"like"=>true));
+	  $data=serialize($data);
+	  $num_updated=db_update('comment_area_melike')
+      ->fields(array(
+        'data' => $data,
+      ))
+     ->condition('areaid', $areaid)
+     ->condition('userid', $user->uid)
+     ->execute();
+   }
+   else{
+      array_push($data,array("nodeid"=>"","commentid"=>$cid,"like"=>true));
+      db_insert('comment_area_melike')
+        ->fields(array(
+          'areaid' => $areaid,
+          'userid' => $user->uid,
+          'data' => serialize($data),
+        ))
+        ->execute();
+   }  
+  
+  return ['nodeid'=>'','commentid'=>$cid,'resultCode'=>'ok'];
+   }
+  catch(Exception $exception){
+     $transaction->rollback();
+     return ['nodeid'=>'','commentid'=>$cid,'resultCode'=>'error'];
+  }
+}
+
+ /**
+ * Implements comment_area_commentdislike($comment) .
+ */
+function comment_area_commentdislike($cid) {
+ $transaction = db_transaction();
+ try {
+  global $user;
+  $user_id=$user->uid;
+  $areaid=user_load($user->uid)->field_area['und']['0']['value'];
+   // Select all the user-defined styles.
+  $comment_number = db_select('field_data_field_like_number')
+        ->fields('field_data_field_like_number',array('field_like_number_value'))
+		->condition('entity_id', $cid)
+        ->execute()
+        ->fetchAssoc();
+   $number=$comment_number["field_like_number_value"];
+  // Reindex the node when comments are added.
+  db_update('field_data_field_like_number')
+  ->fields(array(
+        'field_like_number_value' => $number-1,
+      ))
+  ->condition('entity_id', $cid)
+  ->execute();
+  //cache_clear_all('my_module_data', 'cache')
+  $data=array();
+   $mylikedata = db_select('comment_area_melike')
+        ->fields('comment_area_melike',array('data'))
+		->condition('areaid', $areaid)
+        ->condition('userid', $user->uid)
+        ->execute()
+        ->fetchAssoc();
+   if(isset($mylikedata["data"])){
+      $data=$mylikedata["data"];
+      $data=unserialize($data);
+	  $nodeidarr = array_column($data, 'commentid');
+	  $found_key = array_search($cid, $nodeidarr);
+	  if ($found_key !== false){
+	    array_splice($data, $found_key, 1);
+	  }
+	  $data=serialize($data);
+	  $num_updated=db_update('comment_area_melike')
+      ->fields(array(
+        'data' => $data,
+      ))
+     ->condition('areaid', $areaid)
+     ->condition('userid', $user->uid)
+     ->execute();
+   }
+  
+  return ['nodeid'=>'','commentid'=>$cid,'resultCode'=>'ok'];
+  }
+  catch(Exception $exception){
+     $transaction->rollback();
+     return ['nodeid'=>'','commentid'=>$cid,'resultCode'=>'error'];
+  }
+}
+
+
+
+
+ 
+ 
+ 
+ 
+ function comment_area_view($index = 0){
+    //获取当前区域下的评论
+	 parse_str($_SERVER["QUERY_STRING"],$parr);
+	 if(!empty($parr['node'])){
+	 $node = node_load($parr['node']);
+	 return comment_node_page_additions($node);
+    }
+	
+ }
+
+/**
+ * Implements hook_comment_insert($comment) .
+ */
+function comment_area_comment_insert($comment) {
+  global $user;
+  $user_area_id=user_load($user->uid)->field_area['und']['0']['value'];
+  // Reindex the node when comments are added.
+  db_update('field_data_field_area_id')
+  ->fields(array(
+        'field_area_id_value' => $user_area_id,
+      ))
+  ->condition('entity_id', $comment->cid)
+  ->execute();
+  //dsm($comment);
+}
+
+
+/** 
+* Implementation of hook_admin_paths_alter().
+*/ 
+function comment_area_admin_paths_alter(&$path) {
+
+//$path['node/20'] = TRUE;
+ $path['user'] = TRUE; 
+ //$path['user/login'] = TRUE;
+ //$path['user_area'] = TRUE;
+ //dsm($path);
+ $path['user/*/addressbook/*/create']=FALSE;
+ $path['user/*/addressbook/*/edit/*']=FALSE;
+ $path['user/*/addressbook/*/delete/*']=FALSE;
+ } 
+
+

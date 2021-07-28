@@ -1,0 +1,14 @@
+name = User Area
+description = Enhance Comment Module.  
+dependencies[] = user
+package = Vegetable King Development
+core = 7.x
+
+files[] = user_area.module
+
+; Information added by Drupal.org packaging script on 2015-03-18
+version = "7.x-3.1+7-dev"
+core = "7.x"
+project = "User Area"
+datestamp = "1426704479"
+

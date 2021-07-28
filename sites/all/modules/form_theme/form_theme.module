@@ -1,0 +1,47 @@
+<?php
+
+/**
+ * @file
+ * Enables users to comment on published content.
+ *
+ * When enabled, the Drupal comment module creates a discussion
+ * board for each Drupal node. Users can post comments to discuss
+ * a forum topic, weblog post, story, collaborative book page, etc.
+ */
+
+/**
+ * Implements hook_theme($existing, $type, $theme, $path) .
+ */
+function form_theme_theme($existing, $type, $theme, $path) {
+    // Ex 1: the "story" node edit form.
+    $items['story_node_form'] = array(
+        'render element' => 'form',
+        'template' => 'node-edit--story',
+        'path' => drupal_get_path('theme', 'mytheme') . '/template/form',
+    );
+
+    // Ex 2: a custom form that comes from a custom module's "custom_donate_form()" function.
+    $items['quantity'] = array(
+        'render element' => 'form',
+		'arguments' => array('unit' => NULL), 
+        'template' => 'quantity',
+        'path' => drupal_get_path('module', 'form_theme') . '/template/form',
+    );
+	 $items['jhbutton'] = array(
+        'render element' => 'form',
+		'arguments' => array('unit' => NULL), 
+        'template' => 'jhbutton',
+        'path' => drupal_get_path('module', 'form_theme') . '/template/form',
+    );
+    
+    return $items;
+}
+
+function template_preprocess_quantity(&$variables) {
+	// $variables['title'] 的值可以使用 $title 在你的hot_news.tpl.php里面输出
+	//dsm($variables);
+	$variables['unit'] = '斤斤';
+}
+
+
+

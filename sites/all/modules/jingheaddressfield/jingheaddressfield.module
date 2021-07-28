@@ -1,0 +1,573 @@
+<?php
+
+/**
+ * @file
+ * Defines a field for attaching city-specific addresses to entities.
+ */
+ 
+ 
+ 
+/**
+ * Implements hook_menu().
+ */
+function jingheaddressfield_menu() {
+  $items = array();
+  $items['addressajax'] = array(
+    'title' => 'Checkout',
+    'page callback' => 'GernateJson',
+	'delivery callback' => 'drupal_json_output',
+    'access arguments' => array('access checkout'),
+    'type' => MENU_CALLBACK,
+    'file' => 'ssx.inc',
+  );
+  return $items;
+}
+ 
+ /**
+ * Implements hook_ctools_plugin_directory().
+ */
+function jingheaddressfield_ctools_plugin_directory($module, $plugin) {
+  //dsm('plugins/' . $plugin);
+  if ($module == 'jingheaddressfield') {
+    
+    return 'plugins/' . $plugin;
+  }
+}
+
+/**
+ * Implements hook_ctools_plugin_type().
+ */
+function jingheaddressfield_ctools_plugin_type() {
+  $plugins['jingheformat'] = array(
+    'load themes' => TRUE,
+  );
+  return $plugins;
+}
+ 
+/**
+ * Implements hook_field_info()
+ */
+function jingheaddressfield_field_info() {
+  $fields = array();
+
+  $fields['jingheaddressfield'] = array(
+    'label' => t('Jinghe Postal address'),
+    'description' => t('Develop by jinghe. A field type used for storing postal addresses according the xNAL standard.'),
+    'settings' => array(),
+    'instance_settings' => array(),
+    'default_widget' => 'jingheaddressfield_standard',
+    'default_formatter' => 'jingheaddressfield_default',
+    'property_type' => 'jingheaddressfield',
+    'property_callbacks' => array(),
+  );
+
+  return $fields;
+}
+/**
+ * Callback to alter the property info of address fields.
+ *
+ * @see addressfield_field_info().
+ */
+function jingheaddressfield_property_info_callback(&$info, $entity_type, $field, $instance, $field_type) {
+  $name = $field['field_name'];
+  $property = &$info[$entity_type]['bundles'][$instance['bundle']]['properties'][$name];
+
+  $property['type'] = ($field['cardinality'] != 1) ? 'list<addressfield>' : 'addressfield';
+  $property['getter callback'] = 'entity_metadata_field_verbatim_get';
+  $property['setter callback'] = 'entity_metadata_field_verbatim_set';
+  $property['auto creation'] = 'jingheaddressfield_auto_creation';
+  $property['property info'] = jingheaddressfield_data_property_info();
+
+  unset($property['query callback']);
+}
+
+/**
+ * Defines info for the properties of the address field data structure.
+ */
+function jingheaddressfield_data_property_info($name = NULL) {
+  // Build an array of basic property information for the address field.
+  $properties = array(
+    'country' => array(
+      'label' => t('Country'),
+      'options list' => '_addressfield_country_options_list',
+    ),
+    'name_line' => array(
+      'label' => t('Full name'),
+    ),
+    'first_name' => array(
+      'label' => t('First name'),
+    ),
+    'last_name' => array(
+      'label' => t('Last name'),
+    ),
+    'organisation_name' => array(
+      'label' => t('Company'),
+    ),
+    'administrative_area' => array(
+      'label' => t('Administrative area (i.e. State / Province)'),
+    ),
+    'sub_administrative_area' => array(
+      'label' => t('Sub administrative area'),
+    ),
+    'locality' => array(
+      'label' => t('Locality (i.e. City)'),
+    ),
+    'dependent_locality' => array(
+      'label' => t('Dependent locality'),
+    ),
+    'postal_code' => array(
+      'label' => t('Postal code'),
+    ),
+    'thoroughfare' => array(
+      'label' => t('Thoroughfare (i.e. Street address)'),
+    ),
+    'premise' => array(
+      'label' => t('Premise (i.e. Apartment / Suite number)'),
+    ),
+    'sub_premise' => array(
+      'label' => t('Sub Premise (i.e. Suite, Apartment, Floor, Unknown.'),
+    ),
+  );
+
+  // Add the default values for each of the address field properties.
+  foreach ($properties as $key => &$value) {
+    $value += array(
+      'description' => !empty($name) ? t('!label of field %name', array('!label' => $value['label'], '%name' => $name)) : '',
+      'type' => 'text',
+      'getter callback' => 'entity_property_verbatim_get',
+      'setter callback' => 'entity_property_verbatim_set',
+    );
+  }
+  return $properties;
+}
+/**
+ * Implements hook_field_widget_info()
+ */
+function jingheaddressfield_field_widget_info() {
+  $widgets = array();
+
+  $widgets['jingheaddressfield_standard'] = array(
+    'label' => t('Jinghe Dynamic address form'),
+    'field types' => array('jingheaddressfield'),
+    'settings' => array(
+	  //'available_province' => array(),
+	  //'default_province' => 'site_default_province',
+      //'available_city' => array(),
+      // Can't use variable_get('site_default_country') here because it would
+      // set the value in stone. Instead, the site_default option allows the
+      // default country to always reflect the current site setting.
+      //'default_city' => 'site_default_city',
+	  //'available_town' => array(),
+	  //'default_town' => 'site_default_town',
+      'format_handlers' => array('jingheaddress'),
+    ),
+  );
+
+  return $widgets;
+}
+
+
+/**
+ * Implements hook_field_widget_settings_form()
+ */
+function jingheaddressfield_field_widget_settings_form($field, $instance) {
+  //dsm('jingheaddressfield_field_widget_settings_form');
+  $widget = $instance['widget'];
+  $defaults = field_info_widget_settings($widget['type']);
+  $settings = array_merge($defaults, $widget['settings']);
+  $form = array();
+
+  if ($widget['type'] == 'jingheaddressfield_standard') {
+    $form['available_province'] = array(
+      '#type' => 'select',
+      '#multiple' => TRUE,
+      '#title' => t('Available province'),
+      '#description' => t('If no province are selected, all province will be available.'),
+      '#options' => _addressfield_country_options_list(),
+      '#default_value' => $settings['available_province'],
+    );
+    $form['default_province'] = array(
+      '#type' => 'select',
+      '#title' => t('Default province'),
+      '#options' => array('site_default' => t('- Site default -')) + _addressfield_country_options_list(),
+      '#default_value' => $settings['default_province'],
+      '#empty_value' => '',
+    );
+    $form['format_handlers'] = array(
+      '#type' => 'checkboxes',
+      '#title' => t('Format handlers'),
+      '#options' => addressfield_format_plugins_options(),
+      '#default_value' => $settings['format_handlers'],
+    );
+  }
+
+  return $form;
+}
+
+
+/**
+ * Implements hook_field_widget_form()
+ */
+function jingheaddressfield_field_widget_form(&$form, &$form_state, $field, $instance, $langcode, $items, $delta, $element) {
+  $settings = $instance['widget']['settings'];
+  $address = array();
+  $parents = array_merge($element['#field_parents'], array($element['#field_name'], $langcode, $delta));
+  //if (!empty($form_state['input'])) {
+	//$form_state['input']['field_addressprofile']['und'][0]['value'] = $form_state['input']['field_addressprofile']['und'][0]['value']." ".$form_state['input']['field_detail']['und'][0]['value'];
+  //}
+  if ($instance['widget']['type'] == 'jingheaddressfield_standard') {
+    if (!empty($instance['description'])) {
+      // Checkout panes convert the fieldset into a container, causing
+      // #description to not be rendered. Hence, a real element is added and
+      // the old #description is removed.
+      $element['#description'] = '';
+      $element['element_description'] = array(
+        '#markup' =>  $instance['description'],
+        '#prefix' => '<div class="fieldset-description">',
+        '#suffix' => '</div>',
+        '#weight' => -999,
+      );
+    }
+	$element += array(
+                '#type' => 'jingheaddressfield_container',
+    );
+  }
+   $element['#validate'][] = 'jingheaddressfield_validate';
+  return $element;
+}
+
+/**
+ * Implementation of hook_theme().
+ */
+function jingheaddressfield_theme() {
+  //$hooks['jingheaddressfield_container'] = array(
+  //  'render element' => 'element',
+  //);
+  $hooks['jingheaddressfield'] = array(
+    'render element' => 'element',
+  );
+  return $hooks;
+}
+
+/**
+ * Render a container for a set of address fields.
+ */
+function theme_jingheaddressfield_container($variables) {
+  //dsm('theme_jingheaddressfield_container');
+  $element = $variables['element'];
+  $element['#children'] = trim($element['#children']);
+  // Remove the autocomplete attribute because the W3C validator complains.
+  // It's only used on forms anyway.
+  unset($element['#attributes']['autocomplete']);
+
+  if (strlen($element['#children']) > 0) {
+    $output = '<' . $element['#tag'] . drupal_attributes($element['#attributes']) . '>';
+    $output .= $element['#children'];
+    $output .= '</' . $element['#tag'] . ">";
+    return $output;
+  }
+  else {
+    return '';
+  }
+}
+
+
+
+/**
+ * Render a container for a set of address fields.
+ */
+function theme_jingheaddressfield($variables) {
+    module_load_include('inc', 'jingheaddressfield', 'ssx');
+    //drupal_add_js(drupal_get_path('theme', 'bartik_cainiang') . '/JS/ssx.js',array( 'scope' => 'header', 'weight' => 120));
+	 drupal_add_js("var data =".GernateJson(), array('type' => 'inline', 'scope' => 'header', 'weight' => 120) ); 
+	
+	drupal_add_js(drupal_get_path('theme', 'bartik_cainiang') . '/JS/ssxp.js',array( 'scope' => 'header', 'weight' => 121));
+    $output = '';
+    $output .= '<div class="store">
+			<p id="shop_1"></p>
+			<p><span id="txt1"></span><span id="shop_address"></span></p>
+		</div>
+	<div class="form-group  form-inline">
+    <label for="province">所在市</label>
+    <select name="province"  id="province" class="form-control">
+	  <option>请选择</option>
+    </select>
+    <label for="city">所在区</label>
+    <select name="city" id="city" class="form-control">
+	  <option>请选择</option>
+    </select>
+	</div>
+	<div class="form-group  form-inline">
+	 <label for="shop">所在社区</label>
+    <select name="shop" id="shop" class="form-control">
+	  <option>请选择</option>
+    </select>
+  </div>
+  <div class="form-item form-type-textfield  form-group" id="edit-field-detail-und-0-value">
+     <label for="edit-field-detail-und-0-value">详细地址 <span title="此项必填。" class="form-required">*</span></label>
+     <input name="field_detail[und][0][value]" class="text-full form-text form-control required" id="edit-field-detail-und-0-value" type="text" size="60" maxlength="255" value="">
+  </div>
+   <div>
+     <input name="field_detail2[und][0][value]" class="hidden" id="edit-field-detail2-und-0-value" type="text" size="60" maxlength="255" value="">
+  </div>
+';
+
+    return $output;
+}
+
+/**
+ * Implementation of hook_element_info().
+ */
+function jingheaddressfield_element_info() {
+  //dsm('jingheaddressfield_element_info');
+  $types['jingheaddressfield_container'] = array(
+    //'#input' => TRUE,
+	//'#tree' => TRUE,
+    //'#theme_wrappers' => array('jingheaddressfield_container'),
+	'#theme_wrappers' => array('form_element'),
+    '#process' => array('jingheaddressfield_widget_process'),
+	'#theme' => array('jingheaddressfield'),
+    '#attributes' => array('class'=>array('JHAddress')),
+    //'#tag' => 'div',
+	
+  );
+  return $types;
+}
+
+
+/**
+ * Process the transliteration_title type element before displaying the field.
+ *
+ * Build the form element. When creating a form using FAPI #process,
+ * note that $element['#value'] is already set.
+ *
+ * The $fields array is in $complete_form['#field_info'][$element['#field_name']].
+ */
+
+function jingheaddressfield_widget_process($element, $form_state, $complete_form) {
+  
+  if(isset($element['default_value'])) {
+        $element['#default_value'] = $element['default_value'];
+    }
+  return $element;
+}
+
+
+/**
+ * Element validate callback: rebuilds the form on country change.
+ */
+function jingheaddressfield_validate($element, &$form_state) {
+  if ($element['#default_value'] != $element['#value']) {
+    $parents = $element['#parents'];
+    array_pop($parents);
+    $address = drupal_array_get_nested_value($form_state['values'], $parents);
+
+    // Clear the country-specific field values.
+    $country_specific_data = array(
+      'dependent_locality' => '',
+      'locality' => '',
+      'administrative_area' => '',
+      'postal_code' => '',
+    );
+    $address = array_diff_key($address, $country_specific_data);
+
+    drupal_array_set_nested_value($form_state['values'], $parents, $address);
+    drupal_array_set_nested_value($form_state['input'], $parents, $address);
+
+    $form_state['rebuild'] = TRUE;
+  }
+
+}
+
+
+
+
+
+/**
+ * Implements hook_field_presave().
+ */
+function jingheaddressfield_field_presave($entity_type, $entity, $field, $instance, $langcode, &$items) {
+   //dsm($items);
+  foreach ($items as $delta => &$item) {
+    
+	if (isset($item['ssx']['xian'])) {
+      // Combine the first and last name to be the name line.
+      $items[$delta]['administrative_area'] = $items[$delta]['ssx']['sheng'];
+	  $items[$delta]['locality'] = $items[$delta]['ssx']['shi'];
+	  $items[$delta]['thoroughfare'] = $items[$delta]['ssx']['xian'];
+	  $items[$delta]['premise'] = $items[$delta]['detail'];
+    }
+  }
+}
+
+
+/**
+ * Implements hook_field_is_empty().
+ */
+function jingheaddressfield_field_is_empty($item, $field) {
+  //return empty($item['ssx']['xian']);
+  return false;
+}
+
+/**
+ * Implements hook_field_formatter_view().
+ */
+function jingheaddressfield_field_formatter_view($entity_type, $entity, $field, $instance, $langcode, $items, $display) {
+  //dsm('jingheaddressfield_field_formatter_view');
+  $settings = $display['settings'];
+  $element = array();
+  //dsm($items);
+  switch ($display['type']) {
+    case 'jingheaddressfield_default':
+      foreach ($items as $delta => $address) {
+        // Generate the address format.
+        $context = array(
+          'mode' => 'render',
+          'field' => $field,
+          'instance' => $instance,
+          'langcode' => $langcode,
+          'delta' => $delta,
+        );
+        $element[$delta] = jingheaddressfield_generate($address, $handlers = array(), $context);
+      }
+      break;
+  }
+
+  return $element;
+}
+
+
+
+/**
+ * Implements hook_field_formatter_info().
+ */
+function jingheaddressfield_field_formatter_info() {
+ //dsm('jingheaddressfield_field_formatter_info');
+  return array(
+    'jingheaddressfield_default' => array(
+      'label' => t('Default'),
+      'field types' => array('jingheaddressfield'),
+      'settings' => array(
+        'use_widget_handlers' => 0,
+        'format_handlers' => array('jingheaddress'),
+      ),
+    ),
+  );
+}
+
+
+/**
+ * Render an address in a given format.
+ */
+function jingheaddressfield_render_address($format) {
+  //dsm('jingheaddressfield_render_address');
+  //翻译成中文
+  transtotext($format['#jingheaddress']);
+  geocode();
+  return $format;
+}
+
+
+
+
+/**
+ * Implements hook_views_api().
+ */
+function jingheaddressfield_views_api() {
+  return array(
+    'api' => 3,
+    'path' => drupal_get_path('module', 'jingheaddressfield') . '/views',
+  );
+}
+
+/**
+ * Implements hook_field_formatter_settings_summary().
+ */
+function jingheaddressfield_field_formatter_settings_summary($field, $instance, $view_mode) {
+  $display = $instance['display'][$view_mode];
+  $settings = $display['settings'];
+
+  if ($settings['use_widget_handlers']) {
+    return t('Use widget configuration');
+  }
+  else {
+    $summary = array();
+    $plugins = jingheaddressfield_format_plugins();
+    foreach ($settings['format_handlers'] as $handler) {
+      $summary[] = $plugins[$handler]['title'];
+    }
+    return $summary ? implode(', ', $summary) : t('No handler');
+  }
+}
+
+
+
+/**
+ * Generate a format for a given address.
+ *
+ * @param $address
+ *   The address format being generated.
+ * @param $handlers
+ *   The format handlers to use to generate the format.
+ * @param $context
+ *   An associative array of context information pertaining to how the address
+ *   format should be generated. If no mode is given, it will initialize to the
+ *   default value. The remaining context keys should only be present when the
+ *   address format is being generated for a field:
+ *   - mode: either 'form' or 'render'; defaults to 'render'.
+ *   - field: the field info array.
+ *   - instance: the field instance array.
+ *   - langcode: the langcode of the language the field is being rendered in.
+ *   - delta: the delta value of the given address.
+ *
+ * @return
+ *   A renderable array suitable for use as part of a form (if 'mode' is 'form')
+ *   or for formatted address output when passed to drupal_render().
+ */
+function jingheaddressfield_generate($address, array $handlers, array $context = array()) {
+  //dsm($handlers);
+  //dsm('jingheaddressfield_generate');
+  // If no mode is given in the context array, default it to 'render'.
+  if (empty($context['mode'])) {
+    $context['mode'] = 'render';
+  }
+
+  ctools_include('plugins');
+  $format = array();
+  // Add the handlers, ordered by weight.
+  $plugins = jingheaddressfield_format_plugins();
+  //dsm(array_keys($plugins));
+  $format['#handlers'] = array_intersect(array_keys($plugins), $handlers);
+  
+  foreach ($format['#handlers'] as $handler) {
+    if ($callback = ctools_plugin_load_function('jingheaddressfield', 'jingheformat', $handler, 'format callback')) {
+	   //dsm($format);
+      $callback($format, $address, $context);
+    }
+  }
+
+  // Store the address in the format, for processing.
+  $format['#jingheaddress'] = $address;
+
+  // Post-process the format stub, depending on the rendering mode.
+  if ($context['mode'] == 'form') {
+    $format['#addressfield'] = TRUE;
+    $format['#process'][] = 'addressfield_process_format_form';
+  }
+  elseif ($context['mode'] == 'render') {
+    $format['#pre_render'][] = 'jingheaddressfield_render_address';
+  }
+
+  return $format;
+}
+
+/**
+ * Get the list of format plugins.
+ */
+function jingheaddressfield_format_plugins() {
+  ctools_include('plugins');
+  $plugins = ctools_get_plugins('jingheaddressfield', 'jingheformat');
+  uasort($plugins, 'ctools_plugin_sort');
+  return $plugins;
+}
+

@@ -1,0 +1,45 @@
+.JHMainMenu{float:left;width:auto;padding:0 !important;}
+.JHMainMenu *{margin:0;padding:0;list-style-type:none;}
+.JHMainMenu a,.JHMainMenu .JHMainMenu img{border:0;}
+/*body{font:12px/180% Arial, Helvetica, sans-serif,"ËÎÌו";}
+body{background-image:url(images/bg.jpg);}*/
+/* sdt_menu */
+.JHMainMenu ul.sdt_menu{list-style:none;font-family:"Myriad Pro", "Trebuchet MS", sans-serif;font-size:14px;
+  width:auto;
+//height:65px;
+margin:0px auto 0 auto;padding:0;}
+.JHMainMenu ul.sdt_menu a{text-decoration:none;outline:none;}
+.JHMainMenu ul.sdt_menu li{
+	//float:left;
+	width:130px;
+	height:65px;
+	position:relative;
+	cursor:pointer;}
+.JHMainMenu ul.sdt_menu li > a,ul.sdt_menu li > a
+{
+	//position:absolute;
+	//top:0;
+	//left:0;
+	width:130px;
+	height:65px;
+	z-index:12;
+    background:#ddf182 url(../images/overlay.jpg) no-repeat top right;
+	//background:#ddf182  no-repeat top right;
+    -moz-box-shadow:0 0 2px #000 inset;
+	-webkit-box-shadow:0 0 2px #000 inset;
+	box-shadow:0 0 2px #000 inset;
+}
+.JHMainMenu ul.sdt_menu li a img{border:none;position:absolute;width:0;height:0;bottom:0;left:65px;z-index:9999;-moz-box-shadow:0 0 4px #000;-webkit-box-shadow:0 0 4px #000;box-shadow:0 0 4px #000}
+.JHMainMenu ul.sdt_menu li span.sdt_wrap{position:absolute;top:0px;left:0;width:130px;height:40px;z-index:15;}
+.JHMainMenu ul.sdt_menu li span.sdt_active{position:absolute;background:#111;top:65px;width:130px;height:0;left:0;z-index:14;-moz-box-shadow:0 0 4px #000 inset;-webkit-box-shadow:0 0 4px #000 inset;box-shadow:0 0 4px #000 inset;}
+.JHMainMenu ul.sdt_menu li span span.sdt_link,
+.JHMainMenu ul.sdt_menu li span span.sdt_descr,
+.JHMainMenu ul.sdt_menu li div.sdt_box a{margin-left:15px;text-transform:uppercase;text-shadow:1px 1px 1px #000;}
+.JHMainMenu ul.sdt_menu li span span.sdt_link{color:#fff;font-size:24px;float:left;clear:both;}
+.JHMainMenu ul.sdt_menu li span span.sdt_descr{color:#0B75AF;float:left;clear:both;width:135px;font-size:10px;letter-spacing:1px;}
+.JHMainMenu ul.sdt_menu li div.sdt_box{position:absolute;width:130px;overflow:hidden;height:135px;padding-top:15px;top:85px;left:0;display:none;background:#000;}
+.JHMainMenu ul.sdt_menu li div.sdt_box a{line-height:30px;color:#0B75AF;font-size:12px;display:block;}
+.JHMainMenu ul.sdt_menu li div.sdt_box a:hover{color:#fff;}
+.JHHeader .region-header{
+//float:left;
+}

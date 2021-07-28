@@ -1,0 +1,32 @@
+ #overlay{
+        margin-top:100px;
+		margin-left:400px;
+        width:442px;;
+        min-width:0 !important;
+        word-wrap:break-word;
+        
+      }
+     #overlay #footer-wrapper{
+         background:none;
+    }
+	
+	#overlay-titlebar
+{
+   //display:none;
+}
+#overlay-title-wrapper,#overlay-tabs
+{
+	display:none;
+	
+}
+   #overlay-content
+{
+   padding:0;
+   width:0;
+}
+#overlay-close{
+	
+	top:-65px;
+	right:-100px;
+	z-index:10000;
+}

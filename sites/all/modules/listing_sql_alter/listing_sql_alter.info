@@ -1,0 +1,14 @@
+name = Listing_Sql_Alter
+description = Enhance Comment Moudle.  
+dependencies[] = views
+package = Vegetable King Development
+core = 7.x
+
+files[] = listing_sql_alter.module
+
+; Information added by Drupal.org packaging script on 2015-03-18
+version = "7.x-3.1+7-dev"
+core = "7.x"
+project = "Listing_Sql_Alter"
+datestamp = "1426704489"
+

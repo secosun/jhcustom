@@ -1,0 +1,312 @@
+<?php
+
+/**
+ * @file
+ * Enables users to choose a area.
+ *
+ * When enabled, the Drupal comment module creates a discussion
+ * board for each Drupal node. Users can post comments to discuss
+ * a forum topic, weblog post, story, collaborative book page, etc.
+ */
+
+
+
+
+
+/**
+  * 实现钩子hook_menu().
+  */
+ function user_area_menu() {
+    $items['hello'] = array(
+    'title' => 'Hello world!',
+    'page callback' => 'user_area_view',
+    'access callback' => TRUE,
+  );
+
+   $items['sunxike'] = array(
+   'title' => '省市县',
+     'page callback' => 'user_area_view',
+     'access callback' => TRUE,
+     'type' => MENU_CALLBACK,
+   );
+
+  return $items;
+ }
+
+
+
+function user_area_view() {
+  $output = t('这是模块做的第一个页面。');
+
+  return $output;
+}
+/**
+  * 路径“ssx”页面的回调函数
+ */
+function user_area_page(){
+ // $render_array = array();
+  //我们为这个页面设置标题
+ //drupal_set_title('省市县三级联动');
+  //页面的正文为一个表单，注意drupal_get_form返回的不是html，需要使用drupal_render呈现一下。
+ //$render_array['#markup'] .= drupal_render(drupal_get_form('shengshixian_test_form'));
+  //Drupal7的页面回调，返回的应该是一个数组，只有在退化形式下，才返回字符串。
+// return $render_array;
+
+  return "页面的正文为一个表单";
+ }
+
+
+/**
+  * 表单shengshixian_test_form的构建函数
+ */
+function user_area_form($form, &$form_state){
+   dsm($form);
+   //设置省市县对应元素的默认值
+  $default_sheng = !empty($form_state['values']['sheng']) ? $form_state['values']['sheng'] : '';
+  $default_shi = !empty($form_state['values']['shi']) ? $form_state['values']['shi'] : '';
+  $default_xian = !empty($form_state['values']['xian']) ? $form_state['values']['xian'] : '';
+  
+  //构建省份的选项数组，首先设置了一个提示语
+  $sheng_options = array(
+    '' => '请选择省份',
+  );
+  
+  //向数据库中查询省份信息，
+ $query_sheng = db_select('taxonomy_term_data','ttd')
+  ->fields('ttd', array('tid', 'name'));
+  
+  //因为省份是第一级术语，分类术语的父亲为0
+  $query_sheng->leftJoin('taxonomy_term_hierarchy', 'tth', 'ttd.tid = tth.tid ');
+  $query_sheng->condition('tth.parent', 0);
+  
+  //需要确定术语所在的词汇表，就是我们在前面创建的地区
+ $query_sheng->leftJoin('taxonomy_vocabulary', 'tv', 'ttd.vid = tv.vid ');
+  $query_sheng->condition('tv.machine_name', 'diqu');
+  
+  //按照tid排序，并执行
+ $result_sheng = $query_sheng->orderBy('tid')->execute();
+  
+  //将返回的结果，进行迭代，为$sheng_options赋值。
+ foreach ($result_sheng as $record) {
+    $sheng_options[$record->tid] = $record->name;
+  }
+  //省份表单元素
+ $form['sheng'] = array(   
+    '#title' => t('请选择您所在的省份?'),   
+    '#type' => 'select',   
+    '#options' => $sheng_options,   
+    '#default_value' => $default_sheng,
+     //#ajax属性数组  
+    '#ajax' => array(     
+      'callback' => 'shengshixian_sheng_callback',     
+      'wrapper' => 'shi-wrapper-div',     
+      'method' => 'replace',     
+      'effect' => 'fade',   
+    ), 
+  );
+  
+  //构建市的选项数组，首先设置了一个提示语
+ $shi_options = array(
+    '' => '请选择市',
+  );
+  //在省份不为空的情况下，取该省份下的所有的市
+ if(!empty($default_sheng)){
+  
+    //向数据库中查询术语信息，
+  $query_shi = db_select('taxonomy_term_data','ttd')
+   ->fields('ttd', array('tid', 'name'));
+   //将其父术语限定在前面的省份的具体值上
+  $query_shi->leftJoin('taxonomy_term_hierarchy', 'tth', 'ttd.tid = tth.tid ');
+   $query_shi->condition('tth.parent', $default_sheng);
+   //由于省份信息里面，已经包含了词汇表信息，所以我们不再需要关联这个taxonomy_vocabulary表。
+  //$query_sheng->leftJoin('taxonomy_vocabulary', 'tv', 'ttd.vid = tv.vid AND tv.machine_name = :machine_name', array(':machine_name' => 'diqu'));
+   
+   //按照tid排序，并执行
+  $result_shi = $query_shi->orderBy('tid')->execute();
+   
+   //将返回的结果，进行迭代，为$shi_options赋值。
+  foreach ($result_shi as $record) {
+    $shi_options[$record->tid] = $record->name;
+   }
+
+ }
+/*
+  //测试代码，中间测试的时候用的，这里保留了，开发模块所用到的测试代码很多，多数都已删除。
+  $form['test'] = array( 
+    '#markup' => '123456:'.$default_sheng
+  );
+  */
+  //表单元素市
+ $form['shi'] = array(   
+    '#title' => t('请选择您所在的市？'),   
+   '#prefix' => '<div id="shi-wrapper-div">',   
+   '#suffix' => '</div>',
+    '#type' => 'select',   
+    '#options' => $shi_options,   
+    '#default_value' => $default_shi,
+     '#ajax' => array(     
+      'callback' => 'shengshixian_shi_callback',     
+      'wrapper' => 'xian-wrapper-div',     
+      'method' => 'replace',     
+      'effect' => 'fade',   
+    ),     
+  );
+  
+  //构建县的选项数组，首先设置了一个提示语
+ $xian_options = array(
+    '' => '请选择县',
+  );
+  //在市不为空的情况下，取该市下的所有的县
+ if(!empty($form_state['values']['shi'])){
+  
+    //向数据库中查询术语信息，
+  $query_xian = db_select('taxonomy_term_data','ttd')
+   ->fields('ttd', array('tid', 'name'));
+   
+   //将其父术语限定在前面的市的具体值上
+  $query_xian->leftJoin('taxonomy_term_hierarchy', 'tth', 'ttd.tid = tth.tid AND tth.parent = :parent', array(':parent' => $form_state['values']['shi']));
+   $query_xian->condition('tth.parent', $default_shi);
+   
+   //由于最前面省份信息里面，已经包含了词汇表信息，所以我们不再需要关联这个taxonomy_vocabulary表。
+  //$query_sheng->leftJoin('taxonomy_vocabulary', 'tv', 'ttd.vid = tv.vid AND tv.machine_name = :machine_name', array(':machine_name' => 'diqu'));
+   
+   //按照tid排序，并执行
+  $result_xian = $query_xian->orderBy('tid')->execute();
+   
+   //将返回的结果，进行迭代，为$xian_options赋值。
+  foreach ($result_xian as $record) {
+    $xian_options[$record->tid] = $record->name;
+   }
+  }
+  
+  //表单元素县
+ $form['xian'] = array(   
+    '#title' => t('请选择您所在的县/区?'),   
+   '#prefix' => '<div id="xian-wrapper-div">',   
+   '#suffix' => '</div>',
+    '#type' => 'select',   
+    '#options' => $xian_options,   
+    '#default_value' => $default_xian,
+    
+  );
+  
+   //提交按钮
+  $form['submit'] = array(
+     '#type' => 'submit',
+     '#value' => t('提交'),
+   );
+   return $form;
+ }
+
+
+/**
+  * 表单元素sheng，它的值变更时，对应的Ajax回调函数。
+ */
+function user_area_sheng_callback($form,&$form_state){
+   //根据当前省份，重新确定市的可选项。返回重新构建的表单元素shi
+  return $form['shi'];
+ }
+
+/**
+  * 表单元素sheng，它的值变更时，对应的Ajax回调函数。
+ */
+function user_area_shi_callback($form,&$form_state){
+   //根据当前所选的市，重新确定县的可选项。返回重新构建的表单元素xian
+  return $form['xian'];
+ }
+
+
+
+/** 
+ * Implements hook_form_alter(). 
+ */ 
+ function user_area_form_alter(&$form, &$form_state, $form_id) { 
+    switch($form_id) { 
+       case 'user_register_form':
+ 		$form['pet_name'] = array(
+  		  '#title' => t('Name'),
+   		 '#type' => 'textfield',
+   		 '#description' => t('Enter the name of your pet.'),
+   		 '#default_value' => 200,
+   		 '#maxlength' => 32,
+    		'#required' => TRUE,
+   		 '#size' => 15,
+    		'#weight' => 5,
+    		'#autocomplete_path' => 'pet/common_pet_names',
+	);
+	$form['pet_weight'] = array(
+    		'#title' => t('Weight'),
+    		'#type' => 'textfield',
+    		'#description' => t('Enter the weight of your pet in kilograms.'),
+    		'#field_suffix' => t('kilograms'),
+    		'#default_value' => 100,
+    		'#size' => 4,
+    		'#weight' => 10,
+		);
+
+		$period = drupal_map_assoc(array(3600, 10800, 21600, 32400, 43200, 86400, 		172800,
+    		259200, 604800, 1209600, 2419200, 4838400, 9676800), 'format_interval');
+
+/* Period now looks like this:
+    Array (
+        [3600] => 1 hour
+        [10800] => 3 hours
+        [21600] => 6 hours
+        [32400] => 9 hours
+        [43200] => 12 hours
+        [86400] => 1 day
+        [172800] => 2 days
+        [259200] => 3 days
+        [604800] => 1 week
+        [1209600] => 2 weeks
+        [2419200] => 4 weeks
+        [4838400] => 8 weeks
+        [9676800] => 16 weeks )
+*/
+
+			$form['access']['statistics_flush_accesslog_timer'] = array(
+    				'#type' => 'select',
+   				 '#title' => t('Discard access logs older than'),
+    				'#default_value' => variable_get				('statistics_flush_accesslog_timer',            259200),
+   				 '#options' => $period,
+    					'#description' => t('Older access log entries 					(including referrer statistics)
+        				will be automatically discarded. (Requires a 					correctly configured
+        				<a href="@cron">cron maintenance task</a>.)', 					array('@cron' =>
+        				url('admin/reports/status'))),
+				);
+
+			$options = array(
+   				 array(
+        				t('Healthy') => array(
+            					1 => t('wagging'),
+            					2 => t('upright'),
+            					3 => t('no tail')
+       					 ),
+
+    					),
+
+    				array(
+        				t('Unhealthy') => array(
+            				4 => t('bleeding'),
+            				5 => t('oozing'),
+        			),
+    				),
+
+				);
+
+		$form['pet_tail'] = array(
+    			'#title' => t('Tail demeanor'),
+   			 '#type' => 'select',
+    			'#description' => t('Pick the closest match that describes the tail
+        					of your pet.'),
+   			 '#options' => $options,
+    			'#multiple' => FALSE,
+    			'#weight' => 20,
+			);
+
+ 		//doing something 
+ 		break; 
+ 	} 
+} 
+
+

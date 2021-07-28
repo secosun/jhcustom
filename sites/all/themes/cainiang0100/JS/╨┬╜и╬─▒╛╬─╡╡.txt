@@ -1,0 +1,114 @@
+(function($){
+
+          $(function(){
+              if($("#toolbar-menu").length){
+                 $("#JingHeUserNav").css("top","30px");
+               }
+			  if($.cookie('JHVEGE')!=undefined){
+				 var user =$.parseJSON(new?Base64().decode(decodeURIComponent($.cookie('JHVEGE')).split('&')[5].split('=')[1].split('.')[1]))
+				 var id=user.sub;
+				 var name =user.username;
+                 $('.JingHeNav').html(' <ul class="JHUser links inline clearfix"><li class="menu-2 first"><span>ÄúºÃ:<a href="/user/' + id + '">' + name + '</a></span> </li> <li class="menu-15 last"> <a id="jhlogout" href="#">ÍË³ö</a></li></ul>');				 
+			     $('#JHOrder').attr('href','/user/' + id + '/orders/');
+			  
+			    $(".ownerTable").each(function(){
+					  $("label",$(this)).each(function(index){
+						   if(index%2 !=0){
+							  //console.log($(this).text());
+							  switch(index){
+							   case 1:
+							       $(this).text(user.boss_info.manager_name);
+								   break;
+							   case 3:
+								   $(this).text(user.boss_info.shop_adress);
+								   break;
+							   case 5:
+							        $(this).text(user.boss_info.shop_name);
+								   break;
+							   case 7:
+							      $(this).text(user.boss_info.manager_phone);
+								   break;
+							   case 9:
+								   $(this).text(user.boss_info.deliever_name);
+								   break;
+							  }
+						   }
+						  
+					  });
+				  });
+			  
+			  }
+			  $("#jhlogout").click(function(){
+				  $.cookie('JHVEGE',?null,{ expires: -1 });?//$.cookie('the_cookie', '', { expires: -1 }); 
+				  $.cookie('DRUPAL_ADMIN',?null,{ expires: -1 });?
+				  $('.JingHeNav').html('<aside class="JHLogin"><a href="/user/login">µÇÂ¼</a>|<a href="/user/register">×¢²á</a></aside>');
+				  $('#JHOrder').attr('href','/user/0/orders/');
+			  });   
+          });
+		   function slideByUserUp(event, obj) {
+			   alert(obj.description);
+			   event.stopPropagation();  
+               obj.originalEvent.stopPropagation(); 
+			   
+		   }
+		    function slideByUserDown(event, obj) {
+			    alert(obj.description);
+			    event.stopPropagation();  
+                obj.originalEvent.stopPropagation();    
+		   }
+		  $(function(){ 
+             	 setTimeout(function()?{??
+????????????                window.scrollTo(0,?1);??
+????????          },?10000);??      
+           }); 
+     })(jQuery);
+
+
+ window.addEventListener("onorientationchange" in window ? "orientationchange" : "resize", function() {
+			   jQuery("ul.loaded").removeAttr("style");
+			   jQuery("ul.loaded li").removeAttr("style");
+			   if(document.location.pathname=="/"){
+			   new GridScrollFx( document.getElementById( 'grid' ), {	viewportFactor : 0.4} );  
+			   }
+        if (window.orientation === 180 || window.orientation === 0) { 
+          
+        } 
+        if (window.orientation === 90 || window.orientation === -90 ){ 
+           
+        }  
+    }, false); 
+
+(function($){
+	 $(document).ready(function() 
+			{
+				$("#container").muslider({
+					"animation_type": "horizontal",
+					"animation_duration": 600,
+					"animation_start": "manual",
+					"responsive": "yes",
+					//"ratio":"maximum",
+	                //"max_width":1074,
+					//"max_height": 607
+				});
+				
+				
+			}
+	 )
+	 })(jQuery);
+
+(function($){
+               $(function() {
+                   $('.temphol').hover(
+                     function() {
+                          $(this).children('.front').stop().animate({ 'top' : '0','height':'0'}, 500);
+                            }, 
+                   function() {
+                          $(this).children('.front').stop().animate({ 'top' : '0','height':'100%'}, 300);
+                          }
+                 );
+                } );
+             })(jQuery);
+
+new GridScrollFx( document.getElementById( 'grid' ), {
+				viewportFactor : 0.4
+			} 

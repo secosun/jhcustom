@@ -1,0 +1,23 @@
+<?php
+
+/**
+ * @file
+ * Enables users to alter the display of views on published content.
+ *
+ */
+
+function listing_sql_alter_views_api(){
+    return array(
+        'api' => 3,
+        //(必须) views的版本,我使用的是7.x-3.7版本
+        //'path' => drupal_get_path('module', 'example') . '/includes/views',
+        //(可选) 如果文件不在模块文件根目录下，说明一下文件路径。
+        //'template path' => drupal_get_path('module', 'example') . '/themes',
+        //(可选）模板文件路径
+    );
+}
+
+
+
+
+

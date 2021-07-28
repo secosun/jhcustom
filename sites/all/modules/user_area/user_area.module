@@ -1,0 +1,379 @@
+<?php
+
+/**
+ * @file
+ * Enables users to choose a area.
+ *
+ * When enabled, the Drupal comment module creates a discussion
+ * board for each Drupal node. Users can post comments to discuss
+ * a forum topic, weblog post, story, collaborative book page, etc.
+ */
+
+
+/**
+  * 实现钩子hook_menu().
+  */
+ function user_area_menu() {
+    $items['user_area'] = array(
+   'title' => t('请完善重要信息，谢谢！'),
+     'page callback' => 'user_area_view',
+     'access callback' => TRUE,
+     'type' => MENU_CALLBACK,
+   );
+
+  return $items;
+ }
+
+
+
+function user_area_view() {
+  //dsm('user_area_view');
+ //我们为这个页面设置标题
+ //drupal_set_title('省市县三级联动');
+  return drupal_get_form('user_area_form');
+  // return drupal_retrieve_form('user_area_form');
+}
+
+
+/**
+  * 表单user_area_form的构建函数
+ */
+function user_area_form($form, &$form_state){
+  // Node author information for administrators.
+   $form['ssx'] = array(
+    '#type' => 'fieldset',
+    '#access' => TRUE,
+    '#title' => t('您的位置'),
+    '#collapsible' => FALSE,
+    '#collapsed' => FALSE,
+    '#weight' => 20,
+    );
+
+   //dsm('user_area_form');
+    //设置省市县对应元素的默认值
+  $default_sheng = !empty($form_state['values']['sheng']) ? $form_state['values']['sheng'] : '';
+  $default_shi = !empty($form_state['values']['shi']) ? $form_state['values']['shi'] : '';
+  $default_xian = !empty($form_state['values']['xian']) ? $form_state['values']['xian'] : '';
+  
+  //构建省份的选项数组，首先设置了一个提示语
+  $sheng_options = array(
+    '' => '请选择省份',
+  );
+  
+  //向数据库中查询省份信息，
+ $query_sheng = db_select('taxonomy_term_data','ttd')
+  ->fields('ttd', array('tid', 'name'));
+  
+  //因为省份是第一级术语，分类术语的父亲为0
+  $query_sheng->leftJoin('taxonomy_term_hierarchy', 'tth', 'ttd.tid = tth.tid ');
+  $query_sheng->condition('tth.parent', 0);
+  
+  //需要确定术语所在的词汇表，就是我们在前面创建的地区
+ $query_sheng->leftJoin('taxonomy_vocabulary', 'tv', 'ttd.vid = tv.vid ');
+  $query_sheng->condition('tv.machine_name', 'UserArea');
+  
+  //按照tid排序，并执行
+ $result_sheng = $query_sheng->orderBy('tid')->execute();
+  
+  //将返回的结果，进行迭代，为$sheng_options赋值。
+ foreach ($result_sheng as $record) {
+    $sheng_options[$record->tid] = $record->name;
+  }
+ //控制表单样式
+ drupal_add_css(drupal_get_path('theme', 'bartik_cainiang') . '/css/userarea.css');
+  //省份表单元素
+ $form['ssx']['sheng'] = array(   
+    '#title' => t('请选择您所在的省份?'),
+    '#prefix' => '<div class ="UserArea"><div id="sheng-wrapper-div">',   
+    '#suffix' => '</div>',   
+    '#type' => 'select', 
+    '#options' => $sheng_options,   
+    '#default_value' => $default_sheng,
+     //#ajax属性数组  
+    '#ajax' => array(     
+      'callback' => 'user_area_sheng_callback',  
+      //'path' => 'user_area',    
+      'wrapper' => 'shi-wrapper-div',     
+      'method' => 'replace',     
+      'effect' => 'fade',   
+    ), 
+    '#DANGEROUS_SKIP_CHECK' => TRUE ,
+  );
+  
+  //构建市的选项数组，首先设置了一个提示语
+ $shi_options = array(
+    '' => '请选择市',
+  );
+  //在省份不为空的情况下，取该省份下的所有的市
+ if(!empty($default_sheng)){
+  //dsm($default_sheng);
+    //向数据库中查询术语信息，
+  $query_shi = db_select('taxonomy_term_data','ttd')
+   ->fields('ttd', array('tid', 'name'));
+   //将其父术语限定在前面的省份的具体值上
+  $query_shi->leftJoin('taxonomy_term_hierarchy', 'tth', 'ttd.tid = tth.tid ');
+   $query_shi->condition('tth.parent', $default_sheng);
+   //由于省份信息里面，已经包含了词汇表信息，所以我们不再需要关联这个taxonomy_vocabulary表。
+  //$query_sheng->leftJoin('taxonomy_vocabulary', 'tv', 'ttd.vid = tv.vid AND tv.machine_name = :machine_name', array(':machine_name' => 'diqu'));
+   
+   //按照tid排序，并执行
+  $result_shi = $query_shi->orderBy('tid')->execute();
+   
+   //将返回的结果，进行迭代，为$shi_options赋值。
+  foreach ($result_shi as $record) {
+    $shi_options[$record->tid] = $record->name;
+   }
+
+ }
+
+  //表单元素市
+ $form['ssx']['shi'] = array(   
+    '#title' => t('请选择您所在的市？'),   
+   '#prefix' => '<div id="shi-wrapper-div">',   
+   '#suffix' => '</div>',
+    '#type' => 'select', 
+    '#options' => $shi_options,   
+    '#default_value' => $default_shi,
+     '#ajax' => array(     
+      'callback' => 'user_area_shi_callback',     
+      'wrapper' => 'xian-wrapper-div',     
+      'method' => 'replace',     
+      'effect' => 'fade',   
+    ),    
+    '#DANGEROUS_SKIP_CHECK' => TRUE , 
+  );
+  
+  //构建县的选项数组，首先设置了一个提示语
+ $xian_options = array(
+    '' => '请选择社区',
+  );
+  //在市不为空的情况下，取该市下的所有的县
+ //dsm($form_state['values']['shi']);
+ if(!empty($form_state['values']['shi'])){
+  
+    //向数据库中查询术语信息，
+  $query_xian = db_select('taxonomy_term_data','ttd')
+   ->fields('ttd', array('tid', 'name'));
+   
+   //将其父术语限定在前面的市的具体值上
+  $query_xian->leftJoin('taxonomy_term_hierarchy', 'tth', 'ttd.tid = tth.tid AND tth.parent = :parent', array(':parent' => $form_state['values']['shi']));
+   $query_xian->condition('tth.parent', $default_shi);
+   
+   //由于最前面省份信息里面，已经包含了词汇表信息，所以我们不再需要关联这个taxonomy_vocabulary表。
+  //$query_sheng->leftJoin('taxonomy_vocabulary', 'tv', 'ttd.vid = tv.vid AND tv.machine_name = :machine_name', array(':machine_name' => 'diqu'));
+   
+   //按照tid排序，并执行
+  $result_xian = $query_xian->orderBy('tid')->execute();
+   
+   //将返回的结果，进行迭代，为$xian_options赋值。
+  foreach ($result_xian as $record) {
+    $xian_options[$record->tid] = $record->name;
+   }
+  }
+  
+  //表单元素县
+   $form['ssx']['xian'] = array(   
+    '#title' => t('请选择您所在的县/区?'),   
+   '#prefix' => '<div id="xian-wrapper-div">',   
+   '#suffix' => '</div></div>',
+    '#type' => 'select', 
+    '#validate' => true,  
+    '#options' => $xian_options,   
+    '#default_value' => $default_xian,
+     '#DANGEROUS_SKIP_CHECK' => TRUE ,
+    
+  );
+
+  //$form['actions'] = array('#type' => 'actions');
+  //$form['actions']['submit'] = array(
+   // '#type' => 'submit',
+  //  '#value' => t('确认'),
+  //   );
+  $form['submit'] = array(
+      '#weight'=>'100',
+      '#type' => 'submit',
+      '#value' => '提交',
+      //'#submit' => array('test_form_submit'),//调用提交函数
+);
+
+  $form['#validate'][] = 'user_area_validate';
+  // Add the final user registration form submit handler.
+  $form['#submit'][] = 'user_area_submit';
+  //dsm($form_state);
+  
+   return $form;
+ }
+
+function user_area_validate($form, &$form_state) {
+  if($form_state['values']['sheng']==''){
+     form_set_error('sheng', '请您选择省份！');
+   }
+  elseif($form_state['values']['shi']==''){
+     form_set_error('shi', '请您选择市区！');
+   }
+  elseif(array_key_exists('xian',$form_state['values']) && $form_state['values']['xian']==''){
+     form_set_error('xian', '请您选择社区！');
+   }
+}
+
+function user_area_submit($form, &$form_state) {
+  if(user_is_logged_in())
+  {
+    
+    global $user;
+    $account= user_load($user->uid);
+    
+    //$account = user_load_by_name($name);
+    //drupal_set_message(t("Error saving user account."), 'error');
+    //drupal_set_message('hhhh'.$form_state['values']['xian'], 'error');
+    $form_state['redirect'] = '';
+    //$edit=array('field_area' => $form_state['values']['xian']);
+    //dsm($form);
+    dsm($form_state);
+    $edit=array();
+    $account->field_area['und'][0]['value']=$form_state['values']['xian'];
+    $account->field_area['und'][0]['safe_value']=$form_state['values']['xian'];
+    //dsm($account->field_area['und'][0]);
+    $account = user_save($account, $edit);
+    //dsm($account);
+    // Terminate if an error occurred during user_save().
+    if (!$account) 
+   {
+     drupal_set_message(t("Error saving user account."), 'error');
+     $form_state['redirect'] = '';
+     return;
+   }
+  }
+  else{
+       $form_state['redirect'] = 'user/login';
+    }
+}
+
+/**
+  * 表单元素sheng，它的值变更时，对应的Ajax回调函数。
+ */
+function user_area_sheng_callback($form,&$form_state){
+   //dsm('user_area_sheng_callback');
+   return $form['ssx']['shi'];
+}
+
+
+/**
+  * 表单元素sheng，它的值变更时，对应的Ajax回调函数。
+ */
+function user_area_shi_callback($form,&$form_state){
+   return $form['ssx']['xian'];
+}
+function user_area_shi_callback1($form,&$form_state){
+ //dsm('user_area_shi_callback');
+ $default_shi = !empty($form_state['values']['shi']) ? $form_state['values']['shi'] : '';
+//构建县的选项数组，首先设置了一个提示语
+ $xian_options = array(
+    '' => '请选择社区',
+  );
+  //在市不为空的情况下，取该市下的所有的县
+ if(!empty($form_state['values']['shi'])){
+  
+    //向数据库中查询术语信息，
+  $query_xian = db_select('taxonomy_term_data','ttd')
+   ->fields('ttd', array('tid', 'name'));
+   
+   //将其父术语限定在前面的市的具体值上
+  $query_xian->leftJoin('taxonomy_term_hierarchy', 'tth', 'ttd.tid = tth.tid AND tth.parent = :parent', array(':parent' => $form_state['values']['shi']));
+   $query_xian->condition('tth.parent', $default_shi);
+   
+   //由于最前面省份信息里面，已经包含了词汇表信息，所以我们不再需要关联这个taxonomy_vocabulary表。
+  //$query_sheng->leftJoin('taxonomy_vocabulary', 'tv', 'ttd.vid = tv.vid AND tv.machine_name = :machine_name', array(':machine_name' => 'diqu'));
+   
+   //按照tid排序，并执行
+  $result_xian = $query_xian->orderBy('tid')->execute();
+   
+   //将返回的结果，进行迭代，为$xian_options赋值。
+  foreach ($result_xian as $record) {
+    $xian_options[$record->tid] = $record->name;
+   }
+  }
+  
+  //表单元素县
+ $form['ssx']['xian'] = array(   
+    '#title' => t('请选择您所在的县/区?'),   
+   '#prefix' => '<div id="xian-wrapper-div">',   
+   '#suffix' => '</div></div>',
+    '#type' => 'select',   
+    '#options' => $xian_options,   
+   // '#default_value' => $default_xian,
+    
+  );
+  $form_state['values']['xian']='';
+  $form_state['rebuild'] = TRUE;
+  return $form['ssx']['xian'];
+   //根据当前所选的市，重新确定县的可选项。返回重新构建的表单元素xian
+ }
+
+
+
+
+
+/**
+ * from submit后，element的最终值
+ */
+function user_area_value_callback($element, $input = FALSE, &$form_state) {
+  dsm('user_area_value_callback');
+  if ($input !== FALSE) {
+    // element可以由多个element组成，但只有一个返回值，其他element将不返回
+    return $_POST['user_area'];
+  } elseif (!empty($element['#default_value'])) {
+    return $element['#default_value'];
+  }
+  
+  return;
+}
+
+
+
+/** 
+ * Implements hook_form_alter(). 
+ */ 
+function user_area_form_alter(&$form, &$form_state, $form_id) { 
+
+ switch($form_id) { 
+       case 'user_register_form':
+     
+           
+      //doing something 
+           //unset($form['#submit']);
+           $form['#submit'][]='user_area_sumbit_custom';
+         
+ 		break; 
+ 	} 
+}
+
+
+function user_area_sumbit_custom($form, &$form_state){
+    //unset($form_state['redirect']);
+    $form_state['redirect'] = 'user_area';
+}
+
+
+function user_area_entity_view_alter(&$build, $type) {
+	 if ($type == 'commerce_customer_profile' && isset($build['commerce_addressbook_options']['edit']['#suffix'])) {
+	//$build['commerce_addressbook_options']['edit']['#suffix']='';
+	unset($build['commerce_addressbook_options']['edit']['#suffix']);
+	//$build['commerce_addressbook_options']['default']['#suffix']='';
+	unset($build['commerce_addressbook_options']['default']['#suffix']);
+	$build['commerce_addressbook_options']['#weight'] = -10;
+
+	 }
+}
+
+function user_area_form_commerce_addressbook_customer_profile_form_alter(&$form,&$form_state){
+	 $form['actions']['submit']['#attributes']['class'][] = 'btn btn-default';
+     $form['actions']['submit']['#value'] = '保存收货地址';
+}
+
+
+ 
+
+
+
+

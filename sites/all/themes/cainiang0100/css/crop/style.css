@@ -1,0 +1,1250 @@
+/* begin Page */
+
+/* Generated with Artisteer version 2.3.0.20943, file checksum is D59401BE. */
+
+.crop body
+{
+	margin: 0 auto;
+	padding: 0;
+	background-color: #CCC2AD;
+}
+
+.crop #main
+{
+	position: relative;
+	width: 100%;
+	left: 0;
+	top: 0;
+}
+
+.crop #page-background-glare
+{
+	position: absolute;
+	width: 100%;
+	height: 245px;
+	left: 0;
+	top: 0;
+}
+
+.crop #page-background-glare-image
+{
+	background-image: url('../images/Page-BgGlare.png');
+	background-repeat: no-repeat;
+	height: 245px;
+	width: 366px;
+	margin: 0;
+}
+
+.crop html:first-child #page-background-glare
+{
+	border: 1px solid transparent; /* Opera fix */
+}
+
+
+
+
+.crop #page-background-simple-gradient
+{
+	position: absolute;
+	background-image: url('../images/Page-BgSimpleGradient.jpg');
+	background-repeat: repeat-x;
+	top:0;
+	width: 100%;
+	height: 44px;
+}
+
+.crop .cleared
+{
+	float: none;
+	clear: both;
+	margin: 0;
+	padding: 0;
+	border: none;
+	font-size:1px;
+}
+
+
+.crop form
+{
+	padding:0 !important;
+	margin:0 !important;
+}
+
+.crop table.position
+{
+	position: relative;
+	width: 100%;
+	table-layout: fixed;
+}
+/* end Page */
+
+/* begin Box, Sheet */
+.crop .Sheet
+{
+	position:relative;
+	z-index:0;
+	margin:0 auto;
+	//width: 900px;
+	width:450px;
+	min-width:23px;
+	min-height:23px;
+}
+
+.crop .Sheet-body
+{
+	position: relative;
+	z-index: 1;
+	padding: 1px;
+}
+
+.crop  .Sheet-tr, .Sheet-tl, .Sheet-br, .Sheet-bl, .Sheet-tc, .Sheet-bc,.Sheet-cr, .Sheet-cl
+{
+	position:absolute;
+	z-index:-1;
+}
+
+.crop  .Sheet-tr, .Sheet-tl, .Sheet-br, .Sheet-bl
+{
+	width: 22px;
+	height: 22px;
+	background-image: url('../images/Sheet-s.png');
+}
+
+.crop  .Sheet-tl
+{
+	top:0;
+	left:0;
+	clip: rect(auto, 11px, 11px, auto);
+}
+
+.crop  .Sheet-tr
+{
+	top: 0;
+	right: 0;
+	clip: rect(auto, auto, 11px, 11px);
+}
+
+.crop  .Sheet-bl
+{
+	bottom: 0;
+	left: 0;
+	clip: rect(11px, 11px, auto, auto);
+}
+
+.crop  .Sheet-br
+{
+	bottom: 0;
+	right: 0;
+	clip: rect(11px, auto, auto, 11px);
+}
+
+.crop  .Sheet-tc, .Sheet-bc
+{
+	left: 11px;
+	right: 11px;
+	height: 22px;
+	background-image: url('../images/Sheet-h.png');
+}
+
+.crop  .Sheet-tc
+{
+	top: 0;
+	clip: rect(auto, auto, 11px, auto);
+}
+
+.crop  .Sheet-bc
+{
+	bottom: 0;
+	clip: rect(11px, auto, auto, auto);
+}
+
+.crop .Sheet-cr, .crop  .Sheet-cl
+{
+	top: 11px;
+	bottom: 11px;
+	width: 22px;
+	background-image: url('../images/Sheet-v.png');
+}
+
+.crop .Sheet-cr
+{
+	right:0;
+	clip: rect(auto, auto, auto, 11px);
+}
+
+.crop .Sheet-cl
+{
+	left:0;
+	clip: rect(auto, 11px, auto, auto);
+}
+
+.crop .Sheet-cc
+{
+	position:absolute;
+	z-index:-1;
+	top: 11px;
+	left: 11px;
+	right: 11px;
+	bottom: 11px;
+	background-color: #FBFAF9;
+}
+
+
+.crop .Sheet
+{
+	margin-top: 10px !important;
+}
+
+.crop  #page-background-simple-gradient, .crop  #page-background-gradient, .crop  #page-background-glare
+{
+	min-width:900px;
+}
+
+/* end Box, Sheet */
+
+/* begin Menu */
+/* menu structure */
+
+.crop .menu a, .crop .menu a:link, .crop .menu a:visited, .crop .menu a:hover
+{
+	text-align:left;
+	text-decoration:none;
+	outline:none;
+	letter-spacing:normal;
+	word-spacing:normal;
+}
+
+.crop .menu, .crop .menu ul
+{
+	margin: 0;
+	padding: 0;
+	border: 0;
+	list-style-type: none;
+	display: block;
+}
+
+.crop .menu li
+{
+	margin: 0;
+	padding: 0;
+	border: 0;
+	display: block;
+	float: left;
+	position: relative;
+	z-index: 5;
+	background:none;
+}
+
+.crop .menu li:hover
+{
+	z-index: 10000;
+	white-space: normal;
+}
+
+.crop .menu li li
+{
+	float: none;
+}
+
+.crop .menu ul
+{
+	visibility: hidden;
+	position: absolute;
+	z-index: 10;
+	left: 0;
+	top: 0;
+	background:none;
+}
+
+.crop .menu li:hover>ul
+{
+	visibility: visible;
+	top: 100%;
+}
+
+.crop .menu li li:hover>ul
+{
+	top: 0;
+	left: 100%;
+}
+
+.crop .menu:after, .crop .menu ul:after
+{
+	content: ".";
+	height: 0;
+	display: block;
+	visibility: hidden;
+	overflow: hidden;
+	clear: both;
+}
+.crop .menu, .crop .menu ul
+{
+	min-height: 0;
+}
+
+.crop .menu ul
+{
+	background-image: url(../images/spacer.gif);
+	padding: 10px 30px 30px 30px;
+	margin: -10px 0 0 -30px;
+}
+
+.crop .menu ul ul
+{
+	padding: 30px 30px 30px 10px;
+	margin: -30px 0 0 -10px;
+}
+
+
+
+
+
+/* menu structure */
+
+.crop .menu
+{
+	padding: 8px 10px 0px 10px;
+}
+
+.crop .nav
+{
+	position: relative;
+	height: 33px;
+	z-index: 100;
+}
+
+.crop .nav .l, .crop .nav .r
+{
+	position: absolute;
+	z-index: -1;
+	top: 0;
+	height: 33px;
+	background-image: url('../images/nav.png');
+}
+
+.crop .nav .l
+{
+	left: 0;
+	right:10px;
+}
+
+.crop .nav .r
+{
+	right: 0;
+	width: 898px;
+	clip: rect(auto, auto, auto, 888px);
+}
+
+
+/* end Menu */
+
+/* begin MenuItem */
+.crop .menu ul li
+{
+	clear: both;
+}
+
+.crop .menu a
+{
+	position:relative;
+	display: block;
+	overflow:hidden;
+	height: 25px;
+	cursor: pointer;
+	text-decoration: none;
+	margin-right: 3px;
+	margin-left: 3px;
+}
+
+
+.crop .menu a .r, .crop .menu a .l
+{
+	position:absolute;
+	display: block;
+	top:0;
+	z-index:-1;
+	height: 75px;
+	background-image: url('../images/MenuItem.png');
+}
+
+.crop .menu a .l
+{
+	left:0;
+	right:3px;
+}
+
+.crop .menu a .r
+{
+	width:406px;
+	right:0;
+	clip: rect(auto, auto, auto, 403px);
+}
+
+.crop .menu a .t 
+{
+font-family: Tahoma, Arial, Helvetica, Sans-Serif;
+font-size: 11px;
+font-style: normal;
+font-weight: bold;
+letter-spacing: 1px;
+text-transform: uppercase;
+	color: #1F1C14;
+	padding: 0 15px;
+	margin: 0 3px;
+	line-height: 25px;
+	text-align: center;
+}
+
+.crop .menu a:hover .l,.crop  .menu a:hover .r
+{
+	top:-25px;
+}
+
+.crop .menu li:hover>a .l, .crop .menu li:hover>a .r
+{
+	top:-25px;
+}
+
+.crop .menu li:hover a .l, .crop .menu li:hover a .r
+{
+	top:-25px;
+}
+.crop .menu a:hover .t
+{
+	color: #F7F6F2;
+}
+
+.crop .menu li:hover a .t
+{
+	color: #F7F6F2;
+}
+
+.crop .menu li:hover>a .t
+{
+	color: #F7F6F2;
+}
+
+
+.crop .menu a.active .l,.crop  .menu a.active .r
+{
+	top: -50px;
+}
+
+.crop .menu a.active .t
+{
+	color: #64583F;
+}
+
+
+/* end MenuItem */
+
+/* begin MenuSubItem */
+.crop .menu ul a
+{
+	display:block;
+	text-align: center;
+	white-space: nowrap;
+	height: 20px;
+	width: 180px;
+	overflow:hidden;
+	line-height: 20px;
+	margin-right: auto;
+
+
+	background-image: url('../images/subitem-bg.png');
+	background-position: left top;
+	background-repeat: repeat-x;
+	border-width: 0px;
+	border-style: solid;
+}
+
+.crop .nav ul.menu ul span,.crop  .nav ul.menu ul span span
+{
+	display: inline;
+	float: none;
+	margin: inherit;
+	padding: inherit;
+	background-image: none;
+	text-align: inherit;
+	text-decoration: inherit;
+}
+
+.crop .menu ul a, .crop .menu ul a:link,.crop  .menu ul a:visited,.crop  .menu ul a:hover,.crop  .menu ul a:active, .crop .nav ul.menu ul span,.crop  .nav ul.menu ul span span
+{
+	text-align: left;
+	text-indent: 12px;
+	text-decoration: none;
+	line-height: 20px;
+	color: #000000;
+font-family: Tahoma, Arial, Helvetica, Sans-Serif;
+font-size: 11px;
+letter-spacing: 1px;
+}
+
+.crop .menu ul ul a
+{
+	margin-left: auto;
+}
+
+.crop .menu ul li a:hover
+{
+	color: #000000;
+	background-position: 0 -20px;
+}
+
+.crop .menu ul li:hover>a
+{
+	color: #000000;
+	background-position: 0 -20px;
+}
+
+.crop .nav .menu ul li a:hover span,.crop  .nav .menu ul li a:hover span span
+{
+	color: #000000;
+}
+
+.crop .nav .menu ul li:hover>a span,.crop  .nav .menu ul li:hover>a span span
+{
+	color: #000000;
+}
+
+
+/* end MenuSubItem */
+
+/* begin ContentLayout */
+.crop .contentLayout
+{
+	position: relative;
+	margin-bottom: 0px;
+	width: 898px;
+}
+/* end ContentLayout */
+
+/* begin Box, Block */
+.crop .Block
+{
+	position:relative;
+	z-index:0;
+	margin:0 auto;
+	min-width:1px;
+	min-height:1px;
+}
+
+.crop .Block-body
+{
+	position: relative;
+	z-index: 1;
+	padding: 7px;
+}
+
+
+
+.crop .Block
+{
+	margin: 7px;
+}
+
+/* end Box, Block */
+
+/* begin Box, BlockContent */
+.crop .BlockContent
+{
+	position:relative;
+	z-index:0;
+	margin:0 auto;
+	min-width:1px;
+	min-height:1px;
+}
+
+.crop .BlockContent-body
+{
+	position: relative;
+	z-index: 1;
+	padding: 0px;
+}
+
+
+
+.crop .BlockContent-body
+{
+	color:#7D6F4F;
+font-family: Tahoma, Arial, Helvetica, Sans-Serif;
+font-size: 11px;
+}
+
+.crop .BlockContent-body a:link
+{
+	color: #A66C07;
+font-family: Tahoma, Arial, Helvetica, Sans-Serif;
+text-decoration: underline;
+}
+
+.crop .BlockContent-body a:visited,.crop  .BlockContent-body a.visited
+{
+	color: #9B8B87;
+font-family: Tahoma, Arial, Helvetica, Sans-Serif;
+text-decoration: none;
+}
+
+.crop .BlockContent-body a:hover,.crop  .BlockContent-body a.hover
+{
+	color: #DC8F09;
+font-family: Tahoma, Arial, Helvetica, Sans-Serif;
+text-decoration: none;
+}
+
+.crop .BlockContent-body ul
+{
+	list-style-type: none;
+	color: #322C1F;
+	margin:0;
+	padding:0;
+}
+
+.crop .BlockContent-body li
+{
+font-family: Tahoma, Arial, Helvetica, Sans-Serif;
+font-size: 11px;
+margin-left: 12px;
+}
+
+.crop .BlockContent-body ul li
+{
+	padding:2px 0 2px 22px;
+	background-image: url('../images/BlockContentBullets.png');
+	background-repeat:no-repeat;
+	margin:0.5em 0 0.5em 0;
+	line-height:1.2em;
+}
+
+/* end Box, BlockContent */
+
+/* begin Box, Post */
+.crop .Post
+{
+	position:relative;
+	z-index:0;
+	margin:0 auto;
+	min-width:1px;
+	min-height:1px;
+}
+
+.crop .Post-body
+{
+	position: relative;
+	z-index: 1;
+	padding: 15px;
+}
+
+
+
+.crop .Post
+{
+	margin: 7px;
+}
+
+/* Start ../images */
+.crop a img
+{
+	border: 0;
+}
+
+.crop .article img,.crop  img.article
+{
+	border: solid 1px #CCC2AD;
+	margin: 1em;
+}
+
+.crop .metadata-icons img
+{
+	border: none;
+	vertical-align: middle;
+	margin: 2px;
+}
+/* Finish ../images */
+
+/* Start tables */
+
+.crop .article table,.crop  table.article
+{
+	border-collapse: collapse;
+	margin: 1px;
+	width:auto;
+}
+
+.crop .article table,.crop  table.article .article tr,.crop  .article th, .crop .article td
+{
+	background-color:Transparent;
+    
+}
+
+.crop .article th, .crop .article td
+{
+	padding: 2px;
+	border: solid 1px #978582;
+	vertical-align: top;
+	text-align:left;
+}
+
+.crop .article th
+{
+	text-align: center;
+	vertical-align: middle;
+	padding: 7px;
+}
+
+/* Finish tables */
+
+.crop pre
+{
+	overflow: auto;
+	padding: 0.1em;
+}
+
+/* end Box, Post */
+
+/* begin PostHeaderIcon */
+.crop .PostHeader
+{
+	text-decoration:none;
+	margin: 0.2em 0;
+	padding: 0;
+	font-weight:normal;
+	font-style:normal;
+	letter-spacing:normal;
+	word-spacing:normal;
+	font-variant:normal;
+	text-decoration:none;
+	font-variant:normal;
+	text-transform:none;
+	text-align:left;
+	text-indent:0;
+	line-height:inherit;
+font-family: Verdana, Geneva, Arial, Helvetica, Sans-Serif;
+font-size: 18px;
+font-style: normal;
+font-weight: bold;
+letter-spacing: 2px;
+text-align: left;
+margin-top: 12px;
+margin-bottom: 8px;
+	color: #9D6607;
+}
+
+.crop .PostHeader a,.crop  .PostHeader a:link,.crop  .PostHeader a:visited,.crop  .PostHeader a:hover
+{
+font-family: Verdana, Geneva, Arial, Helvetica, Sans-Serif;
+font-size: 18px;
+font-style: normal;
+font-weight: bold;
+letter-spacing: 2px;
+text-align: left;
+margin-top: 12px;
+margin-bottom: 8px;
+	margin:0;
+	color: #9D6607;
+}
+
+/* end PostHeaderIcon */
+
+/* begin PostHeader */
+.crop .PostHeader a:link
+{
+font-family: Verdana, Geneva, Arial, Helvetica, Sans-Serif;
+text-decoration: none;
+text-align: left;
+  color: #BA7908;
+}
+
+.crop .PostHeader a:visited, .crop .PostHeader a.visited
+{
+font-family: Verdana, Geneva, Arial, Helvetica, Sans-Serif;
+text-decoration: none;
+text-align: left;
+  color: #514643;
+}
+
+.crop .PostHeader a:hover,.crop  .PostHeader a.hovered
+{
+font-family: Verdana, Geneva, Arial, Helvetica, Sans-Serif;
+text-decoration: underline;
+text-align: left;
+  color: #A66C07;
+}
+/* end PostHeader */
+
+/* begin PostContent */
+/* Content Text Font & Color (Default) */
+.crop body
+{
+font-family: Tahoma, Arial, Helvetica, Sans-Serif;
+font-size: 11px;
+font-style: normal;
+font-weight: normal;
+letter-spacing: 1px;
+  color: #7D6F4F;
+}
+
+
+.crop .PostContent p 
+{
+	margin: 0.5em 0;
+}
+
+.crop .PostContent, .crop .PostContent p
+{
+font-family: Tahoma, Arial, Helvetica, Sans-Serif;
+letter-spacing: 1px;
+  color: #7D6F4F;
+}
+
+.crop .PostContent
+{
+  margin:0;
+}
+
+.crop .PostContent table{
+    text-align: center;
+}
+
+.crop .PostContent th{
+    background-color: #C0C0C0;
+    color:#FFF;
+}
+
+
+/* Start Content link style */
+/*
+The right order of link pseudo-classes: Link-Visited-Hover-Focus-Active.
+http://www.w3schools.com/CSS/css_pseudo_classes.asp
+http://meyerweb.com/eric/thoughts/2007/06/11/who-ordered-the-link-states/
+*/
+.crop a
+{
+font-family: Tahoma, Arial, Helvetica, Sans-Serif;
+text-decoration: underline;
+letter-spacing: 1px;
+  color: #DC8F09;
+}
+
+/* Adds special style to an unvisited link. */
+.crop a:link
+{
+font-family: Tahoma, Arial, Helvetica, Sans-Serif;
+text-decoration: underline;
+letter-spacing: 1px;
+  color: #DC8F09;
+}
+
+/* Adds special style to a visited link. */
+.crop a:visited,.crop  a.visited
+{
+font-family: Tahoma, Arial, Helvetica, Sans-Serif;
+text-decoration: underline;
+  color: #5F514F;
+}
+
+/* :hover - adds special style to an element when you mouse over it. */
+.crop a:hover,.crop  a.hover
+{
+font-family: Tahoma, Arial, Helvetica, Sans-Serif;
+text-decoration: none;
+  color: #A66C07;
+}
+
+/* Finish Content link style */
+
+/* Resert some headings default style & links default style for links in headings*/
+.crop h1,.crop  h2,.crop  h3,.crop  h4,.crop  h5,.crop  h6,
+.crop h1 a,.crop  h2 a,.crop  h3 a,.crop  h4 a,.crop  h5 a,.crop  h6 a
+.crop h1 a:hover,.crop  h2 a:hover,.crop  h3 a:hover,.crop  h4 a:hover,.crop  h5 a:hover,.crop  h6 a:hover
+.crop h1 a:visited,.crop  h2 a:visited,.crop  h3 a:visited,.crop  h4 a:visited,.crop  h5 a:visited,.crop  h6 a:visited
+{
+  font-weight: normal;
+  font-style: normal;
+  text-decoration: none;
+}
+
+
+/* Start Content headings Fonts & Colors  */
+.crop h1,.crop  h1 a,.crop  h1 a:link,.crop  h1 a:visited,.crop  h1 a:hover
+{
+font-family: Verdana, Geneva, Arial, Helvetica, Sans-Serif;
+font-size: 20px;
+letter-spacing: 3px;
+text-align: left;
+  color: #6B5E43;
+}
+
+.crop h2,.crop  h2 a,.crop  h2 a:link,.crop  h2 a:visited,.crop  h2 a:hover
+{
+font-family: Verdana, Geneva, Arial, Helvetica, Sans-Serif;
+font-size: 18px;
+letter-spacing: 2px;
+text-align: left;
+  color: #8D7C58;
+}
+
+.crop h3,.crop  h3 a,.crop  h3 a:link,.crop  h3 a:visited,.crop  h3 a:hover
+{
+font-family: Verdana, Geneva, Arial, Helvetica, Sans-Serif;
+font-size: 16px;
+letter-spacing: 2px;
+text-align: left;
+  color: #7D6C68;
+}
+
+.crop h4,.crop  h4 a,.crop  h4 a:link,.crop  h4 a:visited,.crop  h4 a:hover
+{
+font-family: Verdana, Geneva, Arial, Helvetica, Sans-Serif;
+font-size: 13px;
+letter-spacing: 2px;
+text-align: left;
+  color: #7D6F4F;
+}
+
+.crop h5,.crop  h5 a,.crop  h5 a:link,.crop  h5 a:visited,.crop  h5 a:hover
+{
+font-family: Verdana, Geneva, Arial, Helvetica, Sans-Serif;
+font-size: 11px;
+letter-spacing: 2px;
+text-align: left;
+  color: #7D6F4F;
+}
+
+.crop h6,.crop  h6 a,.crop  h6 a:link,.crop  h6 a:visited,.crop  h6 a:hover
+{
+font-family: Verdana, Geneva, Arial, Helvetica, Sans-Serif;
+font-size: 11px;
+letter-spacing: 2px;
+text-align: left;
+  color: #7D6F4F;
+}
+/* Finish Content headings Fonts & Colors  */
+/* end PostContent */
+
+/* begin PostBullets */
+/* Start Content list */
+.crop ol,.crop  ul
+{
+	color: #191610;
+	margin:1em 0 1em 2em;
+	padding:0;
+font-family: Tahoma, Arial, Helvetica, Sans-Serif;
+font-size: 11px;
+text-align: left;
+}
+
+.crop li ol,.crop  li ul
+{
+	margin:0.5em 0 0.5em 2em;
+	padding:0;
+}
+
+.crop li 
+{
+	margin:0.2em 0;
+	padding:0;
+}
+
+.crop ul
+{
+	list-style-type: none;
+}
+
+.crop ol
+{
+	list-style-position:inside;
+	
+}
+
+
+
+.crop .Post li
+{
+	padding:0px 0 0px 11px;
+	line-height:1.2em;
+}
+
+.crop .Post ol li,.crop  .Post ul ol li
+{
+	background: none;
+	padding-left:0;
+}
+
+.crop .Post ul li,.crop  .Post ol ul li 
+{
+	background-image: url('../images/PostBullets.png');
+	background-repeat:no-repeat;
+	padding-left:11px;
+}
+
+
+/* Finish Content list */
+/* end PostBullets */
+
+/* begin PostQuote */
+/* Start blockquote */
+.crop blockquote,
+.crop blockquote p,
+.crop .PostContent blockquote p
+{
+	color:#13110C;
+font-family: Tahoma, Arial, Helvetica, Sans-Serif;
+font-style: italic;
+font-weight: normal;
+text-align: left;
+}
+
+.crop blockquote,
+.crop .PostContent blockquote
+{
+		margin:10px 10px 10px 50px;
+	padding:5px 5px 5px 32px;
+	background-color:#E4DED3;
+	background-image:url('../images/PostQuote.png');
+	background-position:left top;
+	background-repeat:no-repeat;
+}
+
+
+/* Finish blockuote */
+/* end PostQuote */
+
+/* begin Button */
+.crop .button-wrapper .button
+{
+	display:inline-block;
+	width: auto;
+	outline:none;
+	border:none;
+	background:none;
+	line-height:25px;
+	margin:0 !important;
+	padding:0 !important;
+	overflow: visible;
+	cursor: default;
+	text-decoration: none !important;
+	z-index:0;
+}
+
+.crop .button-wrapper
+{
+	display:inline-block;
+	position:relative;
+	height: 25px;
+	overflow:hidden;
+	white-space: nowrap;
+	width: auto;
+	z-index:0;
+}
+
+.crop .firefox2 .button-wrapper
+{
+	display:block;
+	float:left;
+}
+
+.crop .button-wrapper .button
+{
+	display:block;
+	height: 25px;
+font-family: Tahoma, Arial, Helvetica, Sans-Serif;
+font-size: 11px;
+font-style: normal;
+font-weight: bold;
+letter-spacing: 1px;
+	white-space: nowrap;
+	text-align: left;
+	padding: 0 10px !important;
+	line-height: 25px;
+	text-decoration: none !important;
+	color: #000000 !important;
+}
+
+.crop input, .crop select
+{
+font-family: Tahoma, Arial, Helvetica, Sans-Serif;
+font-size: 11px;
+font-style: normal;
+font-weight: bold;
+letter-spacing: 1px;
+}
+
+.crop .button-wrapper.hover .button,.crop  .button:hover
+{
+	color: #F3F1EC !important;
+	text-decoration: none !important;
+}
+
+.crop .button-wrapper.active .button
+{
+	color: #F6F4F4 !important;
+}
+
+.crop .button-wrapper .l,.crop  .button-wrapper .r
+{
+	display:block;
+	position:absolute;
+	z-index:-1;
+	height: 75px;
+	background-image: url('../images/Button.png');
+}
+
+.crop .button-wrapper .l
+{
+	left:0;
+	right:1px;
+}
+
+.crop .button-wrapper .r
+{
+	width:403px;
+	right:0;
+	clip: rect(auto, auto, auto, 402px);
+}
+
+.crop .button-wrapper.hover .l,.crop  .button-wrapper.hover .r
+{
+	top: -25px;
+}
+
+.crop .button-wrapper.active .l,.crop  .button-wrapper.active .r
+{
+	top: -50px;
+}
+
+
+/* end Button */
+
+/* begin Footer */
+.crop .Footer
+{
+	position:relative;
+	z-index:0;
+	overflow:hidden;
+	width: 898px;
+	margin: 5px auto 0px auto;
+}
+
+.crop .Footer .Footer-inner
+{
+	height:1%;
+	position: relative;
+	z-index: 0;
+	padding: 8px;
+	text-align: center;
+}
+
+.crop .Footer .Footer-background
+{
+	position:absolute;
+	z-index:-1;
+	background-repeat:no-repeat;
+	background-image: url('../images/Footer.png');
+	width: 898px;
+	height: 150px;
+	bottom:0;
+	left:0;
+}
+
+
+.crop .Footer .Footer-text p
+{
+	margin: 0;
+}
+
+.crop .Footer .Footer-text
+{
+	display:inline-block;
+	color:#271902;
+font-family: Tahoma, Arial, Helvetica, Sans-Serif;
+font-size: 10px;
+letter-spacing: 1px;
+}
+
+.crop .Footer .Footer-text a:link
+{
+	text-decoration: none;
+	color: #624004;
+font-family: Tahoma, Arial, Helvetica, Sans-Serif;
+font-style: normal;
+font-weight: bold;
+text-decoration: none;
+}
+
+.crop .Footer .Footer-text a:visited
+{
+	text-decoration: none;
+	color: #534846;
+font-family: Tahoma, Arial, Helvetica, Sans-Serif;
+text-decoration: none;
+}
+
+.crop .Footer .Footer-text a:hover
+{
+	text-decoration: none;
+	color: #312002;
+font-family: Tahoma, Arial, Helvetica, Sans-Serif;
+text-decoration: underline;
+}
+/* end Footer */
+
+/* begin PageFooter */
+.crop .page-footer, .crop .page-footer a,.crop  .page-footer a:link,.crop  .page-footer a:visited,.crop  .page-footer a:hover
+{
+	font-family:Arial;
+	font-size:8px;
+	letter-spacing:normal;
+	word-spacing:normal;
+	font-style:normal;
+	font-weight:normal;
+	text-decoration:underline;
+	color:#7D6F4F;
+}
+
+.crop .page-footer
+{
+	margin:1em;
+	text-align:center;
+	text-decoration:none;
+	color:#6F605D;
+}
+/* end PageFooter */
+
+/* begin LayoutCell */
+.crop .contentLayout .content
+{
+	position: relative;
+	margin: 0;
+	padding: 0;
+	border: 0;
+	float: left;
+	overflow: hidden;
+	width: 897px;
+}
+.crop #crop_container,.crop #crop_container2{
+    float:left;
+}
+.crop .result,.crop .result2{
+    float:left;
+    margin:0 0 0 10px;
+    border:1px solid #333;
+    width:400px;
+    height:300px;
+}
+.crop .txt{
+    width:230px;
+    margin:75px auto 0 auto;
+    
+}
+.crop code,pre{
+    font-family: monospace;
+    font-size: 12px;
+    color:#808080
+}
+/* end LayoutCell */
+
+.crop ins{
+    margin:10px 0 0 10px !important;
+}

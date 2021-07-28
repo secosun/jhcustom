@@ -1,0 +1,13 @@
+name = jingheaddressfield
+description = Enhance Address Module.  
+package = Vegetable King Development
+core = 7.x
+
+files[] = jingheaddressfield.module
+
+; Information added by Drupal.org packaging script on 2015-03-18
+version = "7.x-3.1+7-dev"
+core = "7.x"
+project = "jingheaddressfield"
+datestamp = "1426704479"
+

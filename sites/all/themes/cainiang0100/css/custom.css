@@ -1,0 +1,462 @@
+.JingHeUserNav{
+	font-size:14px !important;
+}
+
+.container>.navbar-header,.container-fluid>.navbar-header,.container>.navbar-collapse,.container-fluid>.navbar-collapse{margin-right:0;margin-left:0}
+.container-fluid{
+	padding:0;
+}
+
+.container{
+ padding:0;
+}
+
+.container .row{
+  margin:0;
+}
+.form-item{
+float:left;
+}
+.JHAddressForm{
+	width:300px;
+}
+.JHAddress,.JHAddressForm .form-actions{
+	margin-top:10px;
+}
+.JHAddressForm  .form-item,.customer_profile_billing .form-item{
+   float:none;
+}
+.JHAddressForm  .field-name-field-addressprofile{
+	display:none;
+}
+.action-links{
+	list-style:none;
+	padding:0;
+}
+.jhaddaddress{
+	margin-top:5px;
+	background-image:url(../images/add-adder.png);
+	width:245px;
+	height:149px;
+	display:block;
+}
+.addressbook-links{
+	
+}
+.jhdelivery-btn{
+	float:right;
+}
+.jhcompile{
+	display:block;
+	width:14px;
+	height:13px;
+}
+.jhaddresshome{
+	width:14px;
+	height:13px;
+	display:block;
+	background:url(../images/newbg.png) no-repeat 0 -12px;
+	float:left;
+	overflow:hidden;
+	margin-top:4px;
+	margin-right:4px;
+}
+.jhoperator{
+	width:14px;
+	height:13px;
+	display:none;
+	float:left;
+	margin-top:2px;
+}
+.jhoperatordefault{
+	background:url(../images/newbg.png) no-repeat 0 -13px;
+}
+.jhoperatoredit{
+	background:url(../images/newbg.png) no-repeat -14px -13px;
+}
+.jhoperatordelete{
+	background:url(../images/newbg.png) no-repeat -28px -13px;
+	margin-right:10px;
+}
+
+.jhaddresshomecl60{
+	float:left;
+	line-height:22px;
+	color:#f60;
+}
+.jhaddr-state{
+	display:block;
+}
+.view-commerce-addressbook-defaults  .list-group-item{
+	background-color:white;
+}
+
+.view-commerce-addressbook-defaults:hover  .jhoperator,.view-commerce-addressbook  .views-field:hover   .jhoperator{
+	display:block;
+}
+
+.view-commerce-addressbook-defaults:hover .jhoperatordefault{
+	display:none;
+}
+
+
+.views-exposed-form .views-exposed-widget{
+	margin:0 auto;
+  padding-top:10px;	
+}
+
+.form-item,.form-actions{
+  margin-top:0;
+  margin-bottom:0;
+}
+
+.form-item-files-picture-upload{
+	margin-top:30px;
+	margin-bottom:10px;
+	float:none;
+}
+
+#header{
+   background:none;
+   
+}
+#header div.section
+{
+   width:auto;
+}
+.culumn,#main,.nosidebars #content
+{
+width:auto;
+
+}
+
+#page-wrapper {
+ 
+background:none;
+  min-height:30px;
+  min-width: 100%;
+  margin-top:35px;
+ height:100%;
+}
+
+#page{
+  height:auto;
+}
+
+body{
+  overflow:none;
+}
+#footer {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  min-width: 100%;
+}
+#header div.section,
+#featured div.section,
+#messages div.section,
+#main,
+#triptych,
+#footer-columns,
+#footer {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+html{
+  min-width:300px;
+}
+.with-secondary-menu  .region-header {
+  float: none; /* LTR */
+  margin-top:0;
+}
+
+.JHTop{
+   //top:10px;
+   
+}
+
+.JHFilter > .view-filters {
+ margin:0 auto;
+}
+
+.JHSearch{
+  //margin-right:50px;
+}
+.JHFilter .product_info{
+    font-size:20px;
+}
+.JHFilter .takespace{
+    width:100%;
+}
+.JHFilter .view-content{
+    clear:both;
+}
+.JHFilter .view-content table{
+	margin-left:auto;
+	margin-right:auto;
+}
+
+
+.JHAddToCart{
+    padding-top:60px;
+}
+
+
+
+
+.views-exposed-form .views-exposed-widget .form-submit{
+	margin-top:0;
+}
+.container{
+	width:100%;
+}
+
+.col-xs-1,.col-sm-1,.col-md-1,.col-lg-1,.col-xs-2,.col-sm-2,.col-md-2,.col-lg-2,.col-xs-3,.col-sm-3,.col-md-3,.col-lg-3,.col-xs-4,.col-sm-4,.col-md-4,.col-lg-4,.col-xs-5,.col-sm-5,.col-md-5,.col-lg-5,.col-xs-6,.col-sm-6,.col-md-6,.col-lg-6,.col-xs-7,.col-sm-7,.col-md-7,.col-lg-7,.col-xs-8,.col-sm-8,.col-md-8,.col-lg-8,.col-xs-9,.col-sm-9,.col-md-9,.col-lg-9,.col-xs-10,.col-sm-10,.col-md-10,.col-lg-10,.col-xs-11,.col-sm-11,.col-md-11,.col-lg-11,.col-xs-12,.col-sm-12,.col-md-12,.col-lg-12{
+	padding-left:1px;
+	padding-right:1px;
+	padding-bottom:5px;
+}
+.navbar{
+	margin-bottom:0;
+}
+.JHHeader .region-header::after{
+	clear:both !important;
+}
+
+
+.JHPictureUpload .section{
+	margin:0 auto;
+	width: 400px;
+}
+.commentodd  .attribution,.comment-by-viewerodd  .attribution,.comment-by-node-authorodd .attribution{
+	float:left;
+	width:144px;
+}
+.commenteven .attribution,.comment-by-viewereven  .attribution,.comment-by-node-authoreven .attribution{
+	width:144px;
+        float:left;
+}
+.commentodd  .comment-text,.comment-by-viewerodd  .comment-text,.comment-by-node-authorodd  .comment-text{
+	height:130px;
+	margin-left:144px;
+}
+
+
+.field-name-comment-body  .field-item{
+    vertical-align:middle;    
+	width:100%;
+}
+.commenteven  .comment-text,.comment-by-viewereven  .comment-text,.comment-by-node-authoreven  .comment-text{
+	height:130px;
+        margin-left:144px;
+}
+.field-name-comment-body   .field-items{
+   width:100%;
+}
+ 
+.comment-time span{
+	white-space:nowrap;
+	}
+	
+.view-commerce-addressbook  .views-view-grid{
+	width:100%;
+}
+
+.BMap_cpyCtrl, .anchorBL,.anchorTR{
+	display:none;
+}
+
+.jh-text-ellipsis-domain{
+	line-height: 18px;    
+}
+
+.jh-text-ellipsis-fly{
+	position: absolute;
+}
+.jh-text-ellipsis-container {
+	 height: 90px;
+	 position: relative;     
+     overflow: hidden;
+}
+
+.jh-text-ellipsis{   
+ 
+ }
+ .jh-text-ellipsis::after {  
+ content: "...";    
+ font-weight: bold;    
+ position: absolute;    
+ bottom: 0;    
+ right: 0;    
+ padding: 0 20px 1px 45px;    
+ /*为了展示更好的效果*/    
+ background: -webkit-gradient(linear,left top,right   top,from(rgba(255,255,255,0)),to(white),color-stop(50%,white));    
+ background: -moz-linear-gradient(to right,rgba(255,255,255,0),white 50%,white);    
+ background: -o-linear-gradient(to right,rgba(255,255,255,0),white 50%,white);   
+ background: -ms-linear-gradient(to right,rgba(255,255,255,0),white 50%,white);    
+ background: linear-gradient(to right,rgba(255,255,255,0),white 50%,white);   
+ }
+
+.form-radios:after{
+content:".";
+height:0;
+visibility:hidden;
+display:block;
+clear:both;
+}
+ .RadioStyle .form-radios  {
+	 margin:0 auto;
+ }
+.RadioStyle input {
+	display: none
+	}
+.RadioStyle label {
+	border: 1px solid #b8b7bd;
+	padding: 1px 1px 1px 1px;
+	line-height: 28px;
+	min-width: 80px;
+	text-align: center;
+	float: left;
+	margin: 1px;
+	border-radius: 1px;
+	color: black;
+	font-weight:800;
+	font-size:14px;
+	}
+.RadioStyle input:checked + label {
+	background: url(../images/ico_checkon.svg) no-repeat right bottom;
+	background-size: 10px 10px;
+	border: 1px solid red;
+	}
+	
+	.JHRadioCenter{
+		display:inline-block;
+	}
+	
+	.JHRadioCenter>label{
+		color:#b8b7bd;
+	}
+	.JHClear{
+		clear:both;
+	}
+.views-exposed-form  .views-submit-button{
+	margin-left:20px;
+}
+		
+	
+.JHChangeValue dt{
+	height:3em;
+	line-height:3em;
+	width:4.5em;
+	font-weight:normal;
+}
+.field-items_JH{
+	height:3em;
+	line-height:3em;
+	padding-left:0.5em;
+	color:black;
+	text-align:right;
+}
+	
+.JHChangeValue dd{
+    margin-left:0;
+	
+}	
+.JHCount li{
+	line-height:32px;
+	float:left;
+	
+}
+.JHNoBorder{
+	height:32px;
+}
+.JHCount .JHQuantity{
+	width:4.5em;	
+}
+.JHQuantity label{
+	font-weight:normal;
+}
+
+.JHOperater{
+	padding-left:5px;
+	padding-right:5px;
+}
+.JHCompositeCount{
+	width:100px;
+}
+
+.views-field-order-number{
+	width:180px;
+	padding-left:0 !important;
+}
+.views-field-created{
+	width:105px;
+	padding-right:0 !important;
+}
+.jhorder{
+	margin:0;
+}
+
+
+.list-group-horizontal .list-group-item {
+		display: inline-block;
+	}
+.list-group-horizontal .list-group-item {
+		margin-bottom: 0;
+		margin-left:-4px;
+		margin-right: 0;
+	}
+.list-group-horizontal .list-group-item:first-child {
+		border-top-right-radius:0;
+		border-bottom-left-radius:4px;
+	}
+.list-group-horizontal .list-group-item:last-child {
+		border-top-right-radius:4px;
+		border-bottom-left-radius:0;
+	}
+.customer_profile_billing .list-group{
+	margin-bottom: 0;
+}
+.pay-item-icon{
+	width:40px;
+}
+
+.form-item-commerce-payment-payment-method  .pay-item{
+	overflow: hidden;
+}
+.form-item-commerce-payment-payment-method  .option{
+	padding-left:40px;
+	margin-left:-40px;
+}
+.form-item-commerce-payment-payment-method input{
+	margin:0;
+}
+.btn-jhvege{
+   background-color:#FF0000;
+   color:white;
+   font-size:200%;
+   padding-bottom:5px;
+   padding-top:5px;
+   font-family:"Microsoft YaHei",微软雅黑,"MicrosoftJhengHei",华文细黑,STHeiti,MingLiu;
+}
+
+
+
+
+
+<!--[if IE]>
+
+#header{
+ margin-top:-30px;
+ 
+}
+
+<![endif]-->
+
+
+
+
+
+
